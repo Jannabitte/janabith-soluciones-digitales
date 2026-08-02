@@ -1426,3 +1426,114 @@
         font-size: 0.6rem;
     }
 }
+/* ==================================================
+   RESPONSIVE: RESUMEN DE SERVICIOS
+================================================== */
+
+@media (max-width: 1000px) {
+
+    .services-preview__layout {
+        grid-template-columns: 1fr;
+        gap: 55px;
+    }
+
+    .services-preview__content {
+        text-align: center;
+    }
+
+    .services-preview__description {
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .services-preview__actions {
+        justify-content: center;
+    }
+
+    .services-preview__features {
+        width: min(100%, 720px);
+        margin-right: auto;
+        margin-left: auto;
+
+        text-align: left;
+    }
+
+    .services-preview__visual {
+        width: min(100%, 570px);
+        margin: 0 auto;
+    }
+}
+
+
+@media (max-width: 650px) {
+
+    .services-preview__content {
+        text-align: left;
+    }
+
+    .services-preview__actions {
+        flex-direction: column;
+    }
+
+    .services-preview__features article {
+        padding: 15px;
+
+        grid-template-columns: 42px 1fr;
+        gap: 12px;
+    }
+
+    .services-preview__features article>span {
+        width: 42px;
+        height: 42px;
+    }
+
+    .services-preview__visual {
+        min-height: 440px;
+    }
+
+    .services-preview__visual::before {
+        width: 275px;
+        height: 275px;
+    }
+
+    .services-preview__window {
+        border-radius: 22px;
+        transform: rotate(0deg);
+    }
+
+    .services-preview__window-body {
+        padding: 19px;
+    }
+
+    .services-preview__mini-card {
+        padding: 17px;
+    }
+
+    .services-preview__floating--one {
+        top: 20px;
+        right: 0;
+    }
+
+    .services-preview__floating--two {
+        bottom: 15px;
+        left: 0;
+    }
+}
+
+
+@media (max-width: 400px) {
+
+    .services-preview__visual {
+        min-height: 415px;
+    }
+
+    .services-preview__window-top small {
+        max-width: 190px;
+        text-align: right;
+    }
+
+    .services-preview__floating {
+        padding: 8px 11px;
+        font-size: 0.62rem;
+    }
+}
