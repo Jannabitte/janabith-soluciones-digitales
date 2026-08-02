@@ -1,63 +1,276 @@
 document.addEventListener("DOMContentLoaded", () => {
 
     /* ==================================================
-       CAPTURAS DISPONIBLES POR PROYECTO
+       RUTA DE RECURSOS
+
+       Permite utilizar este archivo desde:
+       - index.html
+       - pages/portafolio.html
+    ================================================== */
+
+    const assetsPath =
+        window.location.pathname.includes("/pages/")
+            ? "../assets"
+            : "assets";
+
+
+    /* ==================================================
+       INFORMACIÓN DE LOS PROYECTOS
+    ================================================== */
+
+    const projectData = {
+
+        ingpro: {
+            category: "Proyecto corporativo publicado",
+            title: "INGPRO",
+
+            description:
+                "Sitio corporativo multipágina desarrollado para presentar servicios de corte CNC y plasma, grabado láser, impresión 3D, CNC Router, equipos industriales, cursos, catálogo digital y canales de cotización.",
+
+            technologies: [
+                "HTML",
+                "CSS",
+                "JavaScript",
+                "Diseño responsivo",
+                "Netlify",
+                "Dominio propio"
+            ],
+
+            url: "https://ingpro.cl"
+        },
+
+
+        "el-chinito": {
+            category: "Proyecto para cliente",
+            title: "Minimarket El Chinito",
+
+            description:
+                "Página web desarrollada para organizar y presentar los productos de un minimarket. Incorpora categorías, carrito de compras, favoritos, ubicación, horarios, Caja Vecina y preparación de pedidos para retiro presencial.",
+
+            technologies: [
+                "HTML",
+                "CSS",
+                "JavaScript",
+                "JSON",
+                "Netlify Forms",
+                "Diseño responsivo"
+            ],
+
+            url: ""
+        },
+
+
+        "killerr-store": {
+            category: "Proyecto para clienta",
+            title: "Killerr Store",
+
+            description:
+                "Tienda web de estilo dark y rosado para presentar ropa, calzado, accesorios, bordados y confecciones propias. Incluye catálogo visual, carruseles y consultas directas mediante Instagram.",
+
+            technologies: [
+                "HTML",
+                "CSS",
+                "JavaScript",
+                "Carruseles",
+                "Instagram",
+                "Diseño responsivo"
+            ],
+
+            url: ""
+        },
+
+
+        "onevet-store": {
+            category: "Proyecto académico",
+            title: "OneVet Store",
+
+            description:
+                "Tienda web educativa que combina programación y medicina veterinaria. Presenta productos, servicios, contenido sobre salud animal, prevención de zoonosis, carrito y favoritos.",
+
+            technologies: [
+                "HTML",
+                "CSS",
+                "JavaScript",
+                "Carrito",
+                "Favoritos",
+                "Medicina veterinaria"
+            ],
+
+            url: ""
+        },
+
+
+        "onevet-api": {
+            category: "Proyecto Java Full Stack",
+            title: "OneVet API",
+
+            description:
+                "Aplicación desarrollada con Java y Spring Boot para administrar productos veterinarios mediante una API REST conectada a una base de datos H2 y consumida desde una interfaz web.",
+
+            technologies: [
+                "Java",
+                "Spring Boot",
+                "API REST",
+                "H2",
+                "Fetch",
+                "Arquitectura por capas"
+            ],
+
+            url: ""
+        },
+
+
+        "java-apps": {
+            category: "Formación Java Full Stack",
+            title: "Sistemas y aplicaciones Java",
+
+            description:
+                "Conjunto de aplicaciones desarrolladas para aplicar programación orientada a objetos, encapsulación, herencia, polimorfismo, colecciones, manejo de excepciones, interfaces gráficas y organización del código.",
+
+            technologies: [
+                "Java",
+                "POO",
+                "Herencia",
+                "Polimorfismo",
+                "Colecciones",
+                "Swing"
+            ],
+
+            url: ""
+        }
+
+    };
+
+
+    /* ==================================================
+       GALERÍAS DE CAPTURAS
     ================================================== */
 
     const projectGalleries = {
+
         ingpro: [
             {
-                src: "assets/img/proyectos/ingpro/ingpro-portada.png",
-                alt: "Portada corporativa del sitio web de INGPRO",
+                src:
+                    `${assetsPath}/img/proyectos/ingpro/ingpro-portada.png`,
+
+                alt:
+                    "Portada corporativa del sitio web de INGPRO",
+
                 caption:
                     "Portada corporativa con carrusel, servicios principales y acceso directo a cotización."
             },
+
             {
-                src: "assets/img/proyectos/ingpro/ingpro-catalogo.png",
-                alt: "Visor del catálogo digital de INGPRO",
+                src:
+                    `${assetsPath}/img/proyectos/ingpro/ingpro-catalogo.png`,
+
+                alt:
+                    "Visor del catálogo digital de INGPRO",
+
                 caption:
-                    "Visor en línea del catálogo INGPRO 2026, con controles de navegación y descarga."
+                    "Visor en línea del catálogo INGPRO 2026, con navegación, zoom y descarga."
             },
+
             {
-                src: "assets/img/proyectos/ingpro/ingpro-formulario.png",
-                alt: "Formulario de cotización de INGPRO",
+                src:
+                    `${assetsPath}/img/proyectos/ingpro/ingpro-formulario.png`,
+
+                alt:
+                    "Formulario de cotización del sitio INGPRO",
+
                 caption:
-                    "Formulario organizado para solicitar antecedentes y evaluar requerimientos de clientes."
+                    "Formulario organizado para reunir los antecedentes necesarios y evaluar cada requerimiento."
             },
+
             {
-                src: "assets/img/proyectos/ingpro/ingpro-impresion-3d.png",
-                alt: "Carrusel de trabajos de impresión 3D de INGPRO",
+                src:
+                    `${assetsPath}/img/proyectos/ingpro/ingpro-impresion-3d.png`,
+
+                alt:
+                    "Carrusel de trabajos de impresión 3D de INGPRO",
+
                 caption:
-                    "Carrusel automático para presentar trabajos reales de impresión 3D."
+                    "Carrusel visual utilizado para presentar proyectos reales de impresión 3D."
             },
+
             {
-                src: "assets/img/proyectos/ingpro/ingpro-trabajos-metal.png",
-                alt: "Galería de trabajos metálicos realizados por INGPRO",
+                src:
+                    `${assetsPath}/img/proyectos/ingpro/ingpro-trabajos-metal.png`,
+
+                alt:
+                    "Galería de trabajos metálicos desarrollados por INGPRO",
+
                 caption:
-                    "Galería visual de proyectos realizados en metal y corte CNC."
+                    "Galería de proyectos realizados en metal mediante corte CNC y plasma."
             },
+
             {
-                src: "assets/img/proyectos/ingpro/ingpro-cnc-router.png",
-                alt: "Proyectos CNC Router desarrollados por INGPRO",
+                src:
+                    `${assetsPath}/img/proyectos/ingpro/ingpro-cnc-router.png`,
+
+                alt:
+                    "Proyectos desarrollados con CNC Router",
+
                 caption:
-                    "Carrusel de proyectos en madera, MDF y otros materiales mecanizables."
+                    "Presentación de trabajos desarrollados en madera, MDF y otros materiales mecanizables."
             },
+
             {
-                src: "assets/img/proyectos/ingpro/ingpro-vista-movil.png",
-                alt: "Versión móvil responsiva del sitio web de INGPRO",
+                src:
+                    `${assetsPath}/img/proyectos/ingpro/ingpro-vista-movil.png`,
+
+                alt:
+                    "Vista responsiva para celular del sitio INGPRO",
+
                 caption:
-                    "Vista responsiva desde celular, con navegación móvil y contenido adaptado."
+                    "Versión responsiva desde celular, con menú móvil y contenido adaptado."
             }
         ]
+
     };
+
+
+    /* ==================================================
+       ELEMENTOS DEL MODAL
+    ================================================== */
+
+    const projectModal =
+        document.getElementById("projectModal");
+
+    const projectModalTitle =
+        document.getElementById("projectModalTitle");
+
+    const projectModalCategory =
+        document.getElementById("projectModalCategory");
+
+    const projectModalDescription =
+        document.getElementById("projectModalDescription");
+
+    const projectModalTechnologies =
+        document.getElementById(
+            "projectModalTechnologies"
+        );
+
+    const projectModalLink =
+        document.getElementById("projectModalLink");
+
+    const projectModalClose =
+        document.getElementById("projectModalClose");
+
+    const projectButtons =
+        document.querySelectorAll(
+            ".project-details-button"
+        );
+
+    const modalCloseElements =
+        document.querySelectorAll(
+            "[data-modal-close]"
+        );
 
 
     /* ==================================================
        ELEMENTOS DE LA GALERÍA
     ================================================== */
-
-    const projectModal =
-        document.getElementById("projectModal");
 
     const projectGallery =
         document.getElementById("projectGallery");
@@ -68,57 +281,128 @@ document.addEventListener("DOMContentLoaded", () => {
         );
 
     const projectModalMockup =
-        document.getElementById("projectModalMockup");
-
-    const projectGalleryImage =
-        document.getElementById("projectGalleryImage");
-
-    const projectGalleryCaption =
-        document.getElementById("projectGalleryCaption");
-
-    const projectGalleryCounter =
-        document.getElementById("projectGalleryCounter");
-
-    const projectGalleryDots =
-        document.getElementById("projectGalleryDots");
-
-    const previousButton =
-        document.querySelector("[data-gallery-previous]");
-
-    const nextButton =
-        document.querySelector("[data-gallery-next]");
-
-    const projectButtons =
-        document.querySelectorAll(
-            ".project-details-button"
+        document.getElementById(
+            "projectModalMockup"
         );
 
-    let currentImages = [];
-    let currentImageIndex = 0;
-    let pointerStartX = 0;
-    let galleryInterval = null;
+    const projectGalleryImage =
+        document.getElementById(
+            "projectGalleryImage"
+        );
 
-    const prefersReducedMotion = window.matchMedia(
-        "(prefers-reduced-motion: reduce)"
-    ).matches;
+    const projectGalleryCaption =
+        document.getElementById(
+            "projectGalleryCaption"
+        );
+
+    const projectGalleryCounter =
+        document.getElementById(
+            "projectGalleryCounter"
+        );
+
+    const projectGalleryDots =
+        document.getElementById(
+            "projectGalleryDots"
+        );
+
+    const previousButton =
+        document.querySelector(
+            "[data-gallery-previous]"
+        );
+
+    const nextButton =
+        document.querySelector(
+            "[data-gallery-next]"
+        );
 
 
     /* ==================================================
-       CONTROL AUTOMÁTICO
+       VARIABLES DE CONTROL
+    ================================================== */
+
+    let currentImages = [];
+    let currentImageIndex = 0;
+    let galleryInterval = null;
+    let pointerStartX = 0;
+    let lastFocusedElement = null;
+
+    const autoplayTime = 4500;
+
+    const prefersReducedMotion =
+        window.matchMedia(
+            "(prefers-reduced-motion: reduce)"
+        ).matches;
+
+
+    /* ==================================================
+       COMPROBAR QUE EL HTML ESTÉ COMPLETO
+    ================================================== */
+
+    if (
+        !projectModal ||
+        !projectModalTitle ||
+        !projectModalCategory ||
+        !projectModalDescription ||
+        !projectModalTechnologies
+    ) {
+        console.error(
+            "No se encontraron todos los elementos del modal de proyectos."
+        );
+
+        return;
+    }
+
+
+    /* ==================================================
+       COMPROBAR SI EL MODAL ESTÁ ABIERTO
+    ================================================== */
+
+    function modalIsOpen() {
+
+        return (
+            projectModal.classList.contains(
+                "active"
+            ) ||
+            projectModal.classList.contains(
+                "open"
+            ) ||
+            projectModal.classList.contains(
+                "is-open"
+            ) ||
+            projectModal.getAttribute(
+                "aria-hidden"
+            ) === "false"
+        );
+
+    }
+
+
+    /* ==================================================
+       DETENER CARRUSEL AUTOMÁTICO
     ================================================== */
 
     function stopGalleryAutoplay() {
+
         if (galleryInterval !== null) {
-            clearInterval(galleryInterval);
+
+            window.clearInterval(
+                galleryInterval
+            );
+
             galleryInterval = null;
+
         }
+
     }
 
-    function startGalleryAutoplay() {
-        stopGalleryAutoplay();
 
-        const modalIsOpen =
-            projectModal?.classList.contains("active");
+    /* ==================================================
+       INICIAR CARRUSEL AUTOMÁTICO
+    ================================================== */
+
+    function startGalleryAutoplay() {
+
+        stopGalleryAutoplay();
 
         const galleryIsVisible =
             projectGallery &&
@@ -126,20 +410,22 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if (
             prefersReducedMotion ||
-            !modalIsOpen ||
+            !modalIsOpen() ||
             !galleryIsVisible ||
             currentImages.length < 2
         ) {
             return;
         }
 
-        galleryInterval = window.setInterval(() => {
-            showGalleryImage(currentImageIndex + 1);
-        }, 4500);
-    }
+        galleryInterval =
+            window.setInterval(() => {
 
-    function resetGalleryAutoplay() {
-        startGalleryAutoplay();
+                showGalleryImage(
+                    currentImageIndex + 1
+                );
+
+            }, autoplayTime);
+
     }
 
 
@@ -148,6 +434,7 @@ document.addEventListener("DOMContentLoaded", () => {
     ================================================== */
 
     function showGalleryImage(index) {
+
         if (
             currentImages.length === 0 ||
             !projectGalleryImage ||
@@ -158,84 +445,169 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         currentImageIndex =
-            ((index % currentImages.length) +
-                currentImages.length) %
+            (
+                (
+                    index %
+                    currentImages.length
+                ) +
+                currentImages.length
+            ) %
             currentImages.length;
 
-        const currentImage =
-            currentImages[currentImageIndex];
+        const selectedImage =
+            currentImages[
+                currentImageIndex
+            ];
 
-        projectGalleryImage.style.opacity = "0";
+        projectGalleryImage.style.opacity =
+            "0";
 
         window.setTimeout(() => {
+
             projectGalleryImage.src =
-                currentImage.src;
+                selectedImage.src;
 
             projectGalleryImage.alt =
-                currentImage.alt;
+                selectedImage.alt;
 
             projectGalleryCaption.textContent =
-                currentImage.caption;
+                selectedImage.caption;
 
             projectGalleryCounter.textContent =
                 `${currentImageIndex + 1} / ${currentImages.length}`;
 
-            projectGalleryImage.style.opacity = "1";
+            projectGalleryImage.style.opacity =
+                "1";
+
         }, 120);
+
 
         const dots =
             projectGalleryDots?.querySelectorAll(
                 ".project-gallery__dot"
             );
 
-        dots?.forEach((dot, dotIndex) => {
-            const isActive =
-                dotIndex === currentImageIndex;
+        dots?.forEach(
+            (dot, dotIndex) => {
 
-            dot.classList.toggle(
-                "active",
-                isActive
-            );
+                const isActive =
+                    dotIndex ===
+                    currentImageIndex;
 
-            dot.setAttribute(
-                "aria-current",
-                isActive ? "true" : "false"
-            );
-        });
+                dot.classList.toggle(
+                    "active",
+                    isActive
+                );
+
+                dot.setAttribute(
+                    "aria-current",
+                    isActive
+                        ? "true"
+                        : "false"
+                );
+
+            }
+        );
+
     }
 
 
     /* ==================================================
-       CREAR LOS PUNTOS
+       CREAR PUNTOS DE LA GALERÍA
     ================================================== */
 
     function renderGalleryDots() {
+
         if (!projectGalleryDots) {
             return;
         }
 
         projectGalleryDots.innerHTML = "";
 
-        currentImages.forEach((image, index) => {
-            const dot =
-                document.createElement("button");
+        currentImages.forEach(
+            (image, index) => {
 
-            dot.type = "button";
-            dot.className =
-                "project-gallery__dot";
+                const dot =
+                    document.createElement(
+                        "button"
+                    );
 
-            dot.setAttribute(
-                "aria-label",
-                `Mostrar captura ${index + 1}: ${image.alt}`
+                dot.type = "button";
+
+                dot.className =
+                    "project-gallery__dot";
+
+                dot.setAttribute(
+                    "aria-label",
+                    `Mostrar captura ${index + 1}: ${image.alt}`
+                );
+
+                dot.addEventListener(
+                    "click",
+                    () => {
+
+                        showGalleryImage(
+                            index
+                        );
+
+                        startGalleryAutoplay();
+
+                    }
+                );
+
+                projectGalleryDots.appendChild(
+                    dot
+                );
+
+            }
+        );
+
+    }
+
+
+    /* ==================================================
+       LIMPIAR GALERÍA
+    ================================================== */
+
+    function clearProjectGallery() {
+
+        stopGalleryAutoplay();
+
+        currentImages = [];
+        currentImageIndex = 0;
+
+        if (projectGallery) {
+            projectGallery.hidden = true;
+        }
+
+        if (projectModalMockup) {
+            projectModalMockup.hidden = false;
+        }
+
+        if (projectGalleryImage) {
+
+            projectGalleryImage.removeAttribute(
+                "src"
             );
 
-            dot.addEventListener("click", () => {
-                showGalleryImage(index);
-                resetGalleryAutoplay();
-            });
+            projectGalleryImage.alt = "";
 
-            projectGalleryDots.appendChild(dot);
-        });
+        }
+
+        if (projectGalleryCaption) {
+            projectGalleryCaption.textContent =
+                "";
+        }
+
+        if (projectGalleryCounter) {
+            projectGalleryCounter.textContent =
+                "";
+        }
+
+        if (projectGalleryDots) {
+            projectGalleryDots.innerHTML = "";
+        }
+
     }
 
 
@@ -244,6 +616,7 @@ document.addEventListener("DOMContentLoaded", () => {
     ================================================== */
 
     function loadProjectGallery(projectId) {
+
         stopGalleryAutoplay();
 
         currentImages =
@@ -251,70 +624,286 @@ document.addEventListener("DOMContentLoaded", () => {
 
         currentImageIndex = 0;
 
-        const hasImages =
-            currentImages.length > 0;
+        if (currentImages.length === 0) {
+
+            clearProjectGallery();
+            return;
+
+        }
 
         if (projectGallery) {
-            projectGallery.hidden = !hasImages;
+            projectGallery.hidden = false;
         }
 
         if (projectModalMockup) {
-            projectModalMockup.hidden = hasImages;
-        }
-
-        if (!hasImages) {
-            projectGalleryImage?.removeAttribute(
-                "src"
-            );
-
-            if (projectGalleryDots) {
-                projectGalleryDots.innerHTML = "";
-            }
-
-            return;
+            projectModalMockup.hidden = true;
         }
 
         renderGalleryDots();
         showGalleryImage(0);
 
-        /*
-         * Esperamos a que el modal termine de abrirse.
-         */
-        window.setTimeout(
-            startGalleryAutoplay,
-            350
-        );
     }
 
 
     /* ==================================================
-       CONTROLES MANUALES
+       COMPLETAR INFORMACIÓN DEL MODAL
     ================================================== */
 
-    previousButton?.addEventListener("click", () => {
-        showGalleryImage(currentImageIndex - 1);
-        resetGalleryAutoplay();
-    });
+    function renderProjectInformation(
+        projectId
+    ) {
 
-    nextButton?.addEventListener("click", () => {
-        showGalleryImage(currentImageIndex + 1);
-        resetGalleryAutoplay();
-    });
+        const selectedProject =
+            projectData[projectId];
+
+        if (!selectedProject) {
+
+            console.error(
+                `No existe información para el proyecto: ${projectId}`
+            );
+
+            return false;
+
+        }
+
+        projectModalCategory.textContent =
+            selectedProject.category;
+
+        projectModalTitle.textContent =
+            selectedProject.title;
+
+        projectModalDescription.textContent =
+            selectedProject.description;
+
+        projectModalTechnologies.innerHTML =
+            "";
+
+        selectedProject.technologies.forEach(
+            (technology) => {
+
+                const technologyElement =
+                    document.createElement(
+                        "span"
+                    );
+
+                technologyElement.textContent =
+                    technology;
+
+                projectModalTechnologies.appendChild(
+                    technologyElement
+                );
+
+            }
+        );
+
+
+        if (
+            projectModalLink &&
+            selectedProject.url
+        ) {
+
+            projectModalLink.href =
+                selectedProject.url;
+
+            projectModalLink.hidden = false;
+
+        } else if (projectModalLink) {
+
+            projectModalLink.hidden = true;
+
+            projectModalLink.removeAttribute(
+                "href"
+            );
+
+        }
+
+        return true;
+
+    }
+
+
+    /* ==================================================
+       ABRIR MODAL
+    ================================================== */
+
+    function openProjectModal(projectId) {
+
+        const projectExists =
+            renderProjectInformation(
+                projectId
+            );
+
+        if (!projectExists) {
+            return;
+        }
+
+        lastFocusedElement =
+            document.activeElement instanceof
+            HTMLElement
+                ? document.activeElement
+                : null;
+
+        loadProjectGallery(projectId);
+
+        projectModal.hidden = false;
+
+        projectModal.setAttribute(
+            "aria-hidden",
+            "false"
+        );
+
+        /*
+         * Se agregan las tres clases para que funcione
+         * aunque el CSS anterior use un nombre distinto.
+         */
+
+        projectModal.classList.add(
+            "active",
+            "open",
+            "is-open"
+        );
+
+        document.body.classList.add(
+            "modal-open"
+        );
+
+        document.body.style.overflow =
+            "hidden";
+
+        window.setTimeout(() => {
+
+            projectModalClose?.focus();
+
+            startGalleryAutoplay();
+
+        }, 250);
+
+    }
+
+
+    /* ==================================================
+       CERRAR MODAL
+    ================================================== */
+
+    function closeProjectModal() {
+
+        stopGalleryAutoplay();
+
+        projectModal.classList.remove(
+            "active",
+            "open",
+            "is-open"
+        );
+
+        projectModal.setAttribute(
+            "aria-hidden",
+            "true"
+        );
+
+        document.body.classList.remove(
+            "modal-open"
+        );
+
+        document.body.style.overflow = "";
+
+        window.setTimeout(() => {
+
+            lastFocusedElement?.focus();
+
+        }, 150);
+
+    }
+
+
+    /* ==================================================
+       ABRIR DESDE LOS BOTONES
+    ================================================== */
 
     projectButtons.forEach((button) => {
-        button.addEventListener("click", () => {
-            const projectId =
-                button.dataset.project;
 
-            if (projectId) {
-                loadProjectGallery(projectId);
+        button.addEventListener(
+            "click",
+            (event) => {
+
+                event.preventDefault();
+
+                const projectId =
+                    button.dataset.project;
+
+                if (!projectId) {
+
+                    console.error(
+                        "El botón no tiene data-project."
+                    );
+
+                    return;
+
+                }
+
+                openProjectModal(
+                    projectId
+                );
+
             }
-        });
+        );
+
     });
 
 
     /* ==================================================
-       PAUSAR AL COLOCAR EL CURSOR
+       CERRAR CON BOTÓN Y FONDO
+    ================================================== */
+
+    modalCloseElements.forEach(
+        (closeElement) => {
+
+            closeElement.addEventListener(
+                "click",
+                closeProjectModal
+            );
+
+        }
+    );
+
+
+    /* ==================================================
+       FLECHA ANTERIOR
+    ================================================== */
+
+    previousButton?.addEventListener(
+        "click",
+        () => {
+
+            showGalleryImage(
+                currentImageIndex - 1
+            );
+
+            startGalleryAutoplay();
+
+        }
+    );
+
+
+    /* ==================================================
+       FLECHA SIGUIENTE
+    ================================================== */
+
+    nextButton?.addEventListener(
+        "click",
+        () => {
+
+            showGalleryImage(
+                currentImageIndex + 1
+            );
+
+            startGalleryAutoplay();
+
+        }
+    );
+
+
+    /* ==================================================
+       PAUSAR CON EL CURSOR
     ================================================== */
 
     projectGalleryViewport?.addEventListener(
@@ -327,129 +916,132 @@ document.addEventListener("DOMContentLoaded", () => {
         startGalleryAutoplay
     );
 
-    projectGalleryViewport?.addEventListener(
-        "focusin",
-        stopGalleryAutoplay
-    );
-
-    projectGalleryViewport?.addEventListener(
-        "focusout",
-        startGalleryAutoplay
-    );
-
 
     /* ==================================================
-       FLECHAS DEL TECLADO
-    ================================================== */
-
-    document.addEventListener("keydown", (event) => {
-        const modalIsOpen =
-            projectModal?.classList.contains(
-                "active"
-            );
-
-        const galleryIsVisible =
-            projectGallery &&
-            !projectGallery.hidden;
-
-        if (!modalIsOpen || !galleryIsVisible) {
-            return;
-        }
-
-        if (event.key === "ArrowLeft") {
-            showGalleryImage(
-                currentImageIndex - 1
-            );
-
-            resetGalleryAutoplay();
-        }
-
-        if (event.key === "ArrowRight") {
-            showGalleryImage(
-                currentImageIndex + 1
-            );
-
-            resetGalleryAutoplay();
-        }
-
-        if (event.key === "Escape") {
-            stopGalleryAutoplay();
-        }
-    });
-
-
-    /* ==================================================
-       DESLIZAR EN PANTALLAS TÁCTILES
+       DESLIZAR EN PANTALLA TÁCTIL
     ================================================== */
 
     projectGalleryImage?.addEventListener(
         "pointerdown",
         (event) => {
-            pointerStartX = event.clientX;
+
+            pointerStartX =
+                event.clientX;
+
             stopGalleryAutoplay();
+
         }
     );
 
     projectGalleryImage?.addEventListener(
         "pointerup",
         (event) => {
-            const pointerDifference =
-                event.clientX - pointerStartX;
 
-            if (Math.abs(pointerDifference) >= 45) {
-                if (pointerDifference > 0) {
+            const difference =
+                event.clientX -
+                pointerStartX;
+
+            if (
+                Math.abs(difference) >= 45
+            ) {
+
+                if (difference > 0) {
+
                     showGalleryImage(
                         currentImageIndex - 1
                     );
+
                 } else {
+
                     showGalleryImage(
                         currentImageIndex + 1
                     );
+
                 }
+
             }
 
-            resetGalleryAutoplay();
+            startGalleryAutoplay();
+
+        }
+    );
+
+    projectGalleryImage?.addEventListener(
+        "dragstart",
+        (event) => {
+
+            event.preventDefault();
+
         }
     );
 
 
     /* ==================================================
-       DETECTAR CUANDO SE CIERRA EL MODAL
+       CONTROL CON TECLADO
     ================================================== */
 
-    if (projectModal) {
-        const modalObserver = new MutationObserver(() => {
-            const modalIsOpen =
-                projectModal.classList.contains(
-                    "active"
+    document.addEventListener(
+        "keydown",
+        (event) => {
+
+            if (!modalIsOpen()) {
+                return;
+            }
+
+            if (event.key === "Escape") {
+
+                closeProjectModal();
+
+            }
+
+            if (
+                event.key === "ArrowLeft" &&
+                currentImages.length > 0
+            ) {
+
+                showGalleryImage(
+                    currentImageIndex - 1
                 );
 
-            if (modalIsOpen) {
                 startGalleryAutoplay();
-            } else {
-                stopGalleryAutoplay();
-            }
-        });
 
-        modalObserver.observe(projectModal, {
-            attributes: true,
-            attributeFilter: ["class"]
-        });
-    }
+            }
+
+            if (
+                event.key === "ArrowRight" &&
+                currentImages.length > 0
+            ) {
+
+                showGalleryImage(
+                    currentImageIndex + 1
+                );
+
+                startGalleryAutoplay();
+
+            }
+
+        }
+    );
 
 
     /* ==================================================
-       PAUSAR SI SE CAMBIA DE PESTAÑA
+       PAUSAR CUANDO SE CAMBIA DE PESTAÑA
     ================================================== */
 
     document.addEventListener(
         "visibilitychange",
         () => {
+
             if (document.hidden) {
+
                 stopGalleryAutoplay();
-            } else {
+
+            } else if (modalIsOpen()) {
+
                 startGalleryAutoplay();
+
             }
+
         }
     );
 
