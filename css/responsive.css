@@ -1537,3 +1537,431 @@
         font-size: 0.62rem;
     }
 }
+/* ==================================================
+   RESPONSIVE: CÓMO TRABAJO
+================================================== */
+
+@media (max-width: 1050px) {
+
+    .work-principles__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .work-commitment__layout {
+        grid-template-columns: 1fr;
+    }
+
+    .work-commitment__content {
+        max-width: 800px;
+    }
+
+    .work-final__content {
+        grid-template-columns: 1fr;
+    }
+
+    .work-final__actions {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}
+
+
+@media (max-width: 900px) {
+
+    .work-hero-visual {
+        width: min(100%, 560px);
+        margin: 0 auto;
+    }
+
+    .work-process__header {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .work-responsibilities__grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media (max-width: 700px) {
+
+    .work-hero-visual {
+        min-height: 410px;
+    }
+
+    .work-hero-visual::before {
+        width: 330px;
+        height: 330px;
+    }
+
+    .work-hero-visual::after {
+        width: 245px;
+        height: 245px;
+    }
+
+    .work-hero-visual__center {
+        width: 175px;
+        height: 175px;
+    }
+
+    .work-hero-visual__center img {
+        width: 112px;
+        height: 112px;
+    }
+
+    .work-orbit {
+        min-width: 110px;
+        padding: 10px 12px;
+    }
+
+    .work-orbit--one {
+        top: 25px;
+        left: 0;
+    }
+
+    .work-orbit--two {
+        top: 90px;
+        right: 0;
+    }
+
+    .work-orbit--three {
+        right: 0;
+        bottom: 65px;
+    }
+
+    .work-orbit--four {
+        bottom: 20px;
+        left: 0;
+    }
+
+    .work-principles {
+        margin-top: -20px;
+    }
+
+    .work-step {
+        grid-template-columns: 58px 1fr;
+        gap: 15px;
+    }
+
+    .work-timeline::before {
+        left: 28px;
+    }
+
+    .work-step__marker {
+        width: 58px;
+        height: 58px;
+    }
+
+    .work-step__marker span {
+        width: 43px;
+        height: 43px;
+
+        font-size: 0.7rem;
+    }
+
+    .work-step__content {
+        padding: 23px 20px;
+    }
+
+    .work-step__heading {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .work-step h3 {
+        font-size: 1.18rem;
+        text-align: left;
+    }
+
+    .work-step ul {
+        grid-template-columns: 1fr;
+    }
+
+    .work-commitment__cards {
+        grid-template-columns: 1fr;
+    }
+
+    .work-role-card {
+        padding: 27px 23px;
+    }
+
+    .work-final {
+        padding: 65px 0;
+    }
+
+    .work-final__actions {
+        flex-direction: column;
+    }
+}
+
+
+@media (max-width: 460px) {
+
+    .work-hero-visual {
+        min-height: 365px;
+    }
+
+    .work-hero-visual::before {
+        width: 275px;
+        height: 275px;
+    }
+
+    .work-hero-visual::after {
+        width: 205px;
+        height: 205px;
+    }
+
+    .work-hero-visual__center {
+        width: 145px;
+        height: 145px;
+    }
+
+    .work-hero-visual__center img {
+        width: 92px;
+        height: 92px;
+    }
+
+    .work-hero-visual__center span {
+        font-size: 0.52rem;
+    }
+
+    .work-orbit {
+        min-width: 96px;
+        padding: 8px 9px;
+        gap: 7px;
+    }
+
+    .work-orbit__number {
+        width: 27px;
+        height: 27px;
+
+        font-size: 0.56rem;
+    }
+
+    .work-orbit strong {
+        font-size: 0.65rem;
+    }
+
+    .work-step {
+        grid-template-columns: 45px 1fr;
+        gap: 10px;
+    }
+
+    .work-timeline::before {
+        left: 22px;
+    }
+
+    .work-step__marker {
+        width: 45px;
+        height: 45px;
+    }
+
+    .work-step__marker span {
+        width: 34px;
+        height: 34px;
+
+        font-size: 0.6rem;
+    }
+
+    .work-step__content {
+        padding: 20px 16px;
+        border-radius: 19px;
+    }
+
+    .work-principle {
+        padding: 20px;
+
+        grid-template-columns: 42px 1fr;
+    }
+
+    .work-principle__icon {
+        width: 42px;
+        height: 42px;
+    }
+}
+/* ==================================================
+   RESPONSIVE: CONTACTO
+================================================== */
+
+@media (max-width: 1050px) {
+
+    .contact-form-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-form-introduction {
+        max-width: 800px;
+    }
+
+    .contact-trust__layout {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-trust__content {
+        max-width: 800px;
+    }
+
+    .contact-final__content {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media (max-width: 900px) {
+
+    .contact-hero-visual {
+        width: min(100%, 570px);
+        margin: 0 auto;
+    }
+
+    .contact-channels__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-channel {
+        min-height: auto;
+    }
+}
+
+
+@media (max-width: 700px) {
+
+    .contact-hero-visual {
+        min-height: 420px;
+    }
+
+    .contact-hero-visual::before {
+        width: 310px;
+        height: 310px;
+    }
+
+    .contact-hero-visual__seal {
+        width: 190px;
+        height: 190px;
+    }
+
+    .contact-hero-visual__seal img {
+        width: 145px;
+        height: 145px;
+    }
+
+    .contact-message {
+        width: min(245px, 70%);
+        padding: 11px 13px;
+
+        grid-template-columns: 34px 1fr;
+    }
+
+    .contact-message>span {
+        width: 34px;
+        height: 34px;
+    }
+
+    .contact-message--one {
+        top: 25px;
+        left: 0;
+    }
+
+    .contact-message--two {
+        top: 165px;
+        right: 0;
+    }
+
+    .contact-message--three {
+        bottom: 25px;
+        left: 0;
+    }
+
+    .contact-form__row {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-form {
+        padding: 24px 20px;
+    }
+
+    .contact-trust__cards {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-final {
+        padding: 65px 0;
+    }
+}
+
+
+@media (max-width: 460px) {
+
+    .contact-hero-visual {
+        min-height: 375px;
+    }
+
+    .contact-hero-visual::before {
+        width: 255px;
+        height: 255px;
+    }
+
+    .contact-hero-visual__seal {
+        width: 155px;
+        height: 155px;
+    }
+
+    .contact-hero-visual__seal img {
+        width: 118px;
+        height: 118px;
+    }
+
+    .contact-message {
+        width: 215px;
+        max-width: 72%;
+
+        grid-template-columns: 30px 1fr;
+        gap: 8px;
+    }
+
+    .contact-message>span {
+        width: 30px;
+        height: 30px;
+
+        font-size: 0.55rem;
+    }
+
+    .contact-message strong {
+        font-size: 0.68rem;
+    }
+
+    .contact-message small {
+        font-size: 0.56rem;
+    }
+
+    .contact-channel {
+        padding: 22px;
+    }
+
+    .contact-form-card {
+        border-radius: 21px;
+    }
+
+    .contact-form {
+        padding: 21px 16px;
+    }
+
+    .contact-form input,
+    .contact-form select,
+    .contact-form textarea {
+        padding: 13px;
+    }
+
+    .contact-form-guide article,
+    .contact-form-security {
+        grid-template-columns: 38px 1fr;
+    }
+
+    .contact-form-guide article>span,
+    .contact-form-security__icon {
+        width: 38px;
+        height: 38px;
+    }
+}

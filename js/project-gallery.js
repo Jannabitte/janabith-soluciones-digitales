@@ -2,10 +2,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     /* ==================================================
        RUTA DE RECURSOS
-
-       Permite utilizar este archivo desde:
-       - index.html
-       - pages/portafolio.html
     ================================================== */
 
     const assetsPath =
@@ -23,10 +19,8 @@ document.addEventListener("DOMContentLoaded", () => {
         ingpro: {
             category: "Proyecto corporativo publicado",
             title: "INGPRO",
-
             description:
                 "Sitio corporativo multipágina desarrollado para presentar servicios de corte CNC y plasma, grabado láser, impresión 3D, CNC Router, equipos industriales, cursos, catálogo digital y canales de cotización.",
-
             technologies: [
                 "HTML",
                 "CSS",
@@ -35,18 +29,14 @@ document.addEventListener("DOMContentLoaded", () => {
                 "Netlify",
                 "Dominio propio"
             ],
-
             url: "https://ingpro.cl"
         },
-
 
         "el-chinito": {
             category: "Proyecto para cliente",
             title: "Minimarket El Chinito",
-
             description:
                 "Página web desarrollada para organizar y presentar los productos de un minimarket. Incorpora categorías, carrito de compras, favoritos, ubicación, horarios, Caja Vecina y preparación de pedidos para retiro presencial.",
-
             technologies: [
                 "HTML",
                 "CSS",
@@ -55,38 +45,30 @@ document.addEventListener("DOMContentLoaded", () => {
                 "Netlify Forms",
                 "Diseño responsivo"
             ],
-
             url: ""
         },
-
 
         "killerr-store": {
             category: "Proyecto para clienta",
             title: "Killerr Store",
-
             description:
-                "Tienda web de estilo dark y rosado para presentar ropa, calzado, accesorios, bordados y confecciones propias. Incluye catálogo visual, carruseles y consultas directas mediante Instagram.",
-
+                "Página web de estilo dark enfocada en la venta de zapatos negros, botines y botas con plataforma, con una estética alternativa y consultas directas mediante Instagram.",
             technologies: [
                 "HTML",
                 "CSS",
                 "JavaScript",
-                "Carruseles",
-                "Instagram",
-                "Diseño responsivo"
+                "Zapatos negros",
+                "Botines",
+                "Botas con plataforma"
             ],
-
             url: ""
         },
-
 
         "onevet-store": {
             category: "Proyecto académico",
             title: "OneVet Store",
-
             description:
                 "Tienda web educativa que combina programación y medicina veterinaria. Presenta productos, servicios, contenido sobre salud animal, prevención de zoonosis, carrito y favoritos.",
-
             technologies: [
                 "HTML",
                 "CSS",
@@ -95,18 +77,14 @@ document.addEventListener("DOMContentLoaded", () => {
                 "Favoritos",
                 "Medicina veterinaria"
             ],
-
             url: ""
         },
-
 
         "onevet-api": {
             category: "Proyecto Java Full Stack",
             title: "OneVet API",
-
             description:
                 "Aplicación desarrollada con Java y Spring Boot para administrar productos veterinarios mediante una API REST conectada a una base de datos H2 y consumida desde una interfaz web.",
-
             technologies: [
                 "Java",
                 "Spring Boot",
@@ -115,18 +93,14 @@ document.addEventListener("DOMContentLoaded", () => {
                 "Fetch",
                 "Arquitectura por capas"
             ],
-
             url: ""
         },
-
 
         "java-apps": {
             category: "Formación Java Full Stack",
             title: "Sistemas y aplicaciones Java",
-
             description:
                 "Conjunto de aplicaciones desarrolladas para aplicar programación orientada a objetos, encapsulación, herencia, polimorfismo, colecciones, manejo de excepciones, interfaces gráficas y organización del código.",
-
             technologies: [
                 "Java",
                 "POO",
@@ -135,7 +109,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 "Colecciones",
                 "Swing"
             ],
-
             url: ""
         }
 
@@ -143,89 +116,70 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     /* ==================================================
-       GALERÍAS DE CAPTURAS
+       GALERÍAS DE IMÁGENES
     ================================================== */
 
     const projectGalleries = {
 
         ingpro: [
             {
-                src:
-                    `${assetsPath}/img/proyectos/ingpro/ingpro-portada.png`,
-
-                alt:
-                    "Portada corporativa del sitio web de INGPRO",
-
+                src: `${assetsPath}/img/proyectos/ingpro/ingpro-portada.png`,
+                alt: "Portada corporativa del sitio web de INGPRO",
                 caption:
                     "Portada corporativa con carrusel, servicios principales y acceso directo a cotización."
             },
-
             {
-                src:
-                    `${assetsPath}/img/proyectos/ingpro/ingpro-catalogo.png`,
-
-                alt:
-                    "Visor del catálogo digital de INGPRO",
-
+                src: `${assetsPath}/img/proyectos/ingpro/ingpro-catalogo.png`,
+                alt: "Visor del catálogo digital de INGPRO",
                 caption:
                     "Visor en línea del catálogo INGPRO 2026, con navegación, zoom y descarga."
             },
-
             {
-                src:
-                    `${assetsPath}/img/proyectos/ingpro/ingpro-formulario.png`,
-
-                alt:
-                    "Formulario de cotización del sitio INGPRO",
-
+                src: `${assetsPath}/img/proyectos/ingpro/ingpro-formulario.png`,
+                alt: "Formulario de cotización del sitio INGPRO",
                 caption:
                     "Formulario organizado para reunir los antecedentes necesarios y evaluar cada requerimiento."
             },
-
             {
-                src:
-                    `${assetsPath}/img/proyectos/ingpro/ingpro-impresion-3d.png`,
-
-                alt:
-                    "Carrusel de trabajos de impresión 3D de INGPRO",
-
+                src: `${assetsPath}/img/proyectos/ingpro/ingpro-impresion-3d.png`,
+                alt: "Carrusel de trabajos de impresión 3D de INGPRO",
                 caption:
                     "Carrusel visual utilizado para presentar proyectos reales de impresión 3D."
             },
-
             {
-                src:
-                    `${assetsPath}/img/proyectos/ingpro/ingpro-trabajos-metal.png`,
-
-                alt:
-                    "Galería de trabajos metálicos desarrollados por INGPRO",
-
+                src: `${assetsPath}/img/proyectos/ingpro/ingpro-trabajos-metal.png`,
+                alt: "Galería de trabajos metálicos desarrollados por INGPRO",
                 caption:
                     "Galería de proyectos realizados en metal mediante corte CNC y plasma."
             },
-
             {
-                src:
-                    `${assetsPath}/img/proyectos/ingpro/ingpro-cnc-router.png`,
-
-                alt:
-                    "Proyectos desarrollados con CNC Router",
-
+                src: `${assetsPath}/img/proyectos/ingpro/ingpro-cnc-router.png`,
+                alt: "Proyectos desarrollados con CNC Router",
                 caption:
                     "Presentación de trabajos desarrollados en madera, MDF y otros materiales mecanizables."
             },
-
             {
-                src:
-                    `${assetsPath}/img/proyectos/ingpro/ingpro-vista-movil.png`,
-
-                alt:
-                    "Vista responsiva para celular del sitio INGPRO",
-
+                src: `${assetsPath}/img/proyectos/ingpro/ingpro-vista-movil.png`,
+                alt: "Vista responsiva para celular del sitio INGPRO",
                 caption:
                     "Versión responsiva desde celular, con menú móvil y contenido adaptado."
             }
         ]
+
+    };
+
+
+    /* ==================================================
+       VIDEOS DE PROYECTOS
+    ================================================== */
+
+    const projectVideos = {
+
+        "killerr-store": {
+            src: `${assetsPath}/video/proyectos/killerr-store/killerr-store-demo.mp4`,
+            caption:
+                "Video de presentación de Killerr Store, enfocado en la venta de zapatos negros, botines y botas con plataforma."
+        }
 
     };
 
@@ -247,9 +201,7 @@ document.addEventListener("DOMContentLoaded", () => {
         document.getElementById("projectModalDescription");
 
     const projectModalTechnologies =
-        document.getElementById(
-            "projectModalTechnologies"
-        );
+        document.getElementById("projectModalTechnologies");
 
     const projectModalLink =
         document.getElementById("projectModalLink");
@@ -258,14 +210,10 @@ document.addEventListener("DOMContentLoaded", () => {
         document.getElementById("projectModalClose");
 
     const projectButtons =
-        document.querySelectorAll(
-            ".project-details-button"
-        );
+        document.querySelectorAll(".project-details-button");
 
     const modalCloseElements =
-        document.querySelectorAll(
-            "[data-modal-close]"
-        );
+        document.querySelectorAll("[data-modal-close]");
 
 
     /* ==================================================
@@ -276,44 +224,42 @@ document.addEventListener("DOMContentLoaded", () => {
         document.getElementById("projectGallery");
 
     const projectGalleryViewport =
-        projectGallery?.querySelector(
-            ".project-gallery__viewport"
-        );
+        projectGallery?.querySelector(".project-gallery__viewport");
 
     const projectModalMockup =
-        document.getElementById(
-            "projectModalMockup"
-        );
+        document.getElementById("projectModalMockup");
 
     const projectGalleryImage =
-        document.getElementById(
-            "projectGalleryImage"
-        );
+        document.getElementById("projectGalleryImage");
 
     const projectGalleryCaption =
-        document.getElementById(
-            "projectGalleryCaption"
-        );
+        document.getElementById("projectGalleryCaption");
 
     const projectGalleryCounter =
-        document.getElementById(
-            "projectGalleryCounter"
-        );
+        document.getElementById("projectGalleryCounter");
 
     const projectGalleryDots =
-        document.getElementById(
-            "projectGalleryDots"
-        );
+        document.getElementById("projectGalleryDots");
 
     const previousButton =
-        document.querySelector(
-            "[data-gallery-previous]"
-        );
+        document.querySelector("[data-gallery-previous]");
 
     const nextButton =
-        document.querySelector(
-            "[data-gallery-next]"
-        );
+        document.querySelector("[data-gallery-next]");
+
+
+    /* ==================================================
+       ELEMENTOS DE VIDEO
+    ================================================== */
+
+    const projectVideo =
+        document.getElementById("projectVideo");
+
+    const projectVideoElement =
+        document.getElementById("projectVideoElement");
+
+    const projectVideoCaption =
+        document.getElementById("projectVideoCaption");
 
 
     /* ==================================================
@@ -329,13 +275,11 @@ document.addEventListener("DOMContentLoaded", () => {
     const autoplayTime = 4500;
 
     const prefersReducedMotion =
-        window.matchMedia(
-            "(prefers-reduced-motion: reduce)"
-        ).matches;
+        window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
 
     /* ==================================================
-       COMPROBAR QUE EL HTML ESTÉ COMPLETO
+       VALIDACIÓN BÁSICA
     ================================================== */
 
     if (
@@ -348,60 +292,31 @@ document.addEventListener("DOMContentLoaded", () => {
         console.error(
             "No se encontraron todos los elementos del modal de proyectos."
         );
-
         return;
     }
 
 
     /* ==================================================
-       COMPROBAR SI EL MODAL ESTÁ ABIERTO
+       UTILIDADES
     ================================================== */
 
     function modalIsOpen() {
-
         return (
-            projectModal.classList.contains(
-                "active"
-            ) ||
-            projectModal.classList.contains(
-                "open"
-            ) ||
-            projectModal.classList.contains(
-                "is-open"
-            ) ||
-            projectModal.getAttribute(
-                "aria-hidden"
-            ) === "false"
+            projectModal.classList.contains("active") ||
+            projectModal.classList.contains("open") ||
+            projectModal.classList.contains("is-open") ||
+            projectModal.getAttribute("aria-hidden") === "false"
         );
-
     }
-
-
-    /* ==================================================
-       DETENER CARRUSEL AUTOMÁTICO
-    ================================================== */
 
     function stopGalleryAutoplay() {
-
         if (galleryInterval !== null) {
-
-            window.clearInterval(
-                galleryInterval
-            );
-
+            window.clearInterval(galleryInterval);
             galleryInterval = null;
-
         }
-
     }
 
-
-    /* ==================================================
-       INICIAR CARRUSEL AUTOMÁTICO
-    ================================================== */
-
     function startGalleryAutoplay() {
-
         stopGalleryAutoplay();
 
         const galleryIsVisible =
@@ -417,24 +332,17 @@ document.addEventListener("DOMContentLoaded", () => {
             return;
         }
 
-        galleryInterval =
-            window.setInterval(() => {
-
-                showGalleryImage(
-                    currentImageIndex + 1
-                );
-
-            }, autoplayTime);
-
+        galleryInterval = window.setInterval(() => {
+            showGalleryImage(currentImageIndex + 1);
+        }, autoplayTime);
     }
 
 
     /* ==================================================
-       MOSTRAR UNA CAPTURA
+       GALERÍA DE IMÁGENES
     ================================================== */
 
     function showGalleryImage(index) {
-
         if (
             currentImages.length === 0 ||
             !projectGalleryImage ||
@@ -445,132 +353,64 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         currentImageIndex =
-            (
-                (
-                    index %
-                    currentImages.length
-                ) +
-                currentImages.length
-            ) %
-            currentImages.length;
+            (((index % currentImages.length) + currentImages.length) %
+                currentImages.length);
 
-        const selectedImage =
-            currentImages[
-                currentImageIndex
-            ];
+        const selectedImage = currentImages[currentImageIndex];
 
-        projectGalleryImage.style.opacity =
-            "0";
+        projectGalleryImage.style.opacity = "0";
 
         window.setTimeout(() => {
-
-            projectGalleryImage.src =
-                selectedImage.src;
-
-            projectGalleryImage.alt =
-                selectedImage.alt;
-
-            projectGalleryCaption.textContent =
-                selectedImage.caption;
-
+            projectGalleryImage.src = selectedImage.src;
+            projectGalleryImage.alt = selectedImage.alt;
+            projectGalleryCaption.textContent = selectedImage.caption;
             projectGalleryCounter.textContent =
                 `${currentImageIndex + 1} / ${currentImages.length}`;
-
-            projectGalleryImage.style.opacity =
-                "1";
-
+            projectGalleryImage.style.opacity = "1";
         }, 120);
 
-
         const dots =
-            projectGalleryDots?.querySelectorAll(
-                ".project-gallery__dot"
+            projectGalleryDots?.querySelectorAll(".project-gallery__dot");
+
+        dots?.forEach((dot, dotIndex) => {
+            const isActive = dotIndex === currentImageIndex;
+
+            dot.classList.toggle("active", isActive);
+            dot.setAttribute(
+                "aria-current",
+                isActive ? "true" : "false"
             );
-
-        dots?.forEach(
-            (dot, dotIndex) => {
-
-                const isActive =
-                    dotIndex ===
-                    currentImageIndex;
-
-                dot.classList.toggle(
-                    "active",
-                    isActive
-                );
-
-                dot.setAttribute(
-                    "aria-current",
-                    isActive
-                        ? "true"
-                        : "false"
-                );
-
-            }
-        );
-
+        });
     }
 
-
-    /* ==================================================
-       CREAR PUNTOS DE LA GALERÍA
-    ================================================== */
-
     function renderGalleryDots() {
-
         if (!projectGalleryDots) {
             return;
         }
 
         projectGalleryDots.innerHTML = "";
 
-        currentImages.forEach(
-            (image, index) => {
+        currentImages.forEach((image, index) => {
+            const dot = document.createElement("button");
 
-                const dot =
-                    document.createElement(
-                        "button"
-                    );
+            dot.type = "button";
+            dot.className = "project-gallery__dot";
 
-                dot.type = "button";
+            dot.setAttribute(
+                "aria-label",
+                `Mostrar captura ${index + 1}: ${image.alt}`
+            );
 
-                dot.className =
-                    "project-gallery__dot";
+            dot.addEventListener("click", () => {
+                showGalleryImage(index);
+                startGalleryAutoplay();
+            });
 
-                dot.setAttribute(
-                    "aria-label",
-                    `Mostrar captura ${index + 1}: ${image.alt}`
-                );
-
-                dot.addEventListener(
-                    "click",
-                    () => {
-
-                        showGalleryImage(
-                            index
-                        );
-
-                        startGalleryAutoplay();
-
-                    }
-                );
-
-                projectGalleryDots.appendChild(
-                    dot
-                );
-
-            }
-        );
-
+            projectGalleryDots.appendChild(dot);
+        });
     }
 
-
-    /* ==================================================
-       LIMPIAR GALERÍA
-    ================================================== */
-
     function clearProjectGallery() {
-
         stopGalleryAutoplay();
 
         currentImages = [];
@@ -580,145 +420,150 @@ document.addEventListener("DOMContentLoaded", () => {
             projectGallery.hidden = true;
         }
 
-        if (projectModalMockup) {
-            projectModalMockup.hidden = false;
-        }
-
         if (projectGalleryImage) {
-
-            projectGalleryImage.removeAttribute(
-                "src"
-            );
-
+            projectGalleryImage.removeAttribute("src");
             projectGalleryImage.alt = "";
-
         }
 
         if (projectGalleryCaption) {
-            projectGalleryCaption.textContent =
-                "";
+            projectGalleryCaption.textContent = "";
         }
 
         if (projectGalleryCounter) {
-            projectGalleryCounter.textContent =
-                "";
+            projectGalleryCounter.textContent = "";
         }
 
         if (projectGalleryDots) {
             projectGalleryDots.innerHTML = "";
         }
-
     }
 
-
-    /* ==================================================
-       CARGAR GALERÍA DEL PROYECTO
-    ================================================== */
-
     function loadProjectGallery(projectId) {
+        const images = projectGalleries[projectId] || [];
 
-        stopGalleryAutoplay();
+        clearProjectGallery();
+        clearProjectVideo();
 
-        currentImages =
-            projectGalleries[projectId] || [];
+        if (images.length === 0) {
+            return false;
+        }
 
+        currentImages = images;
         currentImageIndex = 0;
 
-        if (currentImages.length === 0) {
-
-            clearProjectGallery();
-            return;
-
+        if (projectModalMockup) {
+            projectModalMockup.hidden = true;
         }
 
         if (projectGallery) {
             projectGallery.hidden = false;
         }
 
-        if (projectModalMockup) {
-            projectModalMockup.hidden = true;
-        }
-
         renderGalleryDots();
         showGalleryImage(0);
 
+        return true;
     }
 
 
     /* ==================================================
-       COMPLETAR INFORMACIÓN DEL MODAL
+       VIDEO DE PROYECTOS
     ================================================== */
 
-    function renderProjectInformation(
-        projectId
-    ) {
-
-        const selectedProject =
-            projectData[projectId];
-
-        if (!selectedProject) {
-
-            console.error(
-                `No existe información para el proyecto: ${projectId}`
-            );
-
-            return false;
-
+    function clearProjectVideo() {
+        if (projectVideo) {
+            projectVideo.hidden = true;
         }
 
-        projectModalCategory.textContent =
-            selectedProject.category;
+        if (projectVideoCaption) {
+            projectVideoCaption.textContent = "";
+        }
 
-        projectModalTitle.textContent =
-            selectedProject.title;
+        if (projectVideoElement) {
+            projectVideoElement.pause();
+            projectVideoElement.removeAttribute("src");
+            projectVideoElement.load();
+        }
+    }
 
-        projectModalDescription.textContent =
-            selectedProject.description;
+    function loadProjectVideo(projectId) {
+        const selectedVideo = projectVideos[projectId];
 
-        projectModalTechnologies.innerHTML =
-            "";
+        clearProjectGallery();
+        clearProjectVideo();
 
-        selectedProject.technologies.forEach(
-            (technology) => {
+        if (!selectedVideo || !projectVideoElement) {
+            return false;
+        }
 
-                const technologyElement =
-                    document.createElement(
-                        "span"
-                    );
+        if (projectModalMockup) {
+            projectModalMockup.hidden = true;
+        }
 
-                technologyElement.textContent =
-                    technology;
+        if (projectVideo) {
+            projectVideo.hidden = false;
+        }
 
-                projectModalTechnologies.appendChild(
-                    technologyElement
-                );
+        projectVideoElement.src = selectedVideo.src;
+        projectVideoElement.load();
 
-            }
-        );
-
-
-        if (
-            projectModalLink &&
-            selectedProject.url
-        ) {
-
-            projectModalLink.href =
-                selectedProject.url;
-
-            projectModalLink.hidden = false;
-
-        } else if (projectModalLink) {
-
-            projectModalLink.hidden = true;
-
-            projectModalLink.removeAttribute(
-                "href"
-            );
-
+        if (projectVideoCaption) {
+            projectVideoCaption.textContent = selectedVideo.caption;
         }
 
         return true;
+    }
 
+
+    /* ==================================================
+       VISUAL POR DEFECTO
+    ================================================== */
+
+    function showProjectMockup() {
+        clearProjectGallery();
+        clearProjectVideo();
+
+        if (projectModalMockup) {
+            projectModalMockup.hidden = false;
+        }
+    }
+
+
+    /* ==================================================
+       INFORMACIÓN DEL PROYECTO
+    ================================================== */
+
+    function renderProjectInformation(projectId) {
+        const selectedProject = projectData[projectId];
+
+        if (!selectedProject) {
+            console.error(
+                `No existe información para el proyecto: ${projectId}`
+            );
+            return false;
+        }
+
+        projectModalCategory.textContent = selectedProject.category;
+        projectModalTitle.textContent = selectedProject.title;
+        projectModalDescription.textContent = selectedProject.description;
+
+        projectModalTechnologies.innerHTML = "";
+
+        selectedProject.technologies.forEach((technology) => {
+            const technologyElement = document.createElement("span");
+            technologyElement.textContent = technology;
+            projectModalTechnologies.appendChild(technologyElement);
+        });
+
+        if (projectModalLink && selectedProject.url) {
+            projectModalLink.href = selectedProject.url;
+            projectModalLink.hidden = false;
+        } else if (projectModalLink) {
+            projectModalLink.hidden = true;
+            projectModalLink.removeAttribute("href");
+        }
+
+        return true;
     }
 
 
@@ -727,57 +572,49 @@ document.addEventListener("DOMContentLoaded", () => {
     ================================================== */
 
     function openProjectModal(projectId) {
-
-        const projectExists =
-            renderProjectInformation(
-                projectId
-            );
+        const projectExists = renderProjectInformation(projectId);
 
         if (!projectExists) {
             return;
         }
 
         lastFocusedElement =
-            document.activeElement instanceof
-            HTMLElement
+            document.activeElement instanceof HTMLElement
                 ? document.activeElement
                 : null;
 
-        loadProjectGallery(projectId);
+        if (projectGalleries[projectId]) {
+            loadProjectGallery(projectId);
+        } else if (projectVideos[projectId]) {
+            loadProjectVideo(projectId);
+        } else {
+            showProjectMockup();
+        }
 
         projectModal.hidden = false;
+        projectModal.setAttribute("aria-hidden", "false");
 
-        projectModal.setAttribute(
-            "aria-hidden",
-            "false"
-        );
+        projectModal.classList.add("active", "open", "is-open");
 
-        /*
-         * Se agregan las tres clases para que funcione
-         * aunque el CSS anterior use un nombre distinto.
-         */
-
-        projectModal.classList.add(
-            "active",
-            "open",
-            "is-open"
-        );
-
-        document.body.classList.add(
-            "modal-open"
-        );
-
-        document.body.style.overflow =
-            "hidden";
+        document.body.classList.add("modal-open");
+        document.body.style.overflow = "hidden";
 
         window.setTimeout(() => {
-
             projectModalClose?.focus();
 
-            startGalleryAutoplay();
+            if (projectGalleries[projectId]) {
+                startGalleryAutoplay();
+            }
 
+            if (projectVideos[projectId] && projectVideoElement) {
+                projectVideoElement.muted = true;
+                const playPromise = projectVideoElement.play();
+
+                if (playPromise?.catch) {
+                    playPromise.catch(() => {});
+                }
+            }
         }, 250);
-
     }
 
 
@@ -786,124 +623,75 @@ document.addEventListener("DOMContentLoaded", () => {
     ================================================== */
 
     function closeProjectModal() {
-
         stopGalleryAutoplay();
+        clearProjectVideo();
 
-        projectModal.classList.remove(
-            "active",
-            "open",
-            "is-open"
-        );
+        projectModal.classList.remove("active", "open", "is-open");
+        projectModal.setAttribute("aria-hidden", "true");
 
-        projectModal.setAttribute(
-            "aria-hidden",
-            "true"
-        );
-
-        document.body.classList.remove(
-            "modal-open"
-        );
-
+        document.body.classList.remove("modal-open");
         document.body.style.overflow = "";
 
         window.setTimeout(() => {
-
             lastFocusedElement?.focus();
-
         }, 150);
-
     }
 
 
     /* ==================================================
-       ABRIR DESDE LOS BOTONES
+       EVENTOS DE APERTURA
     ================================================== */
 
     projectButtons.forEach((button) => {
+        button.addEventListener("click", (event) => {
+            event.preventDefault();
 
-        button.addEventListener(
-            "click",
-            (event) => {
+            const projectId = button.dataset.project;
 
-                event.preventDefault();
-
-                const projectId =
-                    button.dataset.project;
-
-                if (!projectId) {
-
-                    console.error(
-                        "El botón no tiene data-project."
-                    );
-
-                    return;
-
-                }
-
-                openProjectModal(
-                    projectId
-                );
-
+            if (!projectId) {
+                console.error("El botón no tiene data-project.");
+                return;
             }
-        );
 
+            openProjectModal(projectId);
+        });
     });
 
 
     /* ==================================================
-       CERRAR CON BOTÓN Y FONDO
+       EVENTOS DE CIERRE
     ================================================== */
 
-    modalCloseElements.forEach(
-        (closeElement) => {
-
-            closeElement.addEventListener(
-                "click",
-                closeProjectModal
-            );
-
-        }
-    );
+    modalCloseElements.forEach((closeElement) => {
+        closeElement.addEventListener("click", closeProjectModal);
+    });
 
 
     /* ==================================================
-       FLECHA ANTERIOR
+       FLECHAS DE LA GALERÍA
     ================================================== */
 
-    previousButton?.addEventListener(
-        "click",
-        () => {
-
-            showGalleryImage(
-                currentImageIndex - 1
-            );
-
-            startGalleryAutoplay();
-
+    previousButton?.addEventListener("click", () => {
+        if (currentImages.length === 0) {
+            return;
         }
-    );
+
+        showGalleryImage(currentImageIndex - 1);
+        startGalleryAutoplay();
+    });
+
+    nextButton?.addEventListener("click", () => {
+        if (currentImages.length === 0) {
+            return;
+        }
+
+        showGalleryImage(currentImageIndex + 1);
+        startGalleryAutoplay();
+    });
 
 
     /* ==================================================
-       FLECHA SIGUIENTE
-    ================================================== */
-
-    nextButton?.addEventListener(
-        "click",
-        () => {
-
-            showGalleryImage(
-                currentImageIndex + 1
-            );
-
-            startGalleryAutoplay();
-
-        }
-    );
-
-
-    /* ==================================================
-       PAUSAR CON EL CURSOR
+       PAUSAR GALERÍA CON CURSOR
     ================================================== */
 
     projectGalleryViewport?.addEventListener(
@@ -918,131 +706,80 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     /* ==================================================
-       DESLIZAR EN PANTALLA TÁCTIL
+       DESLIZAMIENTO TÁCTIL EN GALERÍA
     ================================================== */
 
-    projectGalleryImage?.addEventListener(
-        "pointerdown",
-        (event) => {
+    projectGalleryImage?.addEventListener("pointerdown", (event) => {
+        pointerStartX = event.clientX;
+        stopGalleryAutoplay();
+    });
 
-            pointerStartX =
-                event.clientX;
+    projectGalleryImage?.addEventListener("pointerup", (event) => {
+        const difference = event.clientX - pointerStartX;
 
+        if (Math.abs(difference) >= 45) {
+            if (difference > 0) {
+                showGalleryImage(currentImageIndex - 1);
+            } else {
+                showGalleryImage(currentImageIndex + 1);
+            }
+        }
+
+        startGalleryAutoplay();
+    });
+
+    projectGalleryImage?.addEventListener("dragstart", (event) => {
+        event.preventDefault();
+    });
+
+
+    /* ==================================================
+       TECLADO
+    ================================================== */
+
+    document.addEventListener("keydown", (event) => {
+        if (!modalIsOpen()) {
+            return;
+        }
+
+        if (event.key === "Escape") {
+            closeProjectModal();
+        }
+
+        if (event.key === "ArrowLeft" && currentImages.length > 0) {
+            showGalleryImage(currentImageIndex - 1);
+            startGalleryAutoplay();
+        }
+
+        if (event.key === "ArrowRight" && currentImages.length > 0) {
+            showGalleryImage(currentImageIndex + 1);
+            startGalleryAutoplay();
+        }
+    });
+
+
+    /* ==================================================
+       CAMBIO DE PESTAÑA
+    ================================================== */
+
+    document.addEventListener("visibilitychange", () => {
+        if (document.hidden) {
             stopGalleryAutoplay();
 
-        }
-    );
-
-    projectGalleryImage?.addEventListener(
-        "pointerup",
-        (event) => {
-
-            const difference =
-                event.clientX -
-                pointerStartX;
-
-            if (
-                Math.abs(difference) >= 45
-            ) {
-
-                if (difference > 0) {
-
-                    showGalleryImage(
-                        currentImageIndex - 1
-                    );
-
-                } else {
-
-                    showGalleryImage(
-                        currentImageIndex + 1
-                    );
-
-                }
-
+            if (projectVideoElement && !projectVideo.hidden) {
+                projectVideoElement.pause();
             }
-
+        } else if (modalIsOpen()) {
             startGalleryAutoplay();
 
+            if (projectVideoElement && !projectVideo.hidden) {
+                const playPromise = projectVideoElement.play();
+
+                if (playPromise?.catch) {
+                    playPromise.catch(() => {});
+                }
+            }
         }
-    );
-
-    projectGalleryImage?.addEventListener(
-        "dragstart",
-        (event) => {
-
-            event.preventDefault();
-
-        }
-    );
-
-
-    /* ==================================================
-       CONTROL CON TECLADO
-    ================================================== */
-
-    document.addEventListener(
-        "keydown",
-        (event) => {
-
-            if (!modalIsOpen()) {
-                return;
-            }
-
-            if (event.key === "Escape") {
-
-                closeProjectModal();
-
-            }
-
-            if (
-                event.key === "ArrowLeft" &&
-                currentImages.length > 0
-            ) {
-
-                showGalleryImage(
-                    currentImageIndex - 1
-                );
-
-                startGalleryAutoplay();
-
-            }
-
-            if (
-                event.key === "ArrowRight" &&
-                currentImages.length > 0
-            ) {
-
-                showGalleryImage(
-                    currentImageIndex + 1
-                );
-
-                startGalleryAutoplay();
-
-            }
-
-        }
-    );
-
-
-    /* ==================================================
-       PAUSAR CUANDO SE CAMBIA DE PESTAÑA
-    ================================================== */
-
-    document.addEventListener(
-        "visibilitychange",
-        () => {
-
-            if (document.hidden) {
-
-                stopGalleryAutoplay();
-
-            } else if (modalIsOpen()) {
-
-                startGalleryAutoplay();
-
-            }
-
-        }
-    );
+    });
 
 });
