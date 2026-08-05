@@ -402,28 +402,6 @@ document.addEventListener("DOMContentLoaded", () => {
             ]
         },
 
-        "killerr-store": {
-            title: "Killerr Store",
-            category: "Tienda alternativa",
-            status: "Proyecto para cliente · versión local",
-
-            description:
-                "Sitio de estilo dark y rosado para presentar ropa negra, zapatos, accesorios, bordados y confecciones propias.",
-
-            solution:
-                "Se creó una identidad visual adaptada a la marca, catálogo de productos, carrusel de clientas y contacto directo mediante Instagram.",
-
-            technologies: [
-                "HTML",
-                "CSS",
-                "JavaScript",
-                "Catálogo",
-                "Carrusel",
-                "Instagram",
-                "Diseño responsivo"
-            ]
-        },
-
         "onevet-store": {
             title: "OneVet Store",
             category: "Educación veterinaria",

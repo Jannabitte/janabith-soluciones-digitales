@@ -32,53 +32,43 @@ document.addEventListener("DOMContentLoaded", () => {
             url: "https://ingpro.cl"
         },
 
-        "el-chinito": {
-            category: "Proyecto para cliente",
+       "el-chinito": {
+            category: "Proyecto web para comercio local",
             title: "Minimarket El Chinito",
+
             description:
-                "Página web desarrollada para organizar y presentar los productos de un minimarket. Incorpora categorías, carrito de compras, favoritos, ubicación, horarios, Caja Vecina y preparación de pedidos para retiro presencial.",
+                "Sitio web desarrollado para un minimarket de barrio, orientado a organizar y presentar productos, categorías, promociones, favoritos y carrito. También incorpora información sobre Caja Vecina, proceso de compra, retiro presencial, ubicación y horarios de atención.",
+
             technologies: [
                 "HTML",
                 "CSS",
                 "JavaScript",
                 "JSON",
-                "Netlify Forms",
+                "Carrito y favoritos",
                 "Diseño responsivo"
             ],
-            url: ""
-        },
 
-        "killerr-store": {
-            category: "Proyecto para clienta",
-            title: "Killerr Store",
-            description:
-                "Página web de estilo dark enfocada en la venta de zapatos negros, botines y botas con plataforma, con una estética alternativa y consultas directas mediante Instagram.",
-            technologies: [
-                "HTML",
-                "CSS",
-                "JavaScript",
-                "Zapatos negros",
-                "Botines",
-                "Botas con plataforma"
-            ],
             url: ""
         },
 
         "onevet-store": {
-            category: "Proyecto académico",
+            category: "Proyecto académico interdisciplinario",
             title: "OneVet Store",
+
             description:
-                "Tienda web educativa que combina programación y medicina veterinaria. Presenta productos, servicios, contenido sobre salud animal, prevención de zoonosis, carrito y favoritos.",
+                "Tienda web educativa inspirada en el enfoque One Health, que relaciona la salud animal, humana y ambiental. Incluye productos y servicios veterinarios, contenido preventivo, favoritos, carrito de reservas y educación sobre bienestar animal, zoonosis y fauna silvestre.",
+
             technologies: [
                 "HTML",
                 "CSS",
                 "JavaScript",
-                "Carrito",
-                "Favoritos",
-                "Medicina veterinaria"
-            ],
-            url: ""
-        },
+                "jQuery",
+                "Carrito y favoritos",
+                "One Health"
+        ],
+
+        url: ""
+    },
 
         "onevet-api": {
             category: "Proyecto Java Full Stack",
@@ -119,69 +109,146 @@ document.addEventListener("DOMContentLoaded", () => {
        GALERÍAS DE IMÁGENES
     ================================================== */
 
-    const projectGalleries = {
+   const projectGalleries = {
 
-        ingpro: [
-            {
-                src: `${assetsPath}/img/proyectos/ingpro/ingpro-portada.png`,
-                alt: "Portada corporativa del sitio web de INGPRO",
-                caption:
-                    "Portada corporativa con carrusel, servicios principales y acceso directo a cotización."
-            },
-            {
-                src: `${assetsPath}/img/proyectos/ingpro/ingpro-catalogo.png`,
-                alt: "Visor del catálogo digital de INGPRO",
-                caption:
-                    "Visor en línea del catálogo INGPRO 2026, con navegación, zoom y descarga."
-            },
-            {
-                src: `${assetsPath}/img/proyectos/ingpro/ingpro-formulario.png`,
-                alt: "Formulario de cotización del sitio INGPRO",
-                caption:
-                    "Formulario organizado para reunir los antecedentes necesarios y evaluar cada requerimiento."
-            },
-            {
-                src: `${assetsPath}/img/proyectos/ingpro/ingpro-impresion-3d.png`,
-                alt: "Carrusel de trabajos de impresión 3D de INGPRO",
-                caption:
-                    "Carrusel visual utilizado para presentar proyectos reales de impresión 3D."
-            },
-            {
-                src: `${assetsPath}/img/proyectos/ingpro/ingpro-trabajos-metal.png`,
-                alt: "Galería de trabajos metálicos desarrollados por INGPRO",
-                caption:
-                    "Galería de proyectos realizados en metal mediante corte CNC y plasma."
-            },
-            {
-                src: `${assetsPath}/img/proyectos/ingpro/ingpro-cnc-router.png`,
-                alt: "Proyectos desarrollados con CNC Router",
-                caption:
-                    "Presentación de trabajos desarrollados en madera, MDF y otros materiales mecanizables."
-            },
-            {
-                src: `${assetsPath}/img/proyectos/ingpro/ingpro-vista-movil.png`,
-                alt: "Vista responsiva para celular del sitio INGPRO",
-                caption:
-                    "Versión responsiva desde celular, con menú móvil y contenido adaptado."
-            }
-        ]
+    /* ==================================================
+       INGPRO
+    ================================================== */
 
-    };
+    ingpro: [
+        {
+            src: `${assetsPath}/img/proyectos/ingpro/ingpro-portada.png`,
+            alt: "Portada corporativa del sitio web de INGPRO",
+            caption:
+                "Portada corporativa con carrusel, servicios principales y acceso directo a cotización."
+        },
+        {
+            src: `${assetsPath}/img/proyectos/ingpro/ingpro-catalogo.png`,
+            alt: "Visor del catálogo digital de INGPRO",
+            caption:
+                "Visor en línea del catálogo INGPRO 2026, con navegación, zoom y descarga."
+        },
+        {
+            src: `${assetsPath}/img/proyectos/ingpro/ingpro-formulario.png`,
+            alt: "Formulario de cotización del sitio INGPRO",
+            caption:
+                "Formulario organizado para reunir los antecedentes necesarios y evaluar cada requerimiento."
+        },
+        {
+            src: `${assetsPath}/img/proyectos/ingpro/ingpro-impresion-3d.png`,
+            alt: "Carrusel de trabajos de impresión 3D de INGPRO",
+            caption:
+                "Carrusel visual utilizado para presentar proyectos reales de impresión 3D."
+        },
+        {
+            src: `${assetsPath}/img/proyectos/ingpro/ingpro-trabajos-metal.png`,
+            alt: "Galería de trabajos metálicos desarrollados por INGPRO",
+            caption:
+                "Galería de proyectos realizados en metal mediante corte CNC y plasma."
+        },
+        {
+            src: `${assetsPath}/img/proyectos/ingpro/ingpro-cnc-router.png`,
+            alt: "Proyectos desarrollados con CNC Router",
+            caption:
+                "Presentación de trabajos desarrollados en madera, MDF y otros materiales mecanizables."
+        },
+        {
+            src: `${assetsPath}/img/proyectos/ingpro/ingpro-vista-movil.png`,
+            alt: "Vista responsiva para celular del sitio INGPRO",
+            caption:
+                "Versión responsiva desde celular, con menú móvil y contenido adaptado."
+        }
+    ],
 
+
+    /* ==================================================
+       ONEVET STORE
+    ================================================== */
+
+    "onevet-store": [
+        {
+            src: `${assetsPath}/img/proyectos/onevet-store/onevet-store-portada.png`,
+            alt: "Portada de la tienda educativa veterinaria OneVet Store",
+            caption:
+                "Portada de OneVet Store, una plataforma educativa inspirada en el enfoque One Health."
+        },
+        {
+            src: `${assetsPath}/img/proyectos/onevet-store/onevet-store-inicio.png`,
+            alt: "Inicio interactivo de OneVet Store",
+            caption:
+                "Inicio con carrusel educativo, contador de favoritos y carrito de reservas."
+        },
+        {
+            src: `${assetsPath}/img/proyectos/onevet-store/onevet-store-servicios.png`,
+            alt: "Servicios veterinarios presentados en OneVet Store",
+            caption:
+                "Servicios para animales mayores, animales exóticos y evaluación del bienestar animal."
+        },
+        {
+            src: `${assetsPath}/img/proyectos/onevet-store/onevet-store-productos.png`,
+            alt: "Productos y contenido de bienestar animal en OneVet Store",
+            caption:
+                "Productos de bienestar y alimentación junto con orientación educativa sobre fauna silvestre."
+        },
+        {
+            src: `${assetsPath}/img/proyectos/onevet-store/onevet-store-carrito.png`,
+            alt: "Carrito de reservas de OneVet Store",
+            caption:
+                "Carrito dinámico que permite agregar, revisar y eliminar productos o servicios seleccionados."
+        },
+        {
+            src: `${assetsPath}/img/proyectos/onevet-store/onevet-store-educacion.png`,
+            alt: "Contenido educativo sobre One Health en Chile",
+            caption:
+                "Sección educativa sobre prevención, zoonosis, tenencia responsable y aplicación de One Health en Chile."
+        }
+        ],
+
+
+    /* ==================================================
+       MINIMARKET EL CHINITO
+    ================================================== */
+
+    "el-chinito": [
+        {
+            src: `${assetsPath}/img/proyectos/el-chinito/el-chinito-portada.png`,
+            alt: "Portada principal del sitio web Minimarket El Chinito",
+            caption:
+                "Portada corporativa del minimarket con carrusel, identidad visual, buscador, favoritos y carrito."
+        },
+        {
+            src: `${assetsPath}/img/proyectos/el-chinito/el-chinito-categorias.png`,
+            alt: "Categorías de productos de Minimarket El Chinito",
+            caption:
+                "Catálogo organizado por categorías para encontrar rápidamente fiambrería, bebestibles, panadería, snacks, abarrotes, lácteos y productos de limpieza."
+        },
+        {
+            src: `${assetsPath}/img/proyectos/el-chinito/el-chinito-caja-vecina.png`,
+            alt: "Sección Caja Vecina de Minimarket El Chinito",
+            caption:
+                "Presentación de servicios presenciales de Caja Vecina, como giros, depósitos, pagos y recargas."
+        },
+        {
+            src: `${assetsPath}/img/proyectos/el-chinito/el-chinito-proceso-compra.png`,
+            alt: "Proceso de compra y retiro de Minimarket El Chinito",
+            caption:
+                "Explicación visual del proceso: seleccionar productos, revisar el pedido, retirar en el local y pagar presencialmente."
+        },
+        {
+            src: `${assetsPath}/img/proyectos/el-chinito/el-chinito-ubicacion.png`,
+            alt: "Ubicación y horarios de Minimarket El Chinito",
+            caption:
+                "Sección con dirección, horarios de atención, mapa y acceso a indicaciones para llegar al local."
+        }
+    ]
+
+};
 
     /* ==================================================
        VIDEOS DE PROYECTOS
     ================================================== */
 
-    const projectVideos = {
-
-        "killerr-store": {
-            src: `${assetsPath}/video/proyectos/killerr-store/killerr-store-demo.mp4`,
-            caption:
-                "Video de presentación de Killerr Store, enfocado en la venta de zapatos negros, botines y botas con plataforma."
-        }
-
-    };
+    const projectVideos = {};
 
 
     /* ==================================================
