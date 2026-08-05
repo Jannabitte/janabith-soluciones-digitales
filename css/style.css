@@ -6831,3 +6831,284 @@ body.modal-open {
 .professional-proof-card--github h3,.professional-proof-card--github span { color:var(--color-blanco); }
 .professional-proof-card--github small { color:rgba(255,255,255,.72); }
 .professional-proof-card--linkedin { border-style:dashed; opacity:.82; }
+
+/* ==================================================
+   IDENTIDAD Y CREDENCIAL EN EL NAVBAR
+================================================== */
+
+.navbar__identity {
+    min-width: max-content;
+
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.navbar__credential {
+    position: relative;
+
+    padding: 5px 11px 5px 5px;
+
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    color: var(--color-morado-oscuro);
+    background:
+        linear-gradient(135deg,
+            rgba(255, 255, 255, 0.96),
+            rgba(244, 232, 252, 0.94));
+
+    border: 1px solid rgba(111, 66, 193, 0.16);
+    border-radius: 50px;
+    box-shadow: 0 8px 18px rgba(47, 27, 77, 0.1);
+
+    transition:
+        transform var(--transicion),
+        box-shadow var(--transicion),
+        border-color var(--transicion);
+}
+
+.navbar__credential:hover {
+    transform: translateY(-2px);
+
+    border-color: rgba(53, 221, 136, 0.7);
+    box-shadow: 0 12px 23px rgba(47, 27, 77, 0.16);
+}
+
+.navbar__credential img {
+    width: 43px;
+    height: 43px;
+
+    flex-shrink: 0;
+    object-fit: contain;
+
+    filter:
+        drop-shadow(0 4px 5px rgba(47, 27, 77, 0.2));
+}
+
+.navbar__credential>span {
+    display: flex;
+    flex-direction: column;
+
+    font-size: 0.55rem;
+    font-weight: 700;
+    line-height: 1.15;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+}
+
+.navbar__credential strong {
+    margin-top: 3px;
+
+    color: var(--color-morado-medio);
+    font-size: 0.62rem;
+    white-space: nowrap;
+}
+/* ==================================================
+   CREDENCIAL PROFESIONAL TALENTO DIGITAL
+================================================== */
+
+.professional-credential {
+    position: relative;
+    overflow: hidden;
+
+    color: var(--color-blanco);
+
+    background:
+        radial-gradient(circle at 12% 18%,
+            rgba(53, 221, 136, 0.14),
+            transparent 26%),
+        radial-gradient(circle at 88% 82%,
+            rgba(202, 68, 149, 0.18),
+            transparent 27%),
+        linear-gradient(135deg,
+            #1f102f,
+            #4b1764 56%,
+            #29153d);
+}
+
+.professional-credential::before {
+    content: "";
+
+    position: absolute;
+    top: -180px;
+    right: -180px;
+
+    width: 430px;
+    height: 430px;
+
+    border: 1px solid rgba(255, 255, 255, 0.09);
+    border-radius: 50%;
+}
+
+.professional-credential__layout {
+    position: relative;
+    z-index: 2;
+
+    display: grid;
+    grid-template-columns: minmax(320px, 0.78fr) minmax(0, 1.22fr);
+    align-items: center;
+    gap: 80px;
+}
+
+
+/* Insignia */
+
+.professional-credential__visual {
+    position: relative;
+
+    min-height: 480px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.professional-credential__glow {
+    position: absolute;
+
+    width: 350px;
+    height: 350px;
+
+    background:
+        radial-gradient(circle,
+            rgba(211, 64, 153, 0.33),
+            rgba(111, 66, 193, 0.16) 45%,
+            transparent 72%);
+
+    border-radius: 50%;
+    filter: blur(7px);
+
+    animation:
+        credentialGlow 4s ease-in-out infinite;
+}
+
+.professional-credential__visual a {
+    position: relative;
+    z-index: 2;
+
+    display: block;
+
+    transition:
+        transform var(--transicion),
+        filter var(--transicion);
+}
+
+.professional-credential__visual a:hover {
+    transform: translateY(-9px) scale(1.025);
+}
+
+.professional-credential__visual img {
+    width: min(380px, 90%);
+    height: auto;
+
+    object-fit: contain;
+
+    filter:
+        drop-shadow(0 28px 30px rgba(0, 0, 0, 0.36));
+}
+
+
+/* Contenido */
+
+.professional-credential .section__title {
+    color: var(--color-blanco);
+}
+
+.professional-credential__institution {
+    margin: 13px 0 22px;
+
+    color: var(--color-verde);
+    font-size: 0.87rem;
+    font-weight: 900;
+    letter-spacing: 0.5px;
+}
+
+.professional-credential__content>p:not(.section__tag):not(.professional-credential__institution) {
+    color: rgba(255, 255, 255, 0.75);
+    line-height: 1.82;
+}
+
+.professional-credential__skills {
+    margin: 26px 0;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.professional-credential__skills span {
+    padding: 8px 12px;
+
+    color: rgba(255, 255, 255, 0.85);
+    background-color: rgba(255, 255, 255, 0.09);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 50px;
+
+    font-size: 0.67rem;
+    font-weight: 800;
+}
+
+.professional-credential__verification {
+    margin-bottom: 27px;
+    padding: 17px;
+
+    display: grid;
+    grid-template-columns: 44px 1fr;
+    align-items: center;
+    gap: 14px;
+
+    background-color: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 17px;
+
+    backdrop-filter: blur(10px);
+}
+
+.professional-credential__check {
+    width: 44px;
+    height: 44px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #251238;
+    background-color: var(--color-verde);
+    border-radius: 50%;
+
+    font-weight: 900;
+}
+
+.professional-credential__verification strong {
+    display: block;
+    margin-bottom: 4px;
+
+    color: var(--color-blanco);
+    font-size: 0.83rem;
+}
+
+.professional-credential__verification p {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.71rem;
+    line-height: 1.5;
+}
+
+.professional-credential .button {
+    gap: 10px;
+}
+
+@keyframes credentialGlow {
+
+    0%,
+    100% {
+        opacity: 0.7;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.08);
+    }
+}
