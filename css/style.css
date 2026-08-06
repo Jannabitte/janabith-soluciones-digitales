@@ -7117,44 +7117,63 @@ body.modal-open {
 ================================================== */
 
 .about-hero-visual--profile {
-    min-height: 550px;
+    position: relative;
+
+    width: min(100%, 600px);
+    min-height: 640px;
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .about-hero-visual--profile::before {
-    width: 455px;
-    height: 455px;
+    width: 520px;
+    height: 520px;
 
     background:
-        linear-gradient(145deg,
-            rgba(111, 66, 193, 0.2),
-            rgba(53, 221, 136, 0.16));
+        linear-gradient(
+            145deg,
+            rgba(111, 66, 193, 0.22),
+            rgba(53, 221, 136, 0.14)
+        );
+
+    opacity: 0.9;
 }
 
 .about-hero-visual--profile::after {
-    width: 505px;
-    height: 505px;
-}
+    width: 580px;
+    height: 580px;
 
+    opacity: 0.45;
+}
 
 /* Contenedor principal de la imagen */
 
 .about-hero-visual__photo {
     position: relative;
-    z-index: 3;
+    z-index: 2;
 
-    width: min(100%, 470px);
-    aspect-ratio: 4 / 3;
+    width: 100%;
+    min-height: 620px;
     overflow: hidden;
 
-    background-color: var(--color-morado-oscuro);
-    border: 5px solid rgba(255, 255, 255, 0.9);
-    border-radius: 34px;
+    background:
+        linear-gradient(
+            180deg,
+            rgba(111, 66, 193, 0.14),
+            rgba(53, 221, 136, 0.08)
+        );
+
+    border: none;
+    border-radius: 40px;
 
     box-shadow:
-        0 35px 70px rgba(47, 27, 77, 0.26),
-        0 0 0 1px rgba(111, 66, 193, 0.12);
+        0 35px 80px rgba(47, 27, 77, 0.20),
+        0 0 0 1px rgba(111, 66, 193, 0.08);
 
-    transform: rotate(-1.5deg);
+    transform: none;
 
     transition:
         transform var(--transicion),
@@ -7162,11 +7181,28 @@ body.modal-open {
 }
 
 .about-hero-visual__photo:hover {
-    transform: rotate(0deg) translateY(-7px);
+    transform: translateY(-6px);
 
     box-shadow:
-        0 42px 80px rgba(47, 27, 77, 0.31),
-        0 0 0 1px rgba(53, 221, 136, 0.28);
+        0 42px 90px rgba(47, 27, 77, 0.24),
+        0 0 0 1px rgba(53, 221, 136, 0.18);
+}
+
+.about-hero-visual__photo::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+
+    pointer-events: none;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255, 255, 255, 0.14),
+            transparent 28%
+        );
 }
 
 .about-hero-visual__photo::after {
@@ -7174,15 +7210,19 @@ body.modal-open {
 
     position: absolute;
     inset: 0;
+    z-index: 1;
 
     pointer-events: none;
 
     background:
-        linear-gradient(to top,
-            rgba(25, 10, 39, 0.84),
-            transparent 42%);
+        linear-gradient(
+            to top,
+            rgba(25, 10, 39, 0.68),
+            rgba(25, 10, 39, 0.22) 38%,
+            rgba(25, 10, 39, 0.08) 65%,
+            transparent
+        );
 }
-
 
 /* Fotografía */
 
@@ -7193,27 +7233,31 @@ body.modal-open {
     display: block;
 
     object-fit: cover;
-    object-position: center;
+    object-position: center top;
+
+    opacity: 0.68;
+    filter: saturate(1.04) contrast(1.02);
 
     transition:
         transform 700ms ease,
+        opacity 700ms ease,
         filter 700ms ease;
 }
 
 .about-hero-visual__photo:hover img {
-    transform: scale(1.035);
-    filter: saturate(1.05);
+    transform: scale(1.03);
+    opacity: 0.74;
+    filter: saturate(1.08);
 }
-
 
 /* Identificación sobre la imagen */
 
 .about-hero-visual__photo-label {
     position: absolute;
     z-index: 2;
-    right: 25px;
-    bottom: 23px;
-    left: 25px;
+    right: 30px;
+    bottom: 28px;
+    left: 30px;
 
     display: flex;
     flex-direction: column;
@@ -7228,34 +7272,239 @@ body.modal-open {
 }
 
 .about-hero-visual__photo-label strong {
-    margin-top: 5px;
+    margin-top: 6px;
 
     color: var(--color-blanco);
-    font-size: 1.55rem;
+    font-size: 1.8rem;
     line-height: 1;
 }
 
 .about-hero-visual__photo-label small {
-    margin-top: 6px;
+    margin-top: 7px;
 
-    color: rgba(255, 255, 255, 0.76);
-    font-size: 0.72rem;
+    color: rgba(255, 255, 255, 0.82);
+    font-size: 0.78rem;
 }
 
+/* Tarjetas flotantes sin números */
 
-/* Ajustes de las tarjetas alrededor de la fotografía */
+.about-hero-visual--profile .about-skill-card {
+    width: 220px;
+    padding: 15px 17px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+
+    background-color: rgba(255, 255, 255, 0.84);
+    border: 1px solid rgba(111, 66, 193, 0.12);
+    border-radius: 18px;
+    box-shadow: var(--sombra-suave);
+
+    backdrop-filter: blur(10px);
+}
+
+.about-hero-visual--profile .about-skill-card > span {
+    display: none;
+}
+
+.about-hero-visual--profile .about-skill-card strong {
+    font-size: 0.82rem;
+}
+
+.about-hero-visual--profile .about-skill-card small {
+    margin-top: 2px;
+    font-size: 0.64rem;
+    line-height: 1.45;
+}
+
+/* Posición de las tarjetas */
 
 .about-hero-visual--profile .about-skill-card--web {
-    top: 25px;
-    left: -35px;
+    top: 24px;
+    left: -22px;
 }
 
 .about-hero-visual--profile .about-skill-card--java {
-    top: 215px;
-    right: -50px;
+    top: 210px;
+    right: -28px;
 }
 
 .about-hero-visual--profile .about-skill-card--admin {
-    bottom: 15px;
-    left: -10px;
+    bottom: 16px;
+    left: -8px;
+}
+
+
+
+/* ==================================================
+   BLOQUES DE INFORMACIÓN DESPLEGABLE
+================================================== */
+
+.text-disclosure {
+    margin-top: 18px;
+
+    overflow: hidden;
+
+    background: rgba(255, 255, 255, 0.84);
+    border: 1px solid rgba(111, 66, 193, 0.14);
+    border-radius: 17px;
+    box-shadow: 0 10px 24px rgba(47, 27, 77, 0.07);
+}
+
+.text-disclosure summary,
+.service-card__details summary,
+.work-step__details summary {
+    list-style: none;
+    cursor: pointer;
+    user-select: none;
+}
+
+.text-disclosure summary::-webkit-details-marker,
+.service-card__details summary::-webkit-details-marker,
+.work-step__details summary::-webkit-details-marker {
+    display: none;
+}
+
+.text-disclosure summary {
+    min-height: 52px;
+    padding: 13px 16px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+
+    color: var(--color-morado-oscuro);
+    font-size: 0.78rem;
+    font-weight: 850;
+}
+
+.text-disclosure summary::after,
+.service-card__details summary::after,
+.work-step__details summary::after {
+    content: "+";
+
+    width: 30px;
+    height: 30px;
+
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: var(--color-morado-oscuro);
+    background: var(--color-verde);
+    border-radius: 10px;
+
+    font-size: 1rem;
+    font-weight: 900;
+}
+
+.text-disclosure[open] summary::after,
+.service-card__details[open] summary::after,
+.work-step__details[open] summary::after {
+    content: "−";
+}
+
+.text-disclosure__content {
+    padding: 0 16px 16px;
+}
+
+.text-disclosure__content p {
+    margin: 0 !important;
+
+    color: var(--color-texto-claro);
+    font-size: 0.82rem;
+    line-height: 1.72;
+}
+
+.text-disclosure--dark {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.14);
+    box-shadow: none;
+}
+
+.text-disclosure--dark summary {
+    color: var(--color-blanco);
+}
+
+.text-disclosure--dark .text-disclosure__content p {
+    color: rgba(255, 255, 255, 0.76);
+}
+
+
+/* Despliegue compacto en tarjetas de servicios */
+
+.service-card__details {
+    width: 100%;
+    margin-top: 18px;
+}
+
+.service-card__details summary {
+    min-height: 44px;
+    padding: 9px 12px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+
+    color: var(--color-morado-medio);
+    background: var(--color-lila-claro);
+    border: 1px solid rgba(111, 66, 193, 0.12);
+    border-radius: 13px;
+
+    font-size: 0.72rem;
+    font-weight: 850;
+}
+
+.service-card__details summary::after {
+    width: 27px;
+    height: 27px;
+    border-radius: 9px;
+}
+
+.service-card__details ul {
+    margin-top: 14px;
+}
+
+
+/* Despliegue compacto en las etapas de trabajo */
+
+.work-step__details {
+    margin-top: 19px;
+}
+
+.work-step__details summary {
+    min-height: 46px;
+    padding: 10px 13px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+
+    color: var(--color-morado-oscuro);
+    background: rgba(223, 248, 233, 0.72);
+    border: 1px solid rgba(20, 154, 87, 0.15);
+    border-radius: 13px;
+
+    font-size: 0.73rem;
+    font-weight: 850;
+}
+
+.work-step__details summary::after {
+    width: 28px;
+    height: 28px;
+    border-radius: 9px;
+}
+
+.work-step__details-content {
+    padding-top: 3px;
+}
+
+.work-step__details .work-step__result {
+    margin-top: 16px;
 }

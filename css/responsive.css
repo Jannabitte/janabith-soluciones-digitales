@@ -2089,252 +2089,6 @@
     }
 }
 /* ==================================================
-   RESUMEN SOBRE MÍ EN EL INICIO
-================================================== */
-
-.home-about-preview {
-    position: relative;
-    overflow: hidden;
-
-    background:
-        radial-gradient(circle at 12% 20%,
-            rgba(201, 175, 232, 0.22),
-            transparent 26%),
-        radial-gradient(circle at 90% 85%,
-            rgba(53, 221, 136, 0.16),
-            transparent 24%),
-        #fdfcff;
-}
-
-.home-about-preview__layout {
-    display: grid;
-    grid-template-columns: minmax(350px, 0.85fr) minmax(0, 1.15fr);
-    align-items: center;
-    gap: 80px;
-}
-
-
-/* Visual */
-
-.home-about-preview__visual {
-    position: relative;
-
-    min-height: 480px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.home-about-preview__visual::before {
-    content: "";
-
-    position: absolute;
-
-    width: 350px;
-    height: 350px;
-
-    background:
-        linear-gradient(145deg,
-            rgba(111, 66, 193, 0.17),
-            rgba(53, 221, 136, 0.19));
-
-    border: 1px solid rgba(111, 66, 193, 0.12);
-    border-radius: 47% 53% 58% 42% / 43% 48% 52% 57%;
-
-    animation: homeAboutShape 8s ease-in-out infinite;
-}
-
-.home-about-preview__seal {
-    position: relative;
-    z-index: 2;
-
-    width: 270px;
-    height: 270px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    background-color: rgba(255, 255, 255, 0.88);
-    border: 1px solid rgba(111, 66, 193, 0.14);
-    border-radius: 50%;
-    box-shadow:
-        0 30px 60px rgba(47, 27, 77, 0.2),
-        inset 0 0 35px rgba(255, 255, 255, 0.78);
-
-    backdrop-filter: blur(12px);
-}
-
-.home-about-preview__seal img {
-    width: 220px;
-    height: 220px;
-
-    object-fit: contain;
-
-    filter:
-        drop-shadow(0 20px 24px rgba(47, 27, 77, 0.22));
-}
-
-
-/* Etiquetas flotantes */
-
-.home-about-preview__badge {
-    position: absolute;
-    z-index: 3;
-
-    padding: 10px 15px;
-
-    color: var(--color-morado-oscuro);
-    background-color: rgba(255, 255, 255, 0.94);
-    border: 1px solid rgba(111, 66, 193, 0.13);
-    border-radius: 50px;
-    box-shadow: var(--sombra-suave);
-
-    font-size: 0.7rem;
-    font-weight: 800;
-
-    animation: homeAboutFloat 4.5s ease-in-out infinite;
-}
-
-.home-about-preview__badge::before {
-    content: "";
-
-    width: 8px;
-    height: 8px;
-    margin-right: 8px;
-
-    display: inline-block;
-
-    background-color: var(--color-verde);
-    border-radius: 50%;
-}
-
-.home-about-preview__badge--one {
-    top: 55px;
-    left: 0;
-}
-
-.home-about-preview__badge--two {
-    top: 190px;
-    right: -15px;
-
-    animation-delay: 1.1s;
-}
-
-.home-about-preview__badge--three {
-    bottom: 55px;
-    left: 20px;
-
-    animation-delay: 2s;
-}
-
-
-/* Contenido */
-
-.home-about-preview__content>p:not(.section__tag) {
-    margin-top: 22px;
-
-    color: var(--color-texto-claro);
-    line-height: 1.8;
-}
-
-.home-about-preview__qualities {
-    margin-top: 30px;
-
-    display: grid;
-    gap: 12px;
-}
-
-.home-about-preview__qualities article {
-    padding: 16px 18px;
-
-    display: grid;
-    grid-template-columns: 44px 1fr;
-    align-items: center;
-    gap: 14px;
-
-    background-color: rgba(255, 255, 255, 0.88);
-    border: 1px solid rgba(111, 66, 193, 0.11);
-    border-radius: 16px;
-
-    transition:
-        transform var(--transicion),
-        box-shadow var(--transicion);
-}
-
-.home-about-preview__qualities article:hover {
-    transform: translateX(7px);
-    box-shadow: var(--sombra-suave);
-}
-
-.home-about-preview__qualities article>span {
-    width: 44px;
-    height: 44px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    color: var(--color-morado-oscuro);
-    background-color: var(--color-verde);
-    border-radius: 13px;
-
-    font-size: 0.65rem;
-    font-weight: 900;
-}
-
-.home-about-preview__qualities h3 {
-    margin-bottom: 4px;
-
-    color: var(--color-morado-oscuro);
-    font-size: 0.9rem;
-}
-
-.home-about-preview__qualities p {
-    color: var(--color-texto-claro);
-    font-size: 0.75rem;
-    line-height: 1.5;
-}
-
-.home-about-preview__actions {
-    margin-top: 29px;
-
-    display: flex;
-    flex-wrap: wrap;
-    gap: 13px;
-}
-
-
-/* Animaciones */
-
-@keyframes homeAboutShape {
-
-    0%,
-    100% {
-        border-radius: 47% 53% 58% 42% / 43% 48% 52% 57%;
-        transform: rotate(0deg);
-    }
-
-    50% {
-        border-radius: 57% 43% 42% 58% / 55% 43% 57% 45%;
-        transform: rotate(5deg);
-    }
-}
-
-@keyframes homeAboutFloat {
-
-    0%,
-    100% {
-        transform: translateY(0);
-    }
-
-    50% {
-        transform: translateY(-9px);
-    }
-}
-
-/* ==================================================
    RESPONSIVE: EXPERIENCIA DIFERENCIADA Y CREDENCIALES
 ================================================== */
 
@@ -2483,60 +2237,85 @@
 @media (max-width: 1050px) {
 
     .about-hero-visual--profile {
-        width: min(100%, 650px);
-        margin: 0 auto;
+        width: min(100%, 540px);
+        min-height: 590px;
     }
 
     .about-hero-visual__photo {
-        width: min(100%, 500px);
-    }
-}
-
-
-@media (max-width: 700px) {
-
-    .about-hero-visual--profile {
-        min-height: 470px;
-    }
-
-    .about-hero-visual--profile::before {
-        width: 350px;
-        height: 350px;
-    }
-
-    .about-hero-visual--profile::after {
-        width: 395px;
-        height: 395px;
-    }
-
-    .about-hero-visual__photo {
-        width: min(90%, 410px);
-        border-width: 4px;
-        border-radius: 27px;
-        transform: none;
+        min-height: 570px;
     }
 
     .about-hero-visual--profile .about-skill-card--web {
-        top: 10px;
         left: 0;
     }
 
     .about-hero-visual--profile .about-skill-card--java {
-        top: 190px;
         right: 0;
     }
 
     .about-hero-visual--profile .about-skill-card--admin {
-        bottom: 5px;
-        left: 0;
+        left: 10px;
     }
 }
 
+@media (max-width: 700px) {
+
+    .about-hero-visual--profile {
+        width: 100%;
+        min-height: 520px;
+    }
+
+    .about-hero-visual--profile::before {
+        width: 360px;
+        height: 360px;
+    }
+
+    .about-hero-visual--profile::after {
+        width: 420px;
+        height: 420px;
+    }
+
+    .about-hero-visual__photo {
+        width: min(100%, 470px);
+        min-height: 500px;
+        border-radius: 30px;
+    }
+
+    .about-hero-visual__photo-label {
+        right: 22px;
+        left: 22px;
+        bottom: 22px;
+    }
+
+    .about-hero-visual__photo-label strong {
+        font-size: 1.45rem;
+    }
+
+    .about-hero-visual--profile .about-skill-card {
+        width: 195px;
+        padding: 13px 15px;
+    }
+
+    .about-hero-visual--profile .about-skill-card--web {
+        top: 10px;
+        left: 6px;
+    }
+
+    .about-hero-visual--profile .about-skill-card--java {
+        top: 175px;
+        right: 6px;
+    }
+
+    .about-hero-visual--profile .about-skill-card--admin {
+        bottom: 8px;
+        left: 6px;
+    }
+}
 
 @media (max-width: 460px) {
 
     .about-hero-visual--profile {
-        min-height: 405px;
+        min-height: 430px;
     }
 
     .about-hero-visual--profile::before {
@@ -2545,39 +2324,995 @@
     }
 
     .about-hero-visual--profile::after {
-        width: 315px;
-        height: 315px;
+        width: 320px;
+        height: 320px;
     }
 
     .about-hero-visual__photo {
-        width: 88%;
-        aspect-ratio: 4 / 3;
-        border-radius: 23px;
+        width: 100%;
+        min-height: 390px;
+        border-radius: 24px;
+    }
+
+    .about-hero-visual__photo img {
+        opacity: 0.60;
     }
 
     .about-hero-visual__photo-label {
-        right: 17px;
+        right: 16px;
+        left: 16px;
         bottom: 16px;
-        left: 17px;
-    }
-
-    .about-hero-visual__photo-label strong {
-        font-size: 1.2rem;
     }
 
     .about-hero-visual__photo-label span {
-        font-size: 0.52rem;
+        font-size: 0.50rem;
+    }
+
+    .about-hero-visual__photo-label strong {
+        font-size: 1.15rem;
     }
 
     .about-hero-visual__photo-label small {
-        font-size: 0.61rem;
+        font-size: 0.62rem;
     }
 
     .about-hero-visual--profile .about-skill-card {
-        max-width: 51%;
+        width: 165px;
+        padding: 11px 13px;
+    }
+
+    .about-hero-visual--profile .about-skill-card strong {
+        font-size: 0.72rem;
+    }
+
+    .about-hero-visual--profile .about-skill-card small {
+        font-size: 0.57rem;
+    }
+
+    .about-hero-visual--profile .about-skill-card--web {
+        top: 8px;
+        left: 4px;
     }
 
     .about-hero-visual--profile .about-skill-card--java {
-        top: 165px;
+        top: 148px;
+        right: 4px;
+    }
+
+    .about-hero-visual--profile .about-skill-card--admin {
+        bottom: 6px;
+        left: 4px;
     }
 }
+
+
+/* ==================================================
+   CORRECCIÓN RESPONSIVA COMPLETA: PÁGINA SOBRE MÍ
+   Mantener este bloque al final de responsive.css
+================================================== */
+
+/* Evita que las grillas y contenidos internos provoquen
+   desplazamiento horizontal o columnas demasiado estrechas. */
+.internal-page main,
+.about-page-hero,
+.about-profile,
+.about-education,
+.about-stack,
+.about-difference,
+.about-brand,
+.about-final,
+.professional-proof,
+.professional-credential {
+    max-width: 100%;
+    overflow-x: clip;
+}
+
+.page-hero__content,
+.about-hero-visual--profile,
+.about-profile__introduction,
+.about-profile__values,
+.about-education__header,
+.about-education__grid,
+.about-stack__content,
+.about-stack__panel,
+.about-difference__grid,
+.about-brand__seal,
+.about-brand__content,
+.about-final__content,
+.professional-proof__content,
+.professional-proof__cards,
+.professional-credential__visual,
+.professional-credential__content {
+    min-width: 0;
+    max-width: 100%;
+}
+
+@media (max-width: 1100px) {
+
+    /* Todas las secciones de dos columnas pasan a una sola
+       antes de que sus anchos mínimos comiencen a deformarlas. */
+    .about-profile__layout,
+    .about-stack__layout,
+    .about-brand__layout,
+    .professional-proof__layout,
+    .professional-credential__layout {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 48px;
+    }
+
+    .about-education__header {
+        grid-template-columns: minmax(0, 1fr);
+        align-items: start;
+        gap: 18px;
+    }
+
+    .about-profile__introduction,
+    .about-stack__content,
+    .about-brand__content,
+    .professional-proof__content,
+    .professional-credential__content {
+        width: 100%;
+    }
+
+    .about-profile__values,
+    .about-education__grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .about-difference__grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .about-brand__seal {
+        min-height: 340px;
+    }
+
+    .about-final__content {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 30px;
+    }
+
+    .about-final__actions {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 900px) {
+
+    /* Portada de Sobre mí */
+    .about-page-hero .page-hero__container {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 42px;
+    }
+
+    .about-page-hero .page-hero__content {
+        width: 100%;
+        text-align: center;
+    }
+
+    .about-page-hero .page-hero__content > p:not(.section__tag) {
+        max-width: 720px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .about-page-hero .page-hero__actions {
+        justify-content: center;
+    }
+
+    /* La imagen deja de depender de alturas rígidas.
+       Las tarjetas pasan debajo y nunca quedan fuera del viewport. */
+    .about-hero-visual--profile {
+        width: min(100%, 680px);
+        min-height: 0;
+        margin: 0 auto;
+
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        align-items: stretch;
+        gap: 12px;
+    }
+
+    .about-hero-visual--profile::before,
+    .about-hero-visual--profile::after {
+        display: none;
+    }
+
+    .about-hero-visual__photo {
+        width: 100%;
+        min-height: 0;
+        aspect-ratio: 3 / 2;
+        grid-column: 1 / -1;
+
+        border-radius: 30px;
+        transform: none;
+    }
+
+    .about-hero-visual__photo:hover {
+        transform: translateY(-4px);
+    }
+
+    .about-hero-visual__photo img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .about-hero-visual--profile .about-skill-card,
+    .about-hero-visual--profile .about-skill-card--web,
+    .about-hero-visual--profile .about-skill-card--java,
+    .about-hero-visual--profile .about-skill-card--admin {
+        position: static;
+        inset: auto;
+
+        width: 100%;
+        min-width: 0;
+        min-height: 92px;
+        padding: 15px;
+
+        animation: none;
+        transform: none;
+    }
+
+    .about-hero-visual--profile .about-skill-card:hover {
+        transform: translateY(-3px);
+    }
+
+    /* Perfil */
+    .about-profile__layout {
+        gap: 38px;
+    }
+
+    .about-profile__values article,
+    .about-difference__grid article,
+    .education-card {
+        min-height: auto;
+    }
+
+    /* Formación */
+    .education-card--wide {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 22px;
+    }
+
+    /* Stack */
+    .about-stack__layout {
+        gap: 38px;
+    }
+
+    /* Marca */
+    .about-brand__seal {
+        min-height: 310px;
+    }
+
+    .about-brand__seal::before {
+        width: 285px;
+        height: 285px;
+    }
+
+    .about-brand__seal img {
+        width: 245px;
+        height: 245px;
+    }
+
+    /* Credenciales */
+    .professional-proof__cards {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .professional-credential__layout {
+        gap: 32px;
+    }
+
+    .professional-credential__visual {
+        width: 100%;
+        min-height: 360px;
+    }
+}
+
+@media (max-width: 760px) {
+
+    .about-profile__values,
+    .about-education__grid,
+    .about-difference__grid,
+    .professional-proof__cards {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .about-profile__values article,
+    .education-card,
+    .about-difference__grid article,
+    .professional-proof-card {
+        width: 100%;
+        min-height: auto;
+    }
+
+    .education-card--wide {
+        grid-column: auto;
+    }
+
+    .about-stack__groups article {
+        grid-template-columns: minmax(0, 1fr);
+        align-items: start;
+        gap: 10px;
+    }
+
+    .about-brand__layout {
+        gap: 26px;
+    }
+
+    .about-final__actions {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .about-final__actions .button {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 650px) {
+
+    .about-page-hero {
+        padding: 112px 0 62px;
+    }
+
+    .about-page-hero .page-hero__container {
+        gap: 34px;
+    }
+
+    .about-page-hero .page-hero__content {
+        text-align: left;
+    }
+
+    .about-page-hero .page-hero__content h1 {
+        max-width: 100%;
+        font-size: clamp(2.15rem, 11vw, 3.25rem);
+        line-height: 1.04;
+        letter-spacing: -1px;
+        overflow-wrap: break-word;
+    }
+
+    .about-page-hero .page-hero__content > p:not(.section__tag) {
+        margin-right: 0;
+        margin-left: 0;
+        font-size: 0.96rem;
+        line-height: 1.7;
+    }
+
+    .about-page-hero .page-hero__actions {
+        width: 100%;
+        align-items: stretch;
+        justify-content: flex-start;
+        flex-direction: column;
+    }
+
+    .about-page-hero .page-hero__actions .button {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .about-hero-visual--profile {
+        width: 100%;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 10px;
+    }
+
+    .about-hero-visual__photo {
+        aspect-ratio: 3 / 2;
+        border-radius: 24px;
+    }
+
+    .about-hero-visual__photo-label {
+        right: 18px;
+        bottom: 17px;
+        left: 18px;
+    }
+
+    .about-hero-visual__photo-label span {
+        font-size: 0.55rem;
+        letter-spacing: 0.8px;
+    }
+
+    .about-hero-visual__photo-label strong {
+        font-size: 1.3rem;
+    }
+
+    .about-hero-visual__photo-label small {
+        font-size: 0.66rem;
+    }
+
+    .about-hero-visual--profile .about-skill-card,
+    .about-hero-visual--profile .about-skill-card--web,
+    .about-hero-visual--profile .about-skill-card--java,
+    .about-hero-visual--profile .about-skill-card--admin {
+        min-height: 0;
+        padding: 14px 16px;
+        border-radius: 15px;
+    }
+
+    .about-hero-visual--profile .about-skill-card strong {
+        font-size: 0.8rem;
+    }
+
+    .about-hero-visual--profile .about-skill-card small {
+        font-size: 0.65rem;
+    }
+
+    .about-profile__layout,
+    .about-stack__layout,
+    .about-brand__layout,
+    .professional-proof__layout,
+    .professional-credential__layout {
+        gap: 30px;
+    }
+
+    .about-profile__signature {
+        align-items: flex-start;
+    }
+
+    .about-profile__signature img {
+        width: 50px;
+        height: 50px;
+        flex: 0 0 auto;
+    }
+
+    .about-profile__signature span,
+    .about-profile__introduction p,
+    .about-education__header > p,
+    .about-brand__content > p,
+    .professional-proof__content > p,
+    .professional-credential__content > p {
+        overflow-wrap: anywhere;
+    }
+
+    .about-profile__values article,
+    .education-card,
+    .about-difference__grid article,
+    .professional-proof-card {
+        padding: 23px 20px;
+        border-radius: 20px;
+    }
+
+    .about-stack__panel {
+        border-radius: 21px;
+    }
+
+    .about-stack__groups {
+        padding: 16px;
+    }
+
+    .about-stack__groups article {
+        padding: 15px;
+    }
+
+    .about-brand__seal {
+        min-height: 245px;
+    }
+
+    .about-brand__seal::before {
+        width: 220px;
+        height: 220px;
+    }
+
+    .about-brand__seal img {
+        width: 190px;
+        height: 190px;
+    }
+
+    .about-final {
+        padding: 65px 0;
+    }
+
+    .about-final h2 {
+        font-size: clamp(1.9rem, 9vw, 2.7rem);
+    }
+
+    .professional-credential__visual {
+        min-height: 290px;
+    }
+
+    .professional-credential__glow {
+        width: 250px;
+        height: 250px;
+    }
+
+    .professional-credential__visual img {
+        width: min(285px, 82vw);
+        max-width: 100%;
+    }
+
+    .professional-credential__verification {
+        grid-template-columns: 40px minmax(0, 1fr);
+        gap: 12px;
+    }
+
+    .professional-credential__verification p {
+        overflow-wrap: anywhere;
+    }
+
+    .professional-credential__skills span,
+    .about-brand__qualities span,
+    .education-card__tags span,
+    .about-stack__groups span {
+        max-width: 100%;
+        white-space: normal;
+    }
+}
+
+@media (max-width: 430px) {
+
+    .internal-page .container {
+        width: 92%;
+    }
+
+    .about-page-hero {
+        padding-top: 104px;
+    }
+
+    .about-page-hero .page-hero__back {
+        margin-bottom: 22px;
+    }
+
+    .about-page-hero .page-hero__content h1 {
+        font-size: clamp(2rem, 10.7vw, 2.75rem);
+    }
+
+    .about-hero-visual__photo {
+        border-radius: 20px;
+    }
+
+    .about-hero-visual__photo img {
+        opacity: 0.64;
+    }
+
+    .about-hero-visual__photo-label {
+        right: 14px;
+        bottom: 13px;
+        left: 14px;
+    }
+
+    .about-profile__signature {
+        padding: 13px;
+        gap: 11px;
+    }
+
+    .about-profile__signature img {
+        width: 45px;
+        height: 45px;
+    }
+
+    .about-profile__signature strong {
+        font-size: 0.88rem;
+    }
+
+    .about-profile__signature span {
+        font-size: 0.66rem;
+        line-height: 1.45;
+    }
+
+    .education-card,
+    .about-profile__values article,
+    .about-difference__grid article,
+    .professional-proof-card {
+        padding: 20px 17px;
+    }
+
+    .about-stack__groups {
+        padding: 13px;
+    }
+
+    .about-stack__panel-header small {
+        max-width: 180px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    .professional-credential__visual {
+        min-height: 245px;
+    }
+
+    .professional-credential__glow {
+        width: 210px;
+        height: 210px;
+    }
+
+    .professional-credential__verification {
+        padding: 13px;
+    }
+}
+
+
+/* ==================================================
+   AJUSTES FINALES: ESPACIOS, TÍTULOS Y DESPLIEGUES
+================================================== */
+
+@media (max-width: 900px) {
+
+    .hero {
+        gap: 42px;
+        padding-bottom: 58px;
+    }
+
+    .home-about-preview__layout {
+        gap: 28px;
+    }
+
+    .home-about-preview__visual {
+        min-height: 330px;
+    }
+}
+
+
+@media (max-width: 650px) {
+
+    /* Portada principal más compacta */
+
+    .hero {
+        padding-top: 112px;
+        padding-bottom: 48px;
+        gap: 34px;
+    }
+
+    .hero h1 {
+        font-size: clamp(2.15rem, 10vw, 2.9rem);
+        line-height: 1.04;
+    }
+
+    .hero__description {
+        font-size: 0.94rem;
+        line-height: 1.65;
+    }
+
+    .hero__browser-body.has-sidebar {
+        grid-template-columns: 84px minmax(0, 1fr);
+    }
+
+    .hero__browser-screen {
+        padding: 18px 15px 14px;
+    }
+
+    .hero-slide__layout {
+        min-height: 82px;
+    }
+
+    /* Resumen de Sobre mí en el index sin franjas vacías */
+
+    .home-about-preview {
+        padding-top: 55px;
+        padding-bottom: 55px;
+    }
+
+    .home-about-preview__layout {
+        gap: 22px;
+    }
+
+    .home-about-preview__visual {
+        min-height: 285px;
+    }
+
+    .home-about-preview__visual::before {
+        width: 225px;
+        height: 225px;
+    }
+
+    .home-about-preview__seal {
+        width: 175px;
+        height: 175px;
+    }
+
+    .home-about-preview__seal img {
+        width: 138px;
+        height: 138px;
+    }
+
+    .home-about-preview__badge {
+        padding: 7px 10px;
+        font-size: 0.56rem;
+    }
+
+    .home-about-preview__badge--one {
+        top: 8px;
+        left: 2px;
+    }
+
+    .home-about-preview__badge--two {
+        top: 112px;
+        right: 2px;
+    }
+
+    .home-about-preview__badge--three {
+        bottom: 8px;
+        left: 5px;
+    }
+
+    /* Títulos interiores proporcionados */
+
+    .page-hero__content h1 {
+        max-width: 100%;
+        font-size: clamp(2rem, 9.3vw, 2.75rem);
+        line-height: 1.08;
+        letter-spacing: -0.7px;
+        overflow-wrap: normal;
+        word-break: normal;
+        hyphens: none;
+    }
+
+    .work-commitment .section__title {
+        font-size: clamp(1.9rem, 8.9vw, 2.55rem);
+        line-height: 1.09;
+        letter-spacing: -0.5px;
+    }
+
+    .contact-final h2,
+    .work-final h2,
+    .home-contact-banner h2 {
+        max-width: 100%;
+        font-size: clamp(1.82rem, 8.4vw, 2.45rem);
+        line-height: 1.12;
+        letter-spacing: -0.4px;
+        overflow-wrap: normal;
+        word-break: normal;
+        hyphens: none;
+    }
+
+    .contact-final,
+    .work-final,
+    .home-contact-banner {
+        padding-top: 55px;
+        padding-bottom: 55px;
+    }
+
+    /* Despliegues fáciles de pulsar */
+
+    .text-disclosure summary,
+    .service-card__details summary,
+    .work-step__details summary {
+        line-height: 1.35;
+    }
+
+    .service-card {
+        min-height: auto;
+    }
+}
+
+
+@media (max-width: 430px) {
+
+    .home-about-preview__visual {
+        min-height: 245px;
+    }
+
+    .home-about-preview__visual::before {
+        width: 190px;
+        height: 190px;
+    }
+
+    .home-about-preview__seal {
+        width: 145px;
+        height: 145px;
+    }
+
+    .home-about-preview__seal img {
+        width: 114px;
+        height: 114px;
+    }
+
+    .home-about-preview__badge--two {
+        top: 96px;
+    }
+
+    .page-hero__content h1 {
+        font-size: clamp(1.9rem, 9.2vw, 2.35rem);
+    }
+
+    .work-commitment .section__title,
+    .contact-final h2,
+    .work-final h2,
+    .home-contact-banner h2 {
+        font-size: clamp(1.75rem, 8.6vw, 2.15rem);
+    }
+
+    .text-disclosure summary {
+        padding: 12px 13px;
+        font-size: 0.72rem;
+    }
+
+    .text-disclosure__content {
+        padding-right: 13px;
+        padding-bottom: 14px;
+        padding-left: 13px;
+    }
+}
+
+/* ==================================================
+   CORRECCIÓN FINAL DEL INDEX EN PANTALLAS PEQUEÑAS
+   Evita desbordamientos, espacios vacíos y títulos sobredimensionados.
+================================================== */
+
+@media (max-width: 900px) {
+
+    html,
+    body {
+        max-width: 100%;
+        overflow-x: clip;
+    }
+
+    .header {
+        min-height: auto;
+    }
+
+    .hero {
+        min-height: auto;
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .hero__content,
+    .hero__visual,
+    .hero__browser,
+    .hero__browser-body,
+    .hero__browser-screen {
+        width: 100%;
+        min-width: 0;
+        max-width: 100%;
+    }
+
+    .hero__browser-body,
+    .hero__browser-body.has-sidebar,
+    .hero__browser-screen {
+        min-height: 0 !important;
+        height: auto !important;
+    }
+
+    .home-about-preview__layout {
+        width: 100%;
+        min-width: 0;
+        grid-template-columns: minmax(0, 1fr) !important;
+        gap: 30px;
+    }
+
+    .home-about-preview__visual,
+    .home-about-preview__content,
+    .home-about-preview__qualities,
+    .home-about-preview__actions {
+        width: 100%;
+        min-width: 0;
+        max-width: 100%;
+    }
+
+    .home-about-preview__content {
+        position: relative;
+        z-index: 4;
+        display: block;
+        visibility: visible;
+        opacity: 1;
+        transform: none;
+    }
+
+    .home-stage {
+        overflow: hidden;
+    }
+
+    .home-stage__header {
+        width: 100%;
+        min-width: 0;
+        grid-template-columns: minmax(0, 1fr) !important;
+        gap: 18px;
+        align-items: start;
+    }
+
+    .home-stage__header > div,
+    .home-stage__header > p {
+        width: 100%;
+        min-width: 0;
+        max-width: 100%;
+    }
+}
+
+
+@media (max-width: 650px) {
+
+    .hero {
+        padding-top: 108px;
+        padding-bottom: 46px;
+        gap: 32px;
+    }
+
+    .hero__content,
+    .hero__visual {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .hero__browser-screen {
+        padding: 18px 15px 14px;
+    }
+
+    .home-about-preview {
+        padding-top: 48px;
+        padding-bottom: 48px;
+    }
+
+    .home-about-preview .container {
+        min-height: 0;
+    }
+
+    .home-about-preview__layout {
+        gap: 24px;
+    }
+
+    .home-about-preview__visual {
+        min-height: 275px;
+        margin: 0 auto;
+        overflow: visible;
+    }
+
+    .home-about-preview__content {
+        padding-top: 4px;
+    }
+
+    .home-about-preview__content .section__title {
+        font-size: clamp(1.72rem, 7.6vw, 2.15rem);
+        line-height: 1.12;
+        letter-spacing: -0.45px;
+        text-wrap: balance;
+    }
+
+    .home-about-preview__content > p:not(.section__tag) {
+        margin-top: 16px;
+        line-height: 1.65;
+    }
+
+    .home-stage__header {
+        margin-bottom: 28px;
+        gap: 14px;
+    }
+
+    .home-stage__header .section__tag {
+        margin-bottom: 8px;
+        font-size: 0.72rem;
+        letter-spacing: 1.5px;
+    }
+
+    .home-stage__header .section__title {
+        max-width: 100%;
+        font-size: clamp(1.62rem, 7.2vw, 2rem);
+        line-height: 1.12;
+        letter-spacing: -0.45px;
+        overflow-wrap: normal;
+        word-break: normal;
+        hyphens: none;
+        text-wrap: balance;
+    }
+
+    .home-stage__header > p {
+        font-size: 0.88rem;
+        line-height: 1.65;
+    }
+}
+
+
+@media (max-width: 430px) {
+
+    .home-about-preview__visual {
+        min-height: 235px;
+    }
+
+    .home-about-preview__content .section__title {
+        font-size: clamp(1.55rem, 7.1vw, 1.9rem);
+    }
+
+    .home-stage__header .section__title {
+        font-size: clamp(1.52rem, 6.9vw, 1.82rem);
+        line-height: 1.14;
+    }
+
+    .home-stage__header > p {
+        font-size: 0.84rem;
+    }
+}
+
