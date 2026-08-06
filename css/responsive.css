@@ -2476,3 +2476,108 @@
         justify-content: center;
     }
 }
+/* ==================================================
+   RESPONSIVE: FOTO PROFESIONAL SOBRE MÍ
+================================================== */
+
+@media (max-width: 1050px) {
+
+    .about-hero-visual--profile {
+        width: min(100%, 650px);
+        margin: 0 auto;
+    }
+
+    .about-hero-visual__photo {
+        width: min(100%, 500px);
+    }
+}
+
+
+@media (max-width: 700px) {
+
+    .about-hero-visual--profile {
+        min-height: 470px;
+    }
+
+    .about-hero-visual--profile::before {
+        width: 350px;
+        height: 350px;
+    }
+
+    .about-hero-visual--profile::after {
+        width: 395px;
+        height: 395px;
+    }
+
+    .about-hero-visual__photo {
+        width: min(90%, 410px);
+        border-width: 4px;
+        border-radius: 27px;
+        transform: none;
+    }
+
+    .about-hero-visual--profile .about-skill-card--web {
+        top: 10px;
+        left: 0;
+    }
+
+    .about-hero-visual--profile .about-skill-card--java {
+        top: 190px;
+        right: 0;
+    }
+
+    .about-hero-visual--profile .about-skill-card--admin {
+        bottom: 5px;
+        left: 0;
+    }
+}
+
+
+@media (max-width: 460px) {
+
+    .about-hero-visual--profile {
+        min-height: 405px;
+    }
+
+    .about-hero-visual--profile::before {
+        width: 280px;
+        height: 280px;
+    }
+
+    .about-hero-visual--profile::after {
+        width: 315px;
+        height: 315px;
+    }
+
+    .about-hero-visual__photo {
+        width: 88%;
+        aspect-ratio: 4 / 3;
+        border-radius: 23px;
+    }
+
+    .about-hero-visual__photo-label {
+        right: 17px;
+        bottom: 16px;
+        left: 17px;
+    }
+
+    .about-hero-visual__photo-label strong {
+        font-size: 1.2rem;
+    }
+
+    .about-hero-visual__photo-label span {
+        font-size: 0.52rem;
+    }
+
+    .about-hero-visual__photo-label small {
+        font-size: 0.61rem;
+    }
+
+    .about-hero-visual--profile .about-skill-card {
+        max-width: 51%;
+    }
+
+    .about-hero-visual--profile .about-skill-card--java {
+        top: 165px;
+    }
+}

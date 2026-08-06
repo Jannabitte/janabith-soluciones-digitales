@@ -7112,3 +7112,150 @@ body.modal-open {
         transform: scale(1.08);
     }
 }
+/* ==================================================
+   IMAGEN PROFESIONAL EN SOBRE MÍ
+================================================== */
+
+.about-hero-visual--profile {
+    min-height: 550px;
+}
+
+.about-hero-visual--profile::before {
+    width: 455px;
+    height: 455px;
+
+    background:
+        linear-gradient(145deg,
+            rgba(111, 66, 193, 0.2),
+            rgba(53, 221, 136, 0.16));
+}
+
+.about-hero-visual--profile::after {
+    width: 505px;
+    height: 505px;
+}
+
+
+/* Contenedor principal de la imagen */
+
+.about-hero-visual__photo {
+    position: relative;
+    z-index: 3;
+
+    width: min(100%, 470px);
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+
+    background-color: var(--color-morado-oscuro);
+    border: 5px solid rgba(255, 255, 255, 0.9);
+    border-radius: 34px;
+
+    box-shadow:
+        0 35px 70px rgba(47, 27, 77, 0.26),
+        0 0 0 1px rgba(111, 66, 193, 0.12);
+
+    transform: rotate(-1.5deg);
+
+    transition:
+        transform var(--transicion),
+        box-shadow var(--transicion);
+}
+
+.about-hero-visual__photo:hover {
+    transform: rotate(0deg) translateY(-7px);
+
+    box-shadow:
+        0 42px 80px rgba(47, 27, 77, 0.31),
+        0 0 0 1px rgba(53, 221, 136, 0.28);
+}
+
+.about-hero-visual__photo::after {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    pointer-events: none;
+
+    background:
+        linear-gradient(to top,
+            rgba(25, 10, 39, 0.84),
+            transparent 42%);
+}
+
+
+/* Fotografía */
+
+.about-hero-visual__photo img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+    object-position: center;
+
+    transition:
+        transform 700ms ease,
+        filter 700ms ease;
+}
+
+.about-hero-visual__photo:hover img {
+    transform: scale(1.035);
+    filter: saturate(1.05);
+}
+
+
+/* Identificación sobre la imagen */
+
+.about-hero-visual__photo-label {
+    position: absolute;
+    z-index: 2;
+    right: 25px;
+    bottom: 23px;
+    left: 25px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.about-hero-visual__photo-label span {
+    color: var(--color-verde);
+    font-size: 0.64rem;
+    font-weight: 900;
+    letter-spacing: 1.1px;
+    text-transform: uppercase;
+}
+
+.about-hero-visual__photo-label strong {
+    margin-top: 5px;
+
+    color: var(--color-blanco);
+    font-size: 1.55rem;
+    line-height: 1;
+}
+
+.about-hero-visual__photo-label small {
+    margin-top: 6px;
+
+    color: rgba(255, 255, 255, 0.76);
+    font-size: 0.72rem;
+}
+
+
+/* Ajustes de las tarjetas alrededor de la fotografía */
+
+.about-hero-visual--profile .about-skill-card--web {
+    top: 25px;
+    left: -35px;
+}
+
+.about-hero-visual--profile .about-skill-card--java {
+    top: 215px;
+    right: -50px;
+}
+
+.about-hero-visual--profile .about-skill-card--admin {
+    bottom: 15px;
+    left: -10px;
+}
