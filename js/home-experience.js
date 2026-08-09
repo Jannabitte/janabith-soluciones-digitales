@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
             title: "Sesión inicial de orientación",
             text: "Primero ordenamos la idea, identificamos el problema real y definimos una primera etapa alcanzable antes de hablar de herramientas.",
             points: ["Necesidad principal", "Prioridades", "Próximo paso"],
-            href: "pages/contacto.html"
+            href: "pages/contacto.html?servicio=otro&origen=Orientador%20digital&mensaje=Hola%2C%20necesito%20orientaci%C3%B3n%20para%20definir%20la%20mejor%20soluci%C3%B3n%20para%20mi%20proyecto.#formulario-contacto"
         }
     };
 

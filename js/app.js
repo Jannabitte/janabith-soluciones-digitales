@@ -86,7 +86,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
         window.addEventListener("resize", () => {
-            if (window.innerWidth > 900) {
+            if (window.innerWidth > 1180) {
                 cerrarMenu();
             }
         });
@@ -678,5 +678,131 @@ document.addEventListener("DOMContentLoaded", () => {
             cerrarMenu();
         }
     });
+
+
+    /* ==================================================
+       INTERACCIONES MODERNAS Y CONTACTO CONTEXTUAL
+    ================================================== */
+
+    const socialLauncher = document.querySelector("[data-social-launcher]");
+    const socialToggle = socialLauncher?.querySelector(".hero-social__toggle");
+
+    socialToggle?.addEventListener("click", () => {
+        const isOpen = socialLauncher.classList.toggle("is-open");
+        socialToggle.setAttribute("aria-expanded", String(isOpen));
+        socialToggle.querySelector("span").textContent = isOpen ? "×" : "+";
+    });
+
+    document.addEventListener("click", (event) => {
+        if (!socialLauncher || !socialToggle || socialLauncher.contains(event.target)) return;
+        socialLauncher.classList.remove("is-open");
+        socialToggle.setAttribute("aria-expanded", "false");
+        socialToggle.querySelector("span").textContent = "+";
+    });
+
+    /* Franja móvil y animada en todas las páginas interiores. */
+    const internalHero = document.querySelector(".page-hero");
+    if (internalHero && !document.querySelector(".motion-band")) {
+        const currentPage = window.location.pathname.split("/").pop() || "inicio";
+        const bandItemsByPage = {
+            "servicios.html": ["Páginas web desde $199.990", "Java Full Stack", "Bases de datos", "Diseño responsivo", "Publicación"],
+            "portafolio.html": ["Proyectos reales", "INGPRO", "OneVet", "Minimarket El Chinito", "Código documentado"],
+            "sobre-mi.html": ["Insignia digital", "Java Full Stack", "Administración", "Comunicación clara", "Aprendizaje continuo"],
+            "como-trabajo.html": ["Diagnóstico", "Planificación", "Desarrollo", "Revisión", "Entrega responsable"],
+            "contacto.html": ["Cuéntame tu idea", "Formulario seguro", "Respuesta escrita", "Cotización clara", "Próximos pasos"]
+        };
+        const items = bandItemsByPage[currentPage] || ["Janabith PuntoCL", "Soluciones digitales", "Desarrollo web", "Java"];
+        const group = items.map((item) => `<span>${item}</span>`).join("");
+        const band = document.createElement("section");
+        band.className = "motion-band";
+        band.setAttribute("aria-label", "Áreas destacadas de esta página");
+        band.innerHTML = `<div class="motion-band__track"><div class="motion-band__group">${group}</div><div class="motion-band__group" aria-hidden="true">${group}</div></div>`;
+        internalHero.insertAdjacentElement("afterend", band);
+    }
+
+    /* Barra de progreso de lectura. */
+    if (!document.querySelector(".reading-progress")) {
+        const progress = document.createElement("div");
+        progress.className = "reading-progress";
+        progress.setAttribute("aria-hidden", "true");
+        document.body.prepend(progress);
+        const updateProgress = () => {
+            const maximum = document.documentElement.scrollHeight - window.innerHeight;
+            const percentage = maximum > 0 ? Math.min(100, Math.max(0, window.scrollY / maximum * 100)) : 0;
+            progress.style.setProperty("--reading-progress", `${percentage}%`);
+        };
+        updateProgress();
+        window.addEventListener("scroll", updateProgress, { passive: true });
+        window.addEventListener("resize", updateProgress);
+    }
+
+    /* Construye enlaces al formulario con un mensaje según el botón presionado. */
+    document.querySelectorAll("[data-contact-message]").forEach((link) => {
+        const service = link.dataset.contactService || "otro";
+        const origin = link.dataset.contactOrigin || "Sitio web";
+        const message = link.dataset.contactMessage || "Hola, quiero consultar por un proyecto digital.";
+        const isInternalPage = document.body.classList.contains("internal-page");
+        const contactBase = isInternalPage ? "contacto.html" : "pages/contacto.html";
+        const params = new URLSearchParams({ servicio: service, origen: origin, mensaje: message });
+        link.href = `${contactBase}?${params.toString()}#formulario-contacto`;
+    });
+
+    /* Completa el formulario cuando la consulta llega desde otro botón. */
+    const contactForm = document.querySelector('form[name="contacto-janabith"]');
+    if (contactForm) {
+        const params = new URLSearchParams(window.location.search);
+        const service = params.get("servicio");
+        const origin = params.get("origen");
+        const message = params.get("mensaje");
+        const serviceField = contactForm.querySelector("#servicio");
+        const messageField = contactForm.querySelector("#mensaje");
+
+        if (serviceField && service && [...serviceField.options].some((option) => option.value === service)) {
+            serviceField.value = service;
+        }
+        if (messageField && message && !messageField.value.trim()) {
+            messageField.value = message;
+        }
+        if (origin) {
+            let originField = contactForm.querySelector('input[name="origen-consulta"]');
+            if (!originField) {
+                originField = document.createElement("input");
+                originField.type = "hidden";
+                originField.name = "origen-consulta";
+                contactForm.appendChild(originField);
+            }
+            originField.value = origin;
+
+            const sourceNotice = document.createElement("p");
+            sourceNotice.className = "contact-source-note";
+            sourceNotice.textContent = `Consulta iniciada desde: ${origin}`;
+            contactForm.prepend(sourceNotice);
+        }
+    }
+
+
+    /* ==================================================
+       ENVÍO DE FORMULARIO
+       Netlify Forms procesa el POST nativo del formulario.
+       No se intercepta con fetch para evitar falsos errores de confirmación.
+    ================================================== */
+
+    if (contactForm) {
+        const submitButton = contactForm.querySelector('button[type="submit"]');
+        const submitText = submitButton?.querySelector(".contact-form__submit-text");
+
+        contactForm.addEventListener("submit", () => {
+            if (!contactForm.checkValidity()) return;
+
+            if (submitButton) {
+                submitButton.disabled = true;
+                submitButton.setAttribute("aria-busy", "true");
+            }
+
+            if (submitText) {
+                submitText.textContent = "Enviando…";
+            }
+        });
+    }
 
 });

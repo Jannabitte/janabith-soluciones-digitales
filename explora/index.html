@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#f7f2ff">
+    <meta name="description" content="Explora soluciones digitales de Janabith PuntoCL: páginas web, mejoras, catálogos, Java Full Stack y orientación para tu proyecto.">
+    <title>Explora | Janabith PuntoCL</title>
+    <link rel="stylesheet" href="explora.css">
+</head>
+<body>
+    <div class="explore-bg" aria-hidden="true">
+        <span class="orb orb--one"></span>
+        <span class="orb orb--two"></span>
+        <span class="line line--one"></span>
+        <span class="line line--two"></span>
+    </div>
+
+    <header class="explore-header">
+        <a class="brand" href="../index.html" aria-label="Volver a Janabith PuntoCL">
+            <img src="../assets/img/sello-janabith.png" alt="">
+            <span><strong>Janabith</strong><small>PuntoCL</small></span>
+        </a>
+        <a class="header-action" href="../pages/portafolio.html">Portafolio</a>
+    </header>
+
+    <main class="explore-main" id="explora">
+        <section class="intro" data-step="0">
+            <p class="eyebrow">Experiencia interactiva</p>
+            <h1>¿Qué podemos crear para tu idea?</h1>
+            <p class="intro__copy">Desliza y elige el punto que más se parece a lo que necesitas.</p>
+            <div class="swipe-hint" aria-hidden="true">
+                <span>Desliza para explorar</span>
+                <b>↓</b>
+            </div>
+        </section>
+
+        <section class="service-card service-card--web reveal" data-step="1">
+            <div class="service-card__topline">
+                <span class="service-icon">🌐</span>
+                <span class="service-kicker">Presencia digital</span>
+            </div>
+            <h2>Página web</h2>
+            <p>Una web clara, moderna y adaptada a celular, tablet y computador.</p>
+            <div class="chips" aria-label="Características">
+                <span>Responsive</span><span>Contacto</span><span>Publicación</span>
+            </div>
+            <div class="price-pill">Desde $199.990</div>
+            <button class="details-toggle" type="button" aria-expanded="false">
+                <span>Ver qué puede incluir</span><b>+</b>
+            </button>
+            <div class="details-panel" hidden>
+                <p>Portada, servicios, contacto, formularios, mapas, galerías, carruseles y otras funciones según el proyecto.</p>
+            </div>
+            <a class="card-cta" href="#" data-contact-service="pagina-web" data-contact-origin="Explora · Página web" data-contact-message="Hola, llegué desde Explora y quiero conversar sobre la creación de una página web.">
+                Quiero una página web <span>→</span>
+            </a>
+        </section>
+
+        <section class="service-card service-card--improve reveal" data-step="2">
+            <div class="service-card__topline">
+                <span class="service-icon">✨</span>
+                <span class="service-kicker">Ya tengo algo creado</span>
+            </div>
+            <h2>Mejorar mi sitio</h2>
+            <p>Revisamos lo que ya existe y priorizamos mejoras que realmente aporten.</p>
+            <div class="mini-browser" aria-hidden="true">
+                <div class="mini-browser__bar"><i></i><i></i><i></i></div>
+                <div class="mini-browser__content">
+                    <span></span><span></span><span></span>
+                </div>
+            </div>
+            <div class="chips"><span>UX</span><span>Responsive</span><span>Orden</span></div>
+            <a class="card-cta" href="#" data-contact-service="otro" data-contact-origin="Explora · Mejorar sitio" data-contact-message="Hola, llegué desde Explora. Ya tengo un sitio o proyecto digital y quiero evaluar mejoras.">
+                Revisar lo que ya tengo <span>→</span>
+            </a>
+        </section>
+
+        <section class="service-card service-card--catalog reveal" data-step="3">
+            <div class="service-card__topline">
+                <span class="service-icon">🗂️</span>
+                <span class="service-kicker">Mostrar mejor lo que haces</span>
+            </div>
+            <h2>Catálogo o portafolio</h2>
+            <p>Organizamos productos, servicios o trabajos para que se entiendan rápido y se vean profesionales.</p>
+            <div class="stack-preview" aria-hidden="true">
+                <span>Servicios</span><span>Proyectos</span><span>Contacto</span>
+            </div>
+            <a class="card-cta" href="#" data-contact-service="pagina-web" data-contact-origin="Explora · Catálogo o portafolio" data-contact-message="Hola, llegué desde Explora y me interesa crear un catálogo o portafolio digital.">
+                Quiero ordenar mi vitrina digital <span>→</span>
+            </a>
+        </section>
+
+        <section class="service-card service-card--java reveal" data-step="4">
+            <div class="service-card__topline">
+                <span class="service-icon">☕</span>
+                <span class="service-kicker">Más allá del frontend</span>
+            </div>
+            <h2>Java Full Stack</h2>
+            <p>Proyectos con lógica, datos y estructura para necesidades que requieren más que una página informativa.</p>
+            <div class="tech-grid" aria-label="Tecnologías">
+                <span>Java</span><span>Spring Boot</span><span>MySQL</span><span>API REST</span>
+            </div>
+            <a class="card-cta" href="#" data-contact-service="aplicacion-java" data-contact-origin="Explora · Java Full Stack" data-contact-message="Hola, llegué desde Explora y quiero conversar sobre una solución o aplicación Java Full Stack.">
+                Conversar sobre una solución Java <span>→</span>
+            </a>
+        </section>
+
+        <section class="service-card service-card--projects reveal" data-step="5">
+            <div class="service-card__topline">
+                <span class="service-icon">💻</span>
+                <span class="service-kicker">Trabajo aplicado</span>
+            </div>
+            <h2>Proyectos</h2>
+            <p>Una pequeña muestra de soluciones que ya hemos construido.</p>
+            <div class="project-strip">
+                <a href="../pages/portafolio.html" class="project-thumb">
+                    <img src="../assets/img/proyectos/ingpro/ingpro-portada.png" alt="Vista del proyecto INGPRO">
+                    <span>INGPRO</span>
+                </a>
+                <a href="../pages/portafolio.html" class="project-thumb">
+                    <img src="../assets/img/proyectos/el-chinito/el-chinito-portada.png" alt="Vista del proyecto El Chinito">
+                    <span>El Chinito</span>
+                </a>
+                <a href="../pages/portafolio.html" class="project-thumb">
+                    <img src="../assets/img/proyectos/onevet-store/onevet-store-portada.png" alt="Vista del proyecto OneVet Store">
+                    <span>OneVet</span>
+                </a>
+            </div>
+            <a class="card-cta card-cta--soft" href="../pages/portafolio.html">Ver portafolio completo <span>→</span></a>
+        </section>
+
+        <section class="service-card service-card--guide reveal" data-step="6">
+            <div class="service-card__topline">
+                <span class="service-icon">💡</span>
+                <span class="service-kicker">También es una opción</span>
+            </div>
+            <h2>No sé exactamente qué necesito</h2>
+            <p>No necesitas llegar con una solución técnica definida. Puedes contarme el problema y partimos desde ahí.</p>
+            <div class="guide-steps">
+                <span><b>1</b> Me cuentas la idea</span>
+                <span><b>2</b> Ordenamos la necesidad</span>
+                <span><b>3</b> Definimos un buen punto de partida</span>
+            </div>
+            <a class="card-cta" href="#" data-contact-service="otro" data-contact-origin="Explora · Necesito orientación" data-contact-message="Hola, llegué desde Explora. Tengo una idea o necesidad, pero todavía no sé exactamente qué solución digital necesito.">
+                Cuéntame tu idea <span>→</span>
+            </a>
+        </section>
+
+        <section class="final-card reveal" data-step="7">
+            <img src="../assets/img/sello-janabith.png" alt="Sello Janabith PuntoCL">
+            <p class="eyebrow">Janabith PuntoCL</p>
+            <h2>Una idea puede comenzar con un mensaje.</h2>
+            <p>Completa el formulario y cuéntame en qué etapa estás.</p>
+            <a class="final-cta" href="#" data-contact-service="otro" data-contact-origin="Explora · Cierre" data-contact-message="Hola, llegué al final de Explora y quiero conversar sobre mi proyecto digital.">💬 Ir al formulario</a>
+            <a class="back-home" href="../index.html">Volver al sitio principal</a>
+        </section>
+    </main>
+
+    <nav class="progress" aria-label="Progreso de Explora">
+        <span class="is-active"></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+    </nav>
+
+    <a class="floating-contact" href="#" data-contact-service="otro" data-contact-origin="Explora · Botón flotante" data-contact-message="Hola, llegué desde Explora y quiero conversar sobre mi idea." aria-label="Ir al formulario de contacto">💬</a>
+
+    <script src="explora.js"></script>
+</body>
+</html>

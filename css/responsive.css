@@ -3316,3 +3316,933 @@
     }
 }
 
+
+
+/* ==================================================
+   RESPONSIVE: PRECIO Y SERVICIOS COMPACTOS
+================================================== */
+
+@media (max-width: 980px) {
+    .services__grid--main,
+    .services__grid--extra {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .service-pricing {
+        grid-template-columns: 1fr;
+    }
+
+    .service-pricing__action {
+        width: min(100%, 440px);
+        justify-self: center;
+    }
+}
+
+@media (max-width: 700px) {
+    .starting-price {
+        width: 100%;
+        grid-template-columns: 1fr;
+        gap: 5px;
+    }
+
+    .starting-price small {
+        grid-column: auto;
+    }
+
+    .services__grid--main,
+    .services__grid--extra {
+        grid-template-columns: 1fr;
+    }
+
+    .services-more > summary {
+        min-height: 72px;
+        padding: 15px 17px;
+    }
+
+    .services-more .services__grid {
+        padding: 17px;
+    }
+
+    .service-pricing {
+        padding: 25px 20px;
+        border-radius: 23px;
+    }
+
+    .service-pricing__action {
+        padding: 23px 18px;
+    }
+
+    .home-stage-card__details summary {
+        font-size: 0.66rem;
+    }
+}
+
+@media (max-width: 460px) {
+    .starting-price {
+        padding: 12px 14px;
+        border-radius: 15px;
+    }
+
+    .starting-price strong {
+        font-size: 1.22rem;
+    }
+
+    .services-more > summary strong {
+        font-size: 0.84rem;
+    }
+
+    .services-more > summary small {
+        font-size: 0.62rem;
+    }
+
+    .service-pricing h3 {
+        font-size: 1.65rem;
+    }
+
+    .service-pricing__features span {
+        font-size: 0.61rem;
+    }
+}
+
+
+/* ==================================================
+   AJUSTES RESPONSIVOS ADICIONALES
+================================================== */
+
+@media (max-width: 1024px) {
+    .home-about-preview__sticker {
+        top: auto;
+        bottom: -30px;
+        right: 8px;
+        width: min(320px, 92%);
+    }
+
+    .hero__social-links,
+    .hero__trust-points {
+        justify-content: flex-start;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero__social-links a {
+        flex: 1 1 calc(50% - 12px);
+        text-align: center;
+    }
+
+    .hero__trust-points span {
+        width: 100%;
+        text-align: center;
+    }
+
+    .home-about-preview__visual {
+        padding-top: 120px;
+    }
+
+    .home-about-preview__sticker {
+        position: relative;
+        top: auto;
+        right: auto;
+        bottom: auto;
+        width: 100%;
+        margin-bottom: 18px;
+    }
+
+    .home-about-preview__badge--one { top: 94px; }
+    .home-about-preview__badge--two { top: 290px; }
+    .home-about-preview__badge--three { bottom: -4px; }
+
+    .floating-cta {
+        display: inline-flex;
+    }
+}
+
+@media (max-width: 520px) {
+    .hero__social-links a {
+        flex-basis: 100%;
+    }
+
+    .home-about-preview__sticker {
+        padding: 12px;
+        border-radius: 22px;
+        gap: 10px;
+    }
+
+    .home-about-preview__sticker img {
+        width: 64px;
+        height: 64px;
+        border-radius: 18px;
+    }
+
+    .home-about-preview__sticker span {
+        font-size: 0.88rem;
+    }
+
+    .home-about-preview__qualities article {
+        padding-left: 24px;
+    }
+
+    .home-about-preview__qualities article::before {
+        top: 22px;
+        width: 12px;
+        height: 12px;
+    }
+}
+
+/* === Saludo animado Janabith en index === */
+@media (max-width: 1024px) {
+    .home-about-preview__wave {
+        width: min(350px, 92%);
+    }
+
+    .home-about-preview__wave-bubble {
+        top: auto;
+        right: 0;
+        bottom: -8px;
+    }
+}
+
+@media (max-width: 768px) {
+    .home-about-preview__visual {
+        min-height: auto;
+        padding-top: 0;
+        padding-bottom: 8px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .home-about-preview__wave {
+        width: min(320px, 100%);
+        margin: 0 auto 6px;
+    }
+
+    .home-about-preview__wave-video {
+        max-width: 280px;
+    }
+
+    .home-about-preview__wave-bubble {
+        position: relative;
+        top: auto;
+        right: auto;
+        bottom: auto;
+        width: min(280px, 100%);
+        margin-top: -16px;
+        text-align: center;
+    }
+
+    .home-about-preview__badge {
+        position: static;
+        animation: none;
+        font-size: 0.82rem;
+        padding: 10px 16px;
+    }
+}
+
+@media (max-width: 520px) {
+    .home-about-preview__wave {
+        width: min(280px, 100%);
+    }
+
+    .home-about-preview__wave-video {
+        max-width: 248px;
+    }
+
+    .home-about-preview__wave-bubble {
+        width: 100%;
+        padding: 14px 16px;
+        border-radius: 20px;
+    }
+
+    .home-about-preview__wave-bubble strong {
+        font-size: 0.96rem;
+    }
+
+    .home-about-preview__wave-bubble span {
+        font-size: 0.86rem;
+    }
+}
+
+/* ==================================================
+   AJUSTES FINALES 2026 · RESPONSIVE GENERAL
+================================================== */
+
+@media (max-width: 1550px) {
+    .navbar {
+        padding-right: 3%;
+        padding-left: 3%;
+        gap: 18px;
+    }
+
+    .navbar__menu {
+        gap: clamp(14px, 1.35vw, 22px);
+    }
+
+    .navbar__brand-text strong {
+        font-size: 1.25rem;
+    }
+
+    .navbar__credential {
+        padding-right: 9px;
+    }
+
+    .navbar__credential > span {
+        font-size: 0.49rem;
+    }
+
+    .navbar__credential strong {
+        font-size: 0.56rem;
+    }
+}
+
+@media (min-width: 901px) and (max-height: 850px) {
+    .hero {
+        padding-top: 106px;
+        padding-bottom: 34px;
+        gap: 40px;
+    }
+
+    .hero h1 {
+        font-size: clamp(2.35rem, 4.4vw, 4rem);
+    }
+
+    .hero__description {
+        margin-top: 17px;
+        font-size: 0.98rem;
+        line-height: 1.58;
+    }
+
+    .hero__buttons {
+        margin-top: 22px;
+    }
+
+    .hero__features {
+        margin-top: 24px;
+    }
+
+    .page-hero {
+        padding-top: 108px;
+        padding-bottom: 38px;
+    }
+
+    .page-hero__content h1 {
+        margin-bottom: 16px;
+        font-size: clamp(2.25rem, 4.2vw, 3.75rem);
+    }
+
+    .page-hero__visual {
+        min-height: 350px;
+    }
+}
+
+/* El menú móvil se activa antes para evitar que Contacto quede fuera de pantalla. */
+@media (max-width: 1180px) {
+    html {
+        scroll-padding-top: 78px;
+    }
+
+    .navbar {
+        min-height: 72px;
+        padding: 10px 4.5%;
+    }
+
+    .navbar__button {
+        position: relative;
+        z-index: 1002;
+        display: block;
+    }
+
+    .navbar__menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        z-index: 1001;
+        width: min(360px, 88%);
+        height: 100dvh;
+        padding: 108px 30px 38px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 6px;
+        overflow-y: auto;
+        background: rgba(255, 255, 255, 0.985);
+        border-left: 1px solid var(--color-borde);
+        box-shadow: -15px 0 40px rgba(47, 27, 77, 0.16);
+        transition: right 0.35s ease;
+    }
+
+    .navbar__menu.active { right: 0; }
+    .navbar__menu li { width: 100%; }
+
+    .navbar__menu a {
+        width: 100%;
+        padding: 14px 5px;
+        display: block;
+        color: var(--color-morado-oscuro);
+        border-bottom: 1px solid rgba(111, 66, 193, 0.1);
+        font-size: 0.98rem;
+    }
+
+    .navbar__button.active span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+    .navbar__button.active span:nth-child(2) { opacity: 0; }
+    .navbar__button.active span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+}
+
+@media (max-width: 900px) {
+    .hero,
+    .page-hero {
+        min-height: auto;
+    }
+
+    .page-hero {
+        display: block;
+        padding-top: 112px;
+        padding-bottom: 56px;
+    }
+
+    .page-hero__container {
+        gap: 32px;
+    }
+
+    .section {
+        padding-top: 58px;
+        padding-bottom: 58px;
+    }
+
+    .hero-social {
+        justify-content: center;
+    }
+
+    .hero-social__label {
+        width: 100%;
+        text-align: center;
+    }
+
+    .hero__trust-points,
+    .hero__features {
+        width: 100%;
+        display: flex;
+        flex-wrap: nowrap;
+        gap: 10px;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scrollbar-width: none;
+        padding-bottom: 7px;
+    }
+
+    .hero__trust-points::-webkit-scrollbar,
+    .hero__features::-webkit-scrollbar { display: none; }
+
+    .hero__trust-points span,
+    .hero__features article {
+        min-width: min(78vw, 250px);
+        flex: 0 0 auto;
+        scroll-snap-align: center;
+    }
+
+    .hero__features article:last-child {
+        grid-column: auto;
+    }
+}
+
+@media (max-width: 650px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    .hero {
+        padding-top: 102px;
+        padding-bottom: 44px;
+        gap: 28px;
+    }
+
+    .hero h1 {
+        font-size: clamp(2.05rem, 10.5vw, 3.05rem);
+        letter-spacing: -1px;
+    }
+
+    .hero__description {
+        margin-top: 18px;
+        font-size: 0.94rem;
+        line-height: 1.58;
+    }
+
+    /* Redes en un solo riel: botón + e iconos que se despliegan hacia el costado. */
+    .hero-social {
+        width: 100%;
+        margin-top: 15px;
+        justify-content: center;
+        flex-wrap: nowrap;
+    }
+
+    .hero-social__label {
+        display: none;
+    }
+
+    .hero-social__toggle {
+        display: inline-flex;
+    }
+
+    .hero-social__controls {
+        max-width: 100%;
+        gap: 8px;
+    }
+
+    .hero-social__links {
+        max-width: 0;
+        opacity: 0;
+        overflow: hidden;
+        flex-wrap: nowrap;
+        gap: 7px;
+        transform: translateX(-8px);
+        transition: max-width 0.38s ease, opacity 0.25s ease, transform 0.38s ease;
+    }
+
+    .hero-social.is-open .hero-social__links {
+        max-width: 250px;
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    .hero-social__links a {
+        width: 43px;
+        height: 43px;
+        min-height: 43px;
+        padding: 0;
+        flex: 0 0 43px;
+        border-radius: 50%;
+    }
+
+    .hero-social__links a span {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        clip: rect(0 0 0 0);
+        white-space: nowrap;
+    }
+
+    .hero-social__links svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    /* Altura estable del carrusel: no empuja el contenido al cambiar de slide. */
+    .hero__browser-body,
+    .hero__browser-body.has-sidebar {
+        min-height: 0 !important;
+        height: auto !important;
+        grid-template-columns: 1fr !important;
+    }
+
+    .hero__browser-sidebar,
+    .hero__browser-body:not(.has-sidebar) .hero__browser-sidebar {
+        min-height: 62px;
+        padding: 9px 10px;
+        display: flex !important;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: center;
+        gap: 6px;
+        visibility: hidden;
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    .hero__browser-body.has-sidebar .hero__browser-sidebar {
+        visibility: visible;
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    .hero__browser-screen {
+        min-height: 430px !important;
+        height: 430px !important;
+        padding: 18px 15px 14px;
+        overflow: hidden;
+    }
+
+    .hero-slide,
+    .hero-slide.active {
+        position: absolute !important;
+        inset: 18px 15px 52px !important;
+        width: auto !important;
+        height: auto !important;
+        margin: 0 !important;
+    }
+
+    .hero-slide {
+        display: flex !important;
+        visibility: hidden !important;
+        opacity: 0 !important;
+        pointer-events: none !important;
+    }
+
+    .hero-slide.active {
+        visibility: visible !important;
+        opacity: 1 !important;
+        pointer-events: auto !important;
+    }
+
+    .hero-slide h3 {
+        font-size: clamp(1.06rem, 5.2vw, 1.25rem);
+        line-height: 1.16;
+    }
+
+    .hero-slide p {
+        font-size: 0.77rem;
+        line-height: 1.46;
+    }
+
+    .hero-slide__layout {
+        min-height: 90px;
+        margin-top: auto;
+    }
+
+    .hero__browser-footer {
+        position: absolute !important;
+        right: 15px !important;
+        bottom: 12px !important;
+        left: 15px !important;
+        margin: 0 !important;
+    }
+
+    .home-about-preview__qualities {
+        gap: 10px;
+    }
+
+    .home-quality summary {
+        min-height: 54px;
+        padding: 14px 48px 14px 18px;
+        font-size: 0.78rem;
+    }
+
+    .home-quality p {
+        padding: 0 18px 15px 40px;
+        font-size: 0.72rem;
+    }
+
+    .home-about-preview__wave {
+        width: min(300px, 96%);
+    }
+
+    .home-about-preview__wave-video {
+        max-width: 270px;
+        background: transparent !important;
+    }
+
+    .motion-band {
+        padding: 12px 0;
+    }
+
+    .motion-band__group span {
+        padding: 0 18px;
+        font-size: 0.65rem;
+    }
+
+    .floating-cta {
+        right: 13px;
+        bottom: 13px;
+        width: 52px;
+        height: 52px;
+        font-size: 1.15rem;
+    }
+
+    .floating-cta::after {
+        display: none;
+    }
+
+    /* Menos escritura visible en tarjetas móviles, detalles disponibles al tocar. */
+    .service-card > p,
+    .contact-channel p,
+    .professional-proof-card small,
+    .home-stage-card > p:not(.home-stage-card__eyebrow) {
+        font-size: 0.74rem;
+        line-height: 1.48;
+    }
+
+    .services__introduction,
+    .page-hero__content > p:not(.section__tag) {
+        font-size: 0.9rem;
+        line-height: 1.6;
+    }
+}
+
+@media (max-width: 400px) {
+    .hero__browser-screen {
+        min-height: 445px !important;
+        height: 445px !important;
+    }
+
+    .hero-social.is-open .hero-social__links {
+        max-width: 220px;
+    }
+
+    .hero-social__links a {
+        width: 40px;
+        height: 40px;
+        min-height: 40px;
+        flex-basis: 40px;
+    }
+
+    .navbar__credential img {
+        width: 34px;
+        height: 34px;
+    }
+}
+
+/* ==================================================
+   CORRECCIONES DEFINITIVAS RESPONSIVAS · AGOSTO 2026
+================================================== */
+
+@media (max-width: 768px) {
+    /* Sobre Janabith: una sola columna real, sin contenido fuera de pantalla. */
+    .home-about-preview {
+        overflow: hidden !important;
+    }
+
+    .home-about-preview .container,
+    .home-about-preview__layout {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+    }
+
+    .home-about-preview__layout {
+        display: flex !important;
+        flex-direction: column !important;
+        grid-template-columns: none !important;
+        gap: 28px !important;
+    }
+
+    .home-about-preview__visual {
+        order: 1;
+        position: relative !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+        min-height: 0 !important;
+        height: auto !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: flex-start !important;
+        gap: 10px !important;
+        overflow: visible !important;
+        transform: none !important;
+    }
+
+    .home-about-preview__visual::before {
+        width: min(300px, 76vw) !important;
+        height: min(300px, 76vw) !important;
+        top: 75px !important;
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+    }
+
+    .home-about-preview__wave {
+        position: relative !important;
+        width: min(300px, 88vw) !important;
+        max-width: 100% !important;
+        margin: 0 auto !important;
+        padding: 0 !important;
+        transform: none !important;
+    }
+
+    .home-about-preview__wave-video {
+        width: 100% !important;
+        max-width: 260px !important;
+        height: auto !important;
+        margin: 0 auto !important;
+    }
+
+    .home-about-preview__wave-bubble {
+        position: static !important;
+        inset: auto !important;
+        width: min(280px, 92vw) !important;
+        margin: 0 auto !important;
+        transform: none !important;
+    }
+
+    .home-about-preview__badge {
+        position: static !important;
+        width: auto !important;
+        max-width: calc(100vw - 40px) !important;
+        margin: 0 auto !important;
+        animation: none !important;
+        transform: none !important;
+    }
+
+    .home-about-preview__content {
+        order: 2;
+        position: static !important;
+        z-index: 1 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        transform: none !important;
+    }
+
+    .home-about-preview__content > *,
+    .home-about-preview__qualities,
+    .home-about-preview__actions {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+    }
+
+    /* Carrusel: altura fija y fondos decorativos que ocupan el espacio disponible. */
+    .hero__browser-screen {
+        min-height: 430px !important;
+        height: 430px !important;
+    }
+
+    .hero-slide,
+    .hero-slide.active {
+        min-height: calc(100% - 70px) !important;
+    }
+
+    .hero-slide__layout {
+        flex: 1 1 auto !important;
+        min-height: 118px !important;
+        margin-top: 12px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+    }
+
+    .hero-slide__cards,
+    .hero-slide__code,
+    .hero-slide__info,
+    .hero-slide__layout-main {
+        width: 100% !important;
+    }
+
+    /* Franja totalmente libre de tarjetas en páginas interiores. */
+    .motion-band {
+        z-index: 50 !important;
+        margin: 0 !important;
+    }
+
+    .contact-channels,
+    .work-principles {
+        margin-top: 0 !important;
+        padding-top: 28px !important;
+    }
+
+    .contact-hero-visual,
+    .work-hero-visual {
+        min-height: auto !important;
+        padding-bottom: 10px !important;
+    }
+
+    .contact-message,
+    .work-orbit {
+        position: static !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 10px 0 0 !important;
+        animation: none !important;
+        transform: none !important;
+    }
+}
+
+@media (max-width: 430px) {
+    .home-about-preview__wave-video {
+        max-width: 236px !important;
+    }
+
+    .home-about-preview__content .section__title {
+        font-size: clamp(1.5rem, 7vw, 1.85rem) !important;
+    }
+
+    .hero__browser-screen {
+        min-height: 438px !important;
+        height: 438px !important;
+    }
+}
+
+/* ==================================================
+   AJUSTE PUNTUAL · RESUMEN SOBRE MÍ EN NOTEBOOK/MÓVIL
+================================================== */
+
+@media (max-width: 1000px) {
+    /* El sticker ocupa su propia fila y las etiquetas quedan debajo, nunca sobre el texto verde. */
+    .home-about-preview__visual {
+        width: min(100%, 620px) !important;
+        min-height: 0 !important;
+        height: auto !important;
+        margin: 0 auto !important;
+        padding: 0 0 12px !important;
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: wrap !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 10px !important;
+        overflow: visible !important;
+    }
+
+    .home-about-preview__wave {
+        flex: 0 0 100% !important;
+        width: 100% !important;
+        max-width: 390px !important;
+        margin: 0 auto 4px !important;
+    }
+
+    .home-about-preview__badge {
+        position: static !important;
+        inset: auto !important;
+        width: auto !important;
+        max-width: calc(100% - 20px) !important;
+        margin: 0 !important;
+        animation: none !important;
+        transform: none !important;
+    }
+
+    .home-about-preview__content {
+        position: relative !important;
+        z-index: 5 !important;
+        width: 100% !important;
+        margin-top: 14px !important;
+        padding-top: 8px !important;
+        clear: both !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+    }
+
+    .home-about-preview__content .section__tag {
+        position: relative !important;
+        z-index: 6 !important;
+        display: block !important;
+        width: 100% !important;
+        margin: 0 0 12px !important;
+        color: var(--color-verde-oscuro) !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .home-about-preview__visual {
+        padding-bottom: 16px !important;
+    }
+
+    .home-about-preview__content {
+        margin-top: 8px !important;
+        padding-top: 10px !important;
+    }
+
+    .home-about-preview__content .section__tag {
+        text-align: center !important;
+    }
+}
