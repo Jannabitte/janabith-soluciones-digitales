@@ -295,7 +295,6 @@ button {
 /* ==================================================
    PORTADA PRINCIPAL
 ================================================== */
-
 .hero {
     width: min(1180px, 90%);
     min-height: 100vh;
@@ -305,7 +304,7 @@ button {
     display: grid;
     grid-template-columns: minmax(0, 1.2fr) minmax(320px, 0.8fr);
     align-items: center;
-    gap: 70px;
+    gap: 40px; /* Reducido de 70px para juntar más los elementos */
 }
 
 .hero__content {
@@ -342,29 +341,29 @@ button {
 
 .hero h1 {
     max-width: 800px;
-
     color: var(--color-morado-oscuro);
-    font-size: clamp(2.7rem, 5.5vw, 5rem);
-    line-height: 1.03;
-    letter-spacing: -2px;
+    /* Tamaño reducido para que encaje mejor en 3-4 líneas */
+    font-size: clamp(2.2rem, 4vw, 3.8rem);
+    line-height: 1.1;
+    letter-spacing: -1px; /* Suavizado para mejor lectura */
 }
 
 .hero h1 span {
-    display: block;
+    /* display: block; <- ELIMINADO para evitar que salte a otra línea */
     color: var(--color-morado-principal);
 }
 
 .hero__description {
     max-width: 730px;
-    margin-top: 26px;
+    margin-top: 20px; /* Reducido levemente */
 
     color: var(--color-texto-claro);
     font-size: 1.08rem;
-    line-height: 1.8;
+    line-height: 1.6; /* Interlineado más limpio */
 }
 
 .hero__buttons {
-    margin-top: 34px;
+    margin-top: 30px;
 
     display: flex;
     flex-wrap: wrap;
@@ -5981,6 +5980,11 @@ button:focus-visible {
         radial-gradient(circle at 90% 15%, rgba(53, 221, 136, 0.15), transparent 24%),
         var(--color-blanco);
 }
+.solution-guide__intro .section__title {
+    font-size: 2.5rem;
+    line-height: 1.2;
+    margin-bottom: 15px;
+}
 
 .solution-guide__options { margin-top: 30px; display: grid; gap: 10px; }
 .solution-guide__option {
@@ -7259,31 +7263,20 @@ button:focus-visible {
 }
 
 .home-about-preview__wave-bubble {
-    position: absolute;
-    top: -18px;
-    right: -6px;
-    width: min(240px, 72%);
-    padding: 16px 18px;
-    border-radius: 22px;
-    background: rgba(255,255,255,0.9);
-    border: 1px solid rgba(111, 66, 193, 0.16);
-    box-shadow: 0 20px 36px rgba(43, 24, 82, 0.12);
-    backdrop-filter: blur(12px);
-}
+        width: min(400px, 100%);
+        padding: 13px 16px;
+        border-radius: 18px;
+    }
 
-.home-about-preview__wave-bubble strong {
-    display: block;
-    margin-bottom: 6px;
-    color: var(--color-morado-oscuro);
-    font-size: 1rem;
-}
+    .home-about-preview__wave-bubble strong {
+        margin-bottom: 4px;
+        font-size: .9rem;
+    }
 
-.home-about-preview__wave-bubble span {
-    display: block;
-    color: rgba(42, 29, 62, 0.88);
-    line-height: 1.45;
-    font-size: 0.9rem;
-}
+    .home-about-preview__wave-bubble span {
+        font-size: 0.88rem;
+        line-height: 1.42;
+    }
 
 /* ==================================================
    AJUSTES FINALES 2026 · EXPERIENCIA MODERNA
@@ -8321,4 +8314,68 @@ button:focus-visible {
   line-height: 1.5;
   margin: 0;
   flex-grow: 1; /* Empuja el contenido para rellenar el espacio si hay textos más cortos */
+}
+
+/* --- SECCIÓN EJEMPLOS DE DISEÑO --- */
+.design-examples {
+  padding: 30px 20px;
+  background-color: #f9f9fc; /* Fondo claro sutil */
+  text-align: center;
+  overflow: hidden; /* Evita que el carrusel ensanche la página */
+}
+
+.design-examples__header {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto 30px auto;
+  padding: 0 20px;
+}
+
+.design-examples__header h2 {
+  color: #2e094e;
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin-bottom: 15px;
+}
+
+.design-examples__header p {
+  color: #555;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+
+/* Contenedor del carrusel animado */
+.design-examples__carousel {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.carousel-track {
+  display: flex;
+  width: max-content;
+  gap: 20px;
+  /* La animación dura 20 segundos, puedes subir o bajar este número para cambiar la velocidad */
+  animation: scrollExamples 40s linear infinite;
+}
+
+.carousel-track:hover {
+  animation-play-state: paused; /* Se detiene si el usuario pone el mouse encima */
+}
+
+.carousel-track img {
+  width: 320px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 6px 15px rgba(46, 9, 78, 0.1);
+  object-fit: cover;
+}
+
+/* Animación de bucle */
+@keyframes scrollExamples {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(calc(-50% - 10px)); }
 }
