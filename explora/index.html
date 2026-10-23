@@ -1,221 +1,196 @@
 <!DOCTYPE html>
+
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="theme-color" content="#2c1763">
-  <meta name="description" content="Explora de Janabith PuntoCL: orientador interactivo para aclarar qué solución digital puede tener más sentido para una idea, negocio o proyecto.">
-  <title>Explora | Janabith PuntoCL</title>
-  <link rel="stylesheet" href="explora.css">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1, viewport-fit=cover" name="viewport"/>
+<meta content="#2c1763" name="theme-color"/>
+<meta content="Explora de Janabith PuntoCL: orientador interactivo para aclarar qué solución digital puede tener más sentido para una idea, negocio o proyecto." name="description"/>
+<title>Explora | Janabith PuntoCL</title>
+<link href="explora.css" rel="stylesheet"/>
 </head>
 <body>
-  <div class="ambient" aria-hidden="true">
-    <span class="ambient__orb ambient__orb--one"></span>
-    <span class="ambient__orb ambient__orb--two"></span>
-    <span class="ambient__spark ambient__spark--one">✦</span>
-    <span class="ambient__spark ambient__spark--two">✦</span>
-  </div>
-
-  <header class="topbar">
-    <a class="brand" href="../index.html" aria-label="Volver a Janabith PuntoCL">
-      <img src="../assets/img/sello-janabith.png" alt="Sello Janabith">
-      <span><strong>Janabith</strong><small>PuntoCL</small></span>
-    </a>
-    <span class="topbar__mode">Explora</span>
-    <button class="help-button" type="button" data-open-glossary aria-label="Aclarar conceptos">?</button>
-  </header>
-
-  <main class="experience">
-    <section class="hero-card" aria-labelledby="heroTitle">
-      <p class="hero-card__eyebrow">✦ Tu guía interactiva</p>
-      <h1 id="heroTitle">Descubre tu <span>solución ideal</span></h1>
-
-      <div class="hero-card__visual" aria-label="Janabith saludando">
-        <div class="hero-card__orbit" aria-hidden="true"></div>
-        <span class="hero-card__spark hero-card__spark--one" aria-hidden="true">✦</span>
-        <span class="hero-card__spark hero-card__spark--two" aria-hidden="true">✦</span>
-        <img class="hero-card__sticker" src="media/janabith-sticker.png" alt="Sticker de Janabith saludando">
-        <div class="hero-card__hello">
-          <strong>¡Hola! Soy Janabith 👋</strong>
-          <span>Te ayudo a ordenar tu idea.</span>
-        </div>
-      </div>
-
-      <p class="hero-card__lead">Tres decisiones rápidas para llegar a una recomendación clara, sin formularios largos ni tecnicismos.</p>
-
-      <div class="hero-card__benefits" aria-label="Beneficios de Explora">
-        <div class="hero-card__benefits-track">
-          <span class="benefit-pill"><b>⚡</b><strong>2–3 min</strong><small>orientación rápida</small></span>
-          <span class="benefit-pill"><b>✨</b><strong>A tu medida</strong><small>según tus respuestas</small></span>
-          <span class="benefit-pill"><b>🛡️</b><strong>Sin registro</strong><small>sin crear una cuenta</small></span>
-          <span class="benefit-pill"><b>📱</b><strong>Responsive</strong><small>pensado para celular</small></span>
-          <span class="benefit-pill"><b>💡</b><strong>Sin tecnicismos</strong><small>explicado simple</small></span>
-          <span class="benefit-pill" aria-hidden="true"><b>⚡</b><strong>2–3 min</strong><small>orientación rápida</small></span>
-          <span class="benefit-pill" aria-hidden="true"><b>✨</b><strong>A tu medida</strong><small>según tus respuestas</small></span>
-          <span class="benefit-pill" aria-hidden="true"><b>🛡️</b><strong>Sin registro</strong><small>sin crear una cuenta</small></span>
-          <span class="benefit-pill" aria-hidden="true"><b>📱</b><strong>Responsive</strong><small>pensado para celular</small></span>
-          <span class="benefit-pill" aria-hidden="true"><b>💡</b><strong>Sin tecnicismos</strong><small>explicado simple</small></span>
-        </div>
-      </div>
-
-      <button class="primary-button hero-card__cta" type="button" data-start>Comenzar <span>→</span></button>
-    </section>
-
-    <section class="advisor" id="orientador" aria-labelledby="advisorTitle">
-      <div class="advisor__header">
-        <div>
-          <p class="section-tag">PASO <span data-step-number>1</span> DE 3</p>
-          <h2 id="advisorTitle">Cuéntame sobre tu proyecto</h2>
-        </div>
-        <button class="text-button" type="button" data-back disabled>← Atrás</button>
-      </div>
-
-      <div class="progress-track" aria-hidden="true"><span data-progress-bar></span></div>
-
-      <div class="question-screen is-active" data-question="stage">
-        <h3>¿En qué etapa estás?</h3>
-        <p class="question-help">Elige lo que más se acerque a tu situación actual.</p>
-        <div class="option-grid">
-          <button class="choice-card" type="button" data-answer="stage" data-value="idea">
-            <span class="choice-card__icon">💡</span><strong>Tengo una idea</strong><small>Quiero hacerla realidad.</small>
-          </button>
-          <button class="choice-card" type="button" data-answer="stage" data-value="business">
-            <span class="choice-card__icon">🏪</span><strong>Tengo un negocio</strong><small>Necesito crecer u ordenar.</small>
-          </button>
-          <button class="choice-card" type="button" data-answer="stage" data-value="site">
-            <span class="choice-card__icon">📈</span><strong>Ya tengo algo</strong><small>Quiero mejorarlo.</small>
-          </button>
-          <button class="choice-card" type="button" data-answer="stage" data-value="unsure">
-            <span class="choice-card__icon">🧭</span><strong>Estoy explorando</strong><small>Necesito orientación.</small>
-          </button>
-        </div>
-      </div>
-
-      <div class="question-screen" data-question="need" hidden>
-        <h3 data-question-title>¿Qué necesitas resolver?</h3>
-        <p class="question-help" data-question-help></p>
-        <div class="option-grid" data-dynamic-options="need"></div>
-      </div>
-
-      <div class="question-screen" data-question="readiness" hidden>
-        <h3 data-question-title>¿Con qué cuentas hoy?</h3>
-        <p class="question-help" data-question-help></p>
-        <div class="option-grid option-grid--three" data-dynamic-options="readiness"></div>
-      </div>
-
-      <div class="advisor__hint" data-selection-hint>Selecciona una opción para continuar.</div>
-    </section>
-
-    <section class="result-card" id="resultado" hidden aria-live="polite">
-      <header class="result-card__header">
-        <div>
-          <p class="section-tag section-tag--green">TU RECOMENDACIÓN</p>
-          <h2 data-result-title></h2>
-        </div>
-        <span class="result-card__icon" data-result-icon>🌐</span>
-      </header>
-
-      <p class="result-card__reason" data-result-reason></p>
-
-      <figure class="project-proof">
-        <div class="project-proof__image-wrap">
-          <img data-project-image src="media/projects/corporate.webp" alt="Referencia de proyecto relacionado">
-          <span class="project-proof__badge">Proyecto relacionado</span>
-        </div>
-        <figcaption>
-          <strong data-project-name>Referencia real</strong>
-          <span data-project-caption></span>
-        </figcaption>
-      </figure>
-
-      <div class="result-directions">
-        <article class="direction-card direction-card--now">
-          <span class="direction-card__label">✓ PRIORIZAR</span>
-          <strong data-result-priority></strong>
-        </article>
-        <article class="direction-card direction-card--later">
-          <span class="direction-card__label">↗ DESPUÉS</span>
-          <strong data-result-later></strong>
-        </article>
-      </div>
-
-      <section class="tech-panel" aria-labelledby="techTitle">
-        <div class="tech-panel__heading">
-          <span>⚙️</span>
-          <div><small>Según esta ruta</small><h3 id="techTitle">Tecnologías que podrían encajar</h3></div>
-        </div>
-        <div class="tech-chips" data-result-tech></div>
-      </section>
-
-      <section class="include-panel">
-        <p class="section-tag">PRIMERA VERSIÓN</p>
-        <div class="result-includes" data-result-includes></div>
-      </section>
-
-      <div class="result-meta">
-        <span data-result-level></span>
-        <span data-result-stage-label></span>
-      </div>
-
-      <div class="result-actions">
-        <button class="secondary-button" type="button" data-toggle-why>¿Por qué esta recomendación? <span>+</span></button>
-        <button class="secondary-button" type="button" data-open-example>Ver referencia ampliada <span>↗</span></button>
-      </div>
-      <div class="why-panel" data-why-panel hidden><p data-result-why></p></div>
-
-      <div class="result-summary">
-        <div><small>Tu punto de partida</small><p data-user-summary></p></div>
-        <button class="icon-button" type="button" data-restart aria-label="Cambiar respuestas">↺</button>
-      </div>
-    </section>
-
-    <section class="compare-card" id="comparar" hidden>
-      <div class="section-heading">
-        <p class="section-tag">COMPARAR</p>
-        <h2>¿Y si tomo otra ruta?</h2>
-      </div>
-      <div class="compare-tabs" role="tablist" aria-label="Comparar soluciones">
-        <button class="compare-tab is-active" type="button" role="tab" aria-selected="true" data-compare="primary">Recomendada</button>
-        <button class="compare-tab" type="button" role="tab" aria-selected="false" data-compare="alternative">Alternativa</button>
-      </div>
-      <div class="compare-view" data-compare-view></div>
-    </section>
-
-    <section class="clarity-card">
-      <div class="section-heading">
-        <p class="section-tag section-tag--green">ACLARADOR</p>
-        <h2>Conceptos en palabras simples</h2>
-      </div>
-      <div class="glossary-chips">
-        <button type="button" data-term="responsive">Responsive</button>
-        <button type="button" data-term="domain">Dominio</button>
-        <button type="button" data-term="hosting">Hosting</button>
-        <button type="button" data-term="backend">Backend</button>
-        <button type="button" data-term="catalog">Catálogo</button>
-        <button type="button" data-term="form">Formulario</button>
-      </div>
-      <div class="term-answer" data-term-answer aria-live="polite"><span>💡</span><p>Toca un término para entenderlo sin lenguaje técnico.</p></div>
-    </section>
-
-    <section class="next-step-card" id="siguiente" hidden>
-      <p class="section-tag section-tag--green">LISTO</p>
-      <h2>Ya tienes una idea más clara.</h2>
-      <div class="next-step-card__result"><span data-final-icon>🌐</span><strong data-final-title></strong></div>
-      <p>La orientación no te obliga a contratar nada. Puedes guardar el resultado o conversar sobre esa ruta.</p>
-      <a class="primary-button primary-button--link" href="#" data-contact>💬 Consultar esta idea <span>→</span></a>
-      <button class="copy-button" type="button" data-copy-result>Copiar resultado</button>
-      <a class="back-home" href="../index.html">Volver a Janabith PuntoCL</a>
-    </section>
-  </main>
-
-  <div class="modal" data-modal hidden>
-    <div class="modal__backdrop" data-close-modal></div>
-    <div class="modal__panel" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
-      <button class="modal__close" type="button" data-close-modal aria-label="Cerrar">×</button>
-      <div data-modal-content></div>
-    </div>
-  </div>
-
-  <script src="explora.js"></script>
+<div aria-hidden="true" class="ambient">
+<span class="ambient__orb ambient__orb--one"></span>
+<span class="ambient__orb ambient__orb--two"></span>
+<span class="ambient__spark ambient__spark--one">✦</span>
+<span class="ambient__spark ambient__spark--two">✦</span>
+</div>
+<header class="topbar">
+<a aria-label="Volver a Janabith PuntoCL" class="brand" href="../index.html">
+<img alt="Sello Janabith" src="../assets/img/sello-janabith.png"/>
+<span><strong>Janabith</strong><small>PuntoCL</small></span>
+</a>
+<span class="topbar__mode">Explora</span>
+<button aria-label="Aclarar conceptos" class="help-button" data-open-glossary="" type="button">?</button>
+</header>
+<main class="experience">
+<section aria-labelledby="heroTitle" class="hero-card">
+<p class="hero-card__eyebrow">✦ Tu guía interactiva</p>
+<h1 id="heroTitle">Descubre tu <span>solución ideal</span></h1>
+<div aria-label="Janabith saludando" class="hero-card__visual">
+<div aria-hidden="true" class="hero-card__orbit"></div>
+<span aria-hidden="true" class="hero-card__spark hero-card__spark--one">✦</span>
+<span aria-hidden="true" class="hero-card__spark hero-card__spark--two">✦</span>
+<img alt="Sticker de Janabith saludando" class="hero-card__sticker" src="media/janabith-sticker.png"/>
+<div class="hero-card__hello">
+<strong>¡Hola! Soy Janabith 👋</strong>
+<span>Te ayudo a ordenar tu idea.</span>
+</div>
+</div>
+<p class="hero-card__lead">Tres decisiones rápidas para llegar a una recomendación clara, sin formularios largos ni tecnicismos.</p>
+<div aria-label="Beneficios de Explora" class="hero-card__benefits">
+<div class="hero-card__benefits-track">
+<span class="benefit-pill"><b>⚡</b><strong>2–3 min</strong><small>orientación rápida</small></span>
+<span class="benefit-pill"><b>✨</b><strong>A tu medida</strong><small>según tus respuestas</small></span>
+<span class="benefit-pill"><b>🛡️</b><strong>Sin registro</strong><small>sin crear una cuenta</small></span>
+<span class="benefit-pill"><b>📱</b><strong>Responsive</strong><small>pensado para celular</small></span>
+<span class="benefit-pill"><b>💡</b><strong>Sin tecnicismos</strong><small>explicado simple</small></span>
+<span aria-hidden="true" class="benefit-pill"><b>⚡</b><strong>2–3 min</strong><small>orientación rápida</small></span>
+<span aria-hidden="true" class="benefit-pill"><b>✨</b><strong>A tu medida</strong><small>según tus respuestas</small></span>
+<span aria-hidden="true" class="benefit-pill"><b>🛡️</b><strong>Sin registro</strong><small>sin crear una cuenta</small></span>
+<span aria-hidden="true" class="benefit-pill"><b>📱</b><strong>Responsive</strong><small>pensado para celular</small></span>
+<span aria-hidden="true" class="benefit-pill"><b>💡</b><strong>Sin tecnicismos</strong><small>explicado simple</small></span>
+</div>
+</div>
+<button class="primary-button hero-card__cta" data-start="" type="button">Comenzar <span>→</span></button>
+</section>
+<section aria-labelledby="advisorTitle" class="advisor" id="orientador">
+<div class="advisor__header">
+<div>
+<p class="section-tag">PASO <span data-step-number="">1</span> DE 3</p>
+<h2 id="advisorTitle">Cuéntame sobre tu proyecto</h2>
+</div>
+<button class="text-button" data-back="" disabled="" type="button">← Atrás</button>
+</div>
+<div aria-hidden="true" class="progress-track"><span data-progress-bar=""></span></div>
+<div class="question-screen is-active" data-question="stage">
+<h3>¿En qué etapa estás?</h3>
+<p class="question-help">Elige lo que más se acerque a tu situación actual.</p>
+<div class="option-grid">
+<button class="choice-card" data-answer="stage" data-value="idea" type="button">
+<span class="choice-card__icon">💡</span><strong>Tengo una idea</strong><small>Quiero hacerla realidad.</small>
+</button>
+<button class="choice-card" data-answer="stage" data-value="business" type="button">
+<span class="choice-card__icon">🏪</span><strong>Tengo un negocio</strong><small>Necesito crecer u ordenar.</small>
+</button>
+<button class="choice-card" data-answer="stage" data-value="site" type="button">
+<span class="choice-card__icon">📈</span><strong>Ya tengo algo</strong><small>Quiero mejorarlo.</small>
+</button>
+<button class="choice-card" data-answer="stage" data-value="unsure" type="button">
+<span class="choice-card__icon">🧭</span><strong>Estoy explorando</strong><small>Necesito orientación.</small>
+</button>
+</div>
+</div>
+<div class="question-screen" data-question="need" hidden="">
+<h3 data-question-title="">¿Qué necesitas resolver?</h3>
+<p class="question-help" data-question-help=""></p>
+<div class="option-grid" data-dynamic-options="need"></div>
+</div>
+<div class="question-screen" data-question="readiness" hidden="">
+<h3 data-question-title="">¿Con qué cuentas hoy?</h3>
+<p class="question-help" data-question-help=""></p>
+<div class="option-grid option-grid--three" data-dynamic-options="readiness"></div>
+</div>
+<div class="advisor__hint" data-selection-hint="">Selecciona una opción para continuar.</div>
+</section>
+<section aria-live="polite" class="result-card" hidden="" id="resultado">
+<header class="result-card__header">
+<div>
+<p class="section-tag section-tag--green">TU RECOMENDACIÓN</p>
+<h2 data-result-title=""></h2>
+</div>
+<span class="result-card__icon" data-result-icon="">🌐</span>
+</header>
+<p class="result-card__reason" data-result-reason=""></p>
+<figure class="project-proof">
+<div class="project-proof__image-wrap">
+<img alt="Referencia de proyecto relacionado" data-project-image="" src="media/projects/corporate.webp"/>
+<span class="project-proof__badge">Proyecto relacionado</span>
+</div>
+<figcaption>
+<strong data-project-name="">Referencia real</strong>
+<span data-project-caption=""></span>
+</figcaption>
+</figure>
+<div class="result-directions">
+<article class="direction-card direction-card--now">
+<span class="direction-card__label">✓ PRIORIZAR</span>
+<strong data-result-priority=""></strong>
+</article>
+<article class="direction-card direction-card--later">
+<span class="direction-card__label">↗ DESPUÉS</span>
+<strong data-result-later=""></strong>
+</article>
+</div>
+<section aria-labelledby="techTitle" class="tech-panel">
+<div class="tech-panel__heading">
+<span>⚙️</span>
+<div><small>Según esta ruta</small><h3 id="techTitle">Tecnologías que podrían encajar</h3></div>
+</div>
+<div class="tech-chips" data-result-tech=""></div>
+</section>
+<section class="include-panel">
+<p class="section-tag">PRIMERA VERSIÓN</p>
+<div class="result-includes" data-result-includes=""></div>
+</section>
+<div class="result-meta">
+<span data-result-level=""></span>
+<span data-result-stage-label=""></span>
+</div>
+<div class="result-actions">
+<button class="secondary-button" data-toggle-why="" type="button">¿Por qué esta recomendación? <span>+</span></button>
+<button class="secondary-button" data-open-example="" type="button">Ver referencia ampliada <span>↗</span></button>
+</div>
+<div class="why-panel" data-why-panel="" hidden=""><p data-result-why=""></p></div>
+<div class="result-summary">
+<div><small>Tu punto de partida</small><p data-user-summary=""></p></div>
+<button aria-label="Cambiar respuestas" class="icon-button" data-restart="" type="button">↺</button>
+</div>
+</section>
+<section class="compare-card" hidden="" id="comparar">
+<div class="section-heading">
+<p class="section-tag">COMPARAR</p>
+<h2>¿Y si tomo otra ruta?</h2>
+</div>
+<div aria-label="Comparar soluciones" class="compare-tabs" role="tablist">
+<button aria-selected="true" class="compare-tab is-active" data-compare="primary" role="tab" type="button">Recomendada</button>
+<button aria-selected="false" class="compare-tab" data-compare="alternative" role="tab" type="button">Alternativa</button>
+</div>
+<div class="compare-view" data-compare-view=""></div>
+</section>
+<section class="clarity-card">
+<div class="section-heading">
+<p class="section-tag section-tag--green">ACLARADOR</p>
+<h2>Conceptos en palabras simples</h2>
+</div>
+<div class="glossary-chips">
+<button data-term="responsive" type="button">Responsive</button>
+<button data-term="domain" type="button">Dominio</button>
+<button data-term="hosting" type="button">Hosting</button>
+<button data-term="backend" type="button">Backend</button>
+<button data-term="catalog" type="button">Catálogo</button>
+<button data-term="form" type="button">Formulario</button>
+</div>
+<div aria-live="polite" class="term-answer" data-term-answer=""><span>💡</span><p>Toca un término para entenderlo sin lenguaje técnico.</p></div>
+</section>
+<section class="next-step-card" hidden="" id="siguiente">
+<p class="section-tag section-tag--green">LISTO</p>
+<h2>Ya tienes una idea más clara.</h2>
+<div class="next-step-card__result"><span data-final-icon="">🌐</span><strong data-final-title=""></strong></div>
+<p>La orientación no te obliga a contratar nada. Puedes guardar el resultado o conversar sobre esa ruta.</p>
+<a class="primary-button primary-button--link" data-contact="" href="#">💬 Consultar esta idea <span>→</span></a>
+<button class="copy-button" data-copy-result="" type="button">Copiar resultado</button>
+<a class="explora-whatsapp" href="https://wa.me/56972367335?text=Hola%2C%20llegu%C3%A9%20desde%20Explora%20de%20Janabith%20PuntoCL%20y%20quiero%20conversar%20sobre%20mi%20resultado." rel="noopener noreferrer" target="_blank">WhatsApp directo</a><a class="back-home" href="../index.html">Volver a Janabith PuntoCL</a>
+</section>
+</main>
+<div class="modal" data-modal="" hidden="">
+<div class="modal__backdrop" data-close-modal=""></div>
+<div aria-labelledby="modalTitle" aria-modal="true" class="modal__panel" role="dialog">
+<button aria-label="Cerrar" class="modal__close" data-close-modal="" type="button">×</button>
+<div data-modal-content=""></div>
+</div>
+</div>
+<script src="explora.js"></script>
 </body>
 </html>

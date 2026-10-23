@@ -705,8 +705,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (internalHero && !document.querySelector(".motion-band")) {
         const currentPage = window.location.pathname.split("/").pop() || "inicio";
         const bandItemsByPage = {
-            "servicios.html": ["Páginas web desde $199.990", "Java Full Stack", "Bases de datos", "Diseño responsivo", "Publicación"],
-            "portafolio.html": ["Proyectos reales", "INGPRO", "OneVet", "Minimarket El Chinito", "Código documentado"],
+            "servicios.html": ["Páginas web desde $99.990", "Java Full Stack", "Bases de datos", "Diseño responsivo", "Publicación"],
             "sobre-mi.html": ["Insignia digital", "Java Full Stack", "Administración", "Comunicación clara", "Aprendizaje continuo"],
             "como-trabajo.html": ["Diagnóstico", "Planificación", "Desarrollo", "Revisión", "Entrega responsable"],
             "contacto.html": ["Cuéntame tu idea", "Formulario seguro", "Respuesta escrita", "Cotización clara", "Próximos pasos"]
@@ -803,6 +802,65 @@ document.addEventListener("DOMContentLoaded", () => {
                 submitText.textContent = "Enviando…";
             }
         });
+    }
+
+
+    /* ==================================================
+       WHATSAPP DIRECTO
+       Canal contextual disponible en todas las páginas.
+    ================================================== */
+    const whatsappNumber = "56972367335";
+    const whatsappMessages = {
+        "index.html": "Hola, vi Janabith PuntoCL y quiero conversar sobre una idea digital.",
+        "": "Hola, vi Janabith PuntoCL y quiero conversar sobre una idea digital.",
+        "servicios.html": "Hola, estuve revisando los servicios de Janabith PuntoCL y quiero consultar por una solución digital.",
+        "portafolio.html": "Hola, estuve revisando el portafolio de Janabith PuntoCL y quiero conversar sobre un proyecto similar.",
+        "sobre-mi.html": "Hola, conocí el perfil de Janabith PuntoCL y quiero conversar sobre una idea o proyecto digital.",
+        "como-trabajo.html": "Hola, revisé cómo trabajas en Janabith PuntoCL y quiero conversar sobre mi proyecto.",
+        "contacto.html": "Hola, llegué a la sección de contacto de Janabith PuntoCL y quiero hacer una consulta.",
+        "gracias.html": "Hola, ya envié una consulta desde Janabith PuntoCL y quiero agregar un detalle por WhatsApp."
+    };
+
+    const currentFile = window.location.pathname.split("/").pop() || "";
+    const whatsappMessage = whatsappMessages[currentFile] || "Hola, llegué desde Janabith PuntoCL y quiero hacer una consulta.";
+    const whatsappHref = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+
+    document.querySelectorAll("[data-whatsapp-message]").forEach((link) => {
+        const message = link.dataset.whatsappMessage || whatsappMessage;
+        link.href = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+        link.target = "_blank";
+        link.rel = "noopener noreferrer";
+    });
+
+    const whatsappIcon = `
+        <span class="whatsapp-float__pulse" aria-hidden="true"></span>
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M20.5 11.7a8.4 8.4 0 0 1-12.4 7.4L4 20.3l1.2-4a8.4 8.4 0 1 1 15.3-4.6Z"></path>
+            <path d="M8.6 7.8c.2-.4.4-.4.7-.4h.5c.2 0 .4.1.5.4l.8 1.9c.1.3 0 .5-.2.7l-.6.7c-.2.2-.1.4 0 .6.6 1 1.4 1.8 2.4 2.4.2.1.4.2.6 0l.8-1c.2-.2.4-.3.7-.2l1.8.9c.3.1.4.3.4.5 0 .4-.2 1.3-.8 1.8-.6.5-1.4.8-2.2.6-1-.2-2.6-.8-4.3-2.3-1.4-1.3-2.4-2.9-2.7-3.9-.3-1-.1-1.8.2-2.3Z"></path>
+        </svg>
+        <span class="whatsapp-float__label">WhatsApp</span>
+    `;
+
+    const existingFloat = document.querySelector(".floating-cta");
+    if (existingFloat) {
+        existingFloat.classList.add("floating-cta--whatsapp");
+        existingFloat.href = whatsappHref;
+        existingFloat.target = "_blank";
+        existingFloat.rel = "noopener noreferrer";
+        existingFloat.setAttribute("aria-label", "Conversar con Janabith por WhatsApp");
+        existingFloat.removeAttribute("data-contact-message");
+        existingFloat.removeAttribute("data-contact-origin");
+        existingFloat.removeAttribute("data-contact-service");
+        existingFloat.innerHTML = whatsappIcon;
+    } else if (!document.querySelector(".whatsapp-float")) {
+        const whatsappFloat = document.createElement("a");
+        whatsappFloat.className = "whatsapp-float";
+        whatsappFloat.href = whatsappHref;
+        whatsappFloat.target = "_blank";
+        whatsappFloat.rel = "noopener noreferrer";
+        whatsappFloat.setAttribute("aria-label", "Conversar con Janabith por WhatsApp");
+        whatsappFloat.innerHTML = whatsappIcon;
+        document.body.appendChild(whatsappFloat);
     }
 
 });

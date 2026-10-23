@@ -22,3 +22,5 @@ node_modules/
 # Archivos compilados o temporales
 dist/
 build/
+# Local Netlify folder
+.netlify

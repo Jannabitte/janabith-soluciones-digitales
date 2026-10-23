@@ -1,709 +1,536 @@
 <!DOCTYPE html>
+
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <meta name="description"
-        content="Janabith PuntoCL. Creación de páginas web, aplicaciones Java y soluciones digitales para emprendimientos, profesionales y empresas.">
-
-    <meta name="keywords"
-        content="páginas web, desarrollo web, Java, Spring Boot, emprendimientos, administración, marketing digital, Chile">
-
-    <meta name="author" content="Janabith PuntoCL">
-
-    <title>Janabith PuntoCL | Soluciones digitales</title>
-
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/responsive.css">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Janabith PuntoCL. Creación de páginas web, aplicaciones Java y soluciones digitales para emprendimientos, profesionales y empresas." name="description"/>
+<meta content="páginas web, desarrollo web, Java, Spring Boot, emprendimientos, administración, marketing digital, Chile" name="keywords"/>
+<meta content="Janabith PuntoCL" name="author"/>
+<title>Janabith PuntoCL | Soluciones digitales</title>
+<link href="css/style.css" rel="stylesheet"/>
+<link href="css/responsive.css" rel="stylesheet"/>
 </head>
-
 <body>
-
-    <!-- Encabezado y menú principal -->
-    <header class="header" id="inicio">
-
-        <nav class="navbar">
-
-            <div class="navbar__identity">
-            
-                <a href="#inicio" class="navbar__logo" aria-label="Ir al inicio de Janabith">
-                    <img src="assets/img/sello-janabith.png" alt="Sello digital de Janabith" class="navbar__seal">
-            
-                    <span class="navbar__brand-text">
-                        <strong>Janabith</strong>
-                        <small>PuntoCL</small>
-                    </span>
-                </a>
-            
-                <a href="https://www.acreditta.com/credential/211da0a0-9c1f-4477-90a2-6fcc19d41416?utm_source=whatsapp&resource_type=badge&resource=211da0a0-9c1f-4477-90a2-6fcc19d41416"
-                    class="navbar__credential" target="_blank" rel="noopener noreferrer"
-                    aria-label="Ver insignia digital Full Stack Java otorgada por Talento Digital para Chile"
-                    title="Ver insignia digital Talento Digital">
-                    <img src="assets/img/credenciales/insignia-talento-digital-java.png"
-                        alt="Insignia Full Stack Java Trainee de Talento Digital">
-            
-                    <span>
+<!-- Encabezado y menú principal -->
+<header class="header" id="inicio">
+<nav class="navbar">
+<div class="navbar__identity">
+<a aria-label="Ir al inicio de Janabith" class="navbar__logo" href="#inicio">
+<img alt="Sello digital de Janabith" class="navbar__seal" src="assets/img/sello-janabith.png"/>
+<span class="navbar__brand-text">
+<strong>Janabith</strong>
+<small>PuntoCL</small>
+</span>
+</a>
+<a aria-label="Ver insignia digital Full Stack Java otorgada por Talento Digital para Chile" class="navbar__credential" href="https://www.acreditta.com/credential/211da0a0-9c1f-4477-90a2-6fcc19d41416?utm_source=whatsapp&amp;resource_type=badge&amp;resource=211da0a0-9c1f-4477-90a2-6fcc19d41416" rel="noopener noreferrer" target="_blank" title="Ver insignia digital Talento Digital">
+<img alt="Insignia Full Stack Java Trainee de Talento Digital" src="assets/img/credenciales/insignia-talento-digital-java.png"/>
+<span>
                         Insignia
                         <strong>Digital</strong>
-                    </span>
-                </a>
-            
-            </div>
-
-            <button class="navbar__button" 
-            id="menuButton" 
-            type="button" 
-            aria-label="Abrir menú de navegación"
-                aria-expanded="false"
-                aria-controls="navbarMenu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-
-            <ul class="navbar__menu" id="navbarMenu">
-                <li>
-                    <a href="#inicio" aria-current="page">Inicio</a>
-                </li>
-
-                <li>
-                    <a href="pages/sobre-mi.html">Sobre mí</a>
-                </li>
-
-                <li>
-                    <a href="pages/servicios.html">Servicios</a>
-                </li>
-
-                <li>    
-                    <a href="pages/portafolio.html">Portafolio</a>                </li>
-
-                <li>
-                    <a href="pages/como-trabajo.html">Cómo trabajo</a>
-                </li>
-
-                <li>
-                    <a href="pages/contacto.html">Contacto</a>
-                </li>
-            </ul>
-
-        </nav>
-
-        <!-- Presentación principal -->
-        <section class="hero">
-
-            <div class="hero__content">
-
-                <p class="hero__tag">
+</span>
+</a>
+</div>
+<button aria-controls="navbarMenu" aria-expanded="false" aria-label="Abrir menú de navegación" class="navbar__button" id="menuButton" type="button">
+<span></span>
+<span></span>
+<span></span>
+</button>
+<ul class="navbar__menu" id="navbarMenu">
+<li>
+<a aria-current="page" href="#inicio">Inicio</a>
+</li>
+<li>
+<a href="pages/sobre-mi.html">Sobre mí</a>
+</li>
+<li>
+<a href="pages/servicios.html">Servicios</a>
+</li>
+<a href="pages/como-trabajo.html">Cómo trabajo</a>
+</li>
+<li>
+<a href="pages/contacto.html">Contacto</a>
+</li>
+</ul>
+</nav>
+<!-- Presentación principal -->
+<section class="hero">
+<div class="hero__content">
+<p class="hero__tag">
                     Desarrollo web · Java · Administración
                 </p>
-
-                <h1>
+<h1>
                     Lleva tu idea al siguiente nivel con una
                     <span>solución digital profesional</span>
-                </h1>
-
-                <p class="hero__description">
-                    Creo páginas web y aplicaciones Java claras, responsivas
-                    y adaptadas a las necesidades de cada proyecto.
-                </p>
-
-                <div class="starting-price starting-price--hero" aria-label="Precio inicial de páginas web">
-                    <span>Proyectos web</span>
-                    <strong>Desde $199.990</strong>
-                    <small>Valor inicial referencial · cotización según alcance</small>
-                </div>
-
-                <div class="hero__buttons">
-
-                    <a href="pages/servicios.html" class="button button--primary">
-                        Conocer servicios
-                    </a>
-
-                    <a href="pages/portafolio.html" class="button button--secondary">
-                        Ver proyectos
-                    </a>
-
-                </div>
-
-                <div class="hero-social" data-social-launcher>
-                    <span class="hero-social__label">Conecta conmigo</span>
-
-                    <div class="hero-social__controls">
-                        <button class="hero-social__toggle" type="button" aria-expanded="false"
-                            aria-controls="heroSocialLinks" aria-label="Mostrar redes y canales de contacto">
-                            <span aria-hidden="true">+</span>
-                        </button>
-
-                        <div class="hero-social__links" id="heroSocialLinks">
-                            <a href="https://www.instagram.com/janabith.cl/" target="_blank" rel="noopener noreferrer"
-                                aria-label="Abrir Instagram de Janabith PuntoCL" title="Instagram">
-                                <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="1"></circle></svg>
-                                <span>Instagram</span>
-                            </a>
-
-                            <a href="https://www.linkedin.com/in/jannabitte-pino889576190/" target="_blank" rel="noopener noreferrer"
-                                aria-label="Abrir LinkedIn de Janabith" title="LinkedIn">
-                                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9v10M6 5.5v.1M10.5 19v-5.6c0-2.2 3.5-2.4 3.5 0V19M10.5 10v9M18 19v-6.3c0-4.4-4.7-4.2-6.2-2"></path></svg>
-                                <span>LinkedIn</span>
-                            </a>
-
-                            <a href="https://github.com/Jannabitte" target="_blank" rel="noopener noreferrer"
-                                aria-label="Abrir GitHub de Janabith" title="GitHub">
-                                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19c-4 .9-4-2-5-2.5M14.5 21v-3.1c0-.9.3-1.6.8-2.1 2.6-.3 5.2-1.3 5.2-5.8 0-1.3-.5-2.4-1.2-3.2.1-.3.5-1.6-.1-3.2 0 0-1-.3-3.3 1.2a11.5 11.5 0 0 0-6 0C7.6 3.3 6.6 3.6 6.6 3.6c-.6 1.6-.2 2.9-.1 3.2A4.6 4.6 0 0 0 5.3 10c0 4.5 2.6 5.5 5.2 5.8.4.4.7 1 .8 1.7V21"></path></svg>
-                                <span>GitHub</span>
-                            </a>
-
-                            <a href="mailto:janabithpuntocl@gmail.com" aria-label="Escribir al correo de Janabith PuntoCL" title="Correo">
-                                <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="m4 7 8 6 8-6"></path></svg>
-                                <span>Correo</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="hero__trust-points" aria-label="Puntos clave de confianza">
-                    <span>Proyecto real publicado</span>
-                    <span>Insignia digital Full Stack Java</span>
-                    <span>Atención clara y escrita</span>
-                </div>
-
-                <div class="hero__features">
-
-                    <article>
-                        <strong>A tu medida</strong>
-                        <span>Diseño acorde a tu marca</span>
-                    </article>
-
-                    <article>
-                        <strong>Responsivo</strong>
-                        <span>Celular, tablet y computador</span>
-                    </article>
-
-                    <article>
-                        <strong>Entrega clara</strong>
-                        <span>Publicación y orientación</span>
-                    </article>
-
-                </div>
-
-            </div>
-
-            <div class="hero__visual">
-
-                <div class="hero__browser">
-
-                    <div class="hero__browser-top">
-                        <div class="hero__browser-dots" aria-hidden="true">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </div>
-
-                        <div class="hero__browser-bar">
+</h1>
+    <p class="hero__description">
+        Desarrollador enfocado en crear soluciones eficientes y estructuradas. Especializado en Java y Programación Orientada a Objetos, utilizando herramientas como IntelliJ IDEA y flujos colaborativos en GitHub para asegurar código limpio y escalable.
+    </p>
+<div aria-label="Precio inicial de páginas web" class="starting-price starting-price--hero">
+<span>Proyectos web</span>
+<strong>Desde $199.990</strong>
+<small>Valor inicial referencial · cotización según alcance</small>
+</div>
+    <div class="hero__buttons">
+        <a class="button button--primary" href="pages/contacto.html">Trabajemos juntos</a>
+        <a class="button button--secondary" href="pages/servicios.html">Ver mis servicios</a>
+    </div>
+<div class="hero-social" data-social-launcher="">
+<span class="hero-social__label">Conecta conmigo</span>
+<div class="hero-social__controls">
+<button aria-controls="heroSocialLinks" aria-expanded="false" aria-label="Mostrar redes y canales de contacto" class="hero-social__toggle" type="button">
+<span aria-hidden="true">+</span>
+</button>
+<div class="hero-social__links" id="heroSocialLinks">
+<a aria-label="Abrir Instagram de Janabith PuntoCL" href="https://www.instagram.com/janabith.cl/" rel="noopener noreferrer" target="_blank" title="Instagram">
+<svg aria-hidden="true" viewbox="0 0 24 24"><rect height="18" rx="5" width="18" x="3" y="3"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="1"></circle></svg>
+<span>Instagram</span>
+</a>
+<a aria-label="Abrir LinkedIn de Janabith" href="https://www.linkedin.com/in/jannabitte-pino889576190/" rel="noopener noreferrer" target="_blank" title="LinkedIn">
+<svg aria-hidden="true" viewbox="0 0 24 24"><path d="M6 9v10M6 5.5v.1M10.5 19v-5.6c0-2.2 3.5-2.4 3.5 0V19M10.5 10v9M18 19v-6.3c0-4.4-4.7-4.2-6.2-2"></path></svg>
+<span>LinkedIn</span>
+</a>
+<a aria-label="Abrir GitHub de Janabith" href="https://github.com/Jannabitte" rel="noopener noreferrer" target="_blank" title="GitHub">
+<svg aria-hidden="true" viewbox="0 0 24 24"><path d="M9 19c-4 .9-4-2-5-2.5M14.5 21v-3.1c0-.9.3-1.6.8-2.1 2.6-.3 5.2-1.3 5.2-5.8 0-1.3-.5-2.4-1.2-3.2.1-.3.5-1.6-.1-3.2 0 0-1-.3-3.3 1.2a11.5 11.5 0 0 0-6 0C7.6 3.3 6.6 3.6 6.6 3.6c-.6 1.6-.2 2.9-.1 3.2A4.6 4.6 0 0 0 5.3 10c0 4.5 2.6 5.5 5.2 5.8.4.4.7 1 .8 1.7V21"></path></svg>
+<span>GitHub</span>
+</a>
+<a aria-label="Escribir al correo de Janabith PuntoCL" href="mailto:janabithpuntocl@gmail.com" title="Correo">
+<svg aria-hidden="true" viewbox="0 0 24 24"><rect height="14" rx="2" width="18" x="3" y="5"></rect><path d="m4 7 8 6 8-6"></path></svg>
+<span>Correo</span>
+</a>
+<a aria-label="Abrir WhatsApp de Janabith PuntoCL" class="hero-social__whatsapp" href="https://wa.me/56972367335?text=Hola%2C%20vi%20Janabith%20PuntoCL%20y%20quiero%20conversar%20sobre%20una%20idea%20digital." rel="noopener noreferrer" target="_blank" title="WhatsApp"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M20.5 11.7a8.4 8.4 0 0 1-12.4 7.4L4 20.3l1.2-4a8.4 8.4 0 1 1 15.3-4.6Z"></path><path d="M8.6 7.8c.2-.4.4-.4.7-.4h.5c.2 0 .4.1.5.4l.8 1.9c.1.3 0 .5-.2.7l-.6.7c-.2.2-.1.4 0 .6.6 1 1.4 1.8 2.4 2.4.2.1.4.2.6 0l.8-1c.2-.2.4-.3.7-.2l1.8.9c.3.1.4.3.4.5 0 .4-.2 1.3-.8 1.8-.6.5-1.4.8-2.2.6-1-.2-2.6-.8-4.3-2.3-1.4-1.3-2.4-2.9-2.7-3.9-.3-1-.1-1.8.2-2.3Z"></path></svg><span>WhatsApp</span></a></div>
+</div>
+</div>
+<div aria-label="Puntos clave de confianza" class="hero__trust-points">
+<span>Proyecto real publicado</span>
+<span>Insignia digital Full Stack Java</span>
+<span>Atención clara y escrita</span>
+</div>
+<div class="hero__features">
+<article>
+<strong>A tu medida</strong>
+<span>Diseño acorde a tu marca</span>
+</article>
+<article>
+<strong>Responsivo</strong>
+<span>Celular, tablet y computador</span>
+</article>
+<article>
+<strong>Entrega clara</strong>
+<span>Publicación y orientación</span>
+</article>
+</div>
+</div>
+<div class="hero__visual">
+<div class="hero__browser">
+<div class="hero__browser-top">
+<div aria-hidden="true" class="hero__browser-dots">
+<span></span>
+<span></span>
+<span></span>
+</div>
+<div class="hero__browser-bar">
                             janabith.cl
                         </div>
-                    </div>
-
-                    <div class="hero__browser-body has-sidebar">
-
-                        <aside class="hero__browser-sidebar" aria-label="Ejemplo de navegación del sitio">
-                            <span class="hero__sidebar-chip hero__sidebar-chip--active">Inicio</span>
-                            <span class="hero__sidebar-chip">Servicios</span>
-                            <span class="hero__sidebar-chip">Portafolio</span>
-                            <span class="hero__sidebar-chip">Contacto</span>
-                        </aside>
-
-                        <div class="hero__browser-screen">
-
-                            <div class="hero-slide active">
-                                <span class="hero-slide__tag">Sitio corporativo</span>
-
-                                <h3>Webs modernas para empresas y marcas</h3>
-
-                                <p>
+</div>
+<div class="hero__browser-body has-sidebar">
+    <aside class="hero__browser-sidebar">
+        <span class="hero__sidebar-chip">Desarrollo Java</span>
+        <span class="hero__sidebar-chip">POO & Lógica</span>
+        <span class="hero__sidebar-chip">Git & GitHub</span>
+    </aside>
+<div class="hero__browser-screen">
+<div class="hero-slide active">
+<span class="hero-slide__tag">Sitio corporativo</span>
+<h3>Webs modernas para empresas y marcas</h3>
+<p>
                                     Presentación profesional, servicios, catálogo,
                                     formularios, videos, carruseles y diseño responsivo.
                                 </p>
-
-                                <div class="hero-slide__badges">
-                                    <span>Corporativo</span>
-                                    <span>Catálogo</span>
-                                    <span>Responsive</span>
-                                </div>
-
-                                <div class="hero-slide__layout">
-                                    <div class="hero-slide__layout-main"></div>
-                                    <div class="hero-slide__layout-side">
-                                        <span></span>
-                                        <span></span>
-                                        <span></span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="hero-slide">
-                                <span class="hero-slide__tag">Tienda / Emprendimiento</span>
-
-                                <h3>Soluciones visuales para vender y destacar</h3>
-
-                                <p>
+<div class="hero-slide__badges">
+<span>Corporativo</span>
+<span>Catálogo</span>
+<span>Responsive</span>
+</div>
+<div class="hero-slide__layout">
+<div class="hero-slide__layout-main"></div>
+<div class="hero-slide__layout-side">
+<span></span>
+<span></span>
+<span></span>
+</div>
+</div>
+</div>
+<div class="hero-slide">
+<span class="hero-slide__tag">Tienda / Emprendimiento</span>
+<h3>Soluciones visuales para vender y destacar</h3>
+<p>
                                     Páginas para productos, servicios, redes sociales,
                                     consultas por WhatsApp y organización comercial.
                                 </p>
-
-                                <div class="hero-slide__badges">
-                                    <span>Tienda</span>
-                                    <span>Carrito</span>
-                                    <span>Instagram</span>
-                                </div>
-
-                                <div class="hero-slide__layout">
-                                    <div class="hero-slide__cards">
-                                        <span></span>
-                                        <span></span>
-                                        <span></span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="hero-slide">
-                                <span class="hero-slide__tag">Sistema Java</span>
-
-                                <h3>Aplicaciones y lógica para organizar información</h3>
-
-                                <p>
+<div class="hero-slide__badges">
+<span>Tienda</span>
+<span>Carrito</span>
+<span>Instagram</span>
+</div>
+<div class="hero-slide__layout">
+<div class="hero-slide__cards">
+<span></span>
+<span></span>
+<span></span>
+</div>
+</div>
+</div>
+<div class="hero-slide">
+<span class="hero-slide__tag">Sistema Java</span>
+<h3>Aplicaciones y lógica para organizar información</h3>
+<p>
                                     Desarrollo de soluciones con Java, bases de datos,
                                     API REST, gestión de datos y estructura Full Stack.
                                 </p>
-
-                                <div class="hero-slide__badges">
-                                    <span>Java</span>
-                                    <span>Spring Boot</span>
-                                    <span>API REST</span>
-                                </div>
-
-                                <div class="hero-slide__layout">
-                                    <div class="hero-slide__code">
-                                        <span></span>
-                                        <span></span>
-                                        <span></span>
-                                        <span></span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="hero-slide">
-                                <span class="hero-slide__tag">Educación / Información</span>
-
-                                <h3>Proyectos claros, informativos y bien estructurados</h3>
-
-                                <p>
+<div class="hero-slide__badges">
+<span>Java</span>
+<span>Spring Boot</span>
+<span>API REST</span>
+</div>
+<div class="hero-slide__layout">
+<div class="hero-slide__code">
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+</div>
+</div>
+</div>
+<div class="hero-slide">
+<span class="hero-slide__tag">Educación / Información</span>
+<h3>Proyectos claros, informativos y bien estructurados</h3>
+<p>
                                     Sitios para educación, servicios, contenido informativo
                                     y proyectos que necesitan comunicar mejor.
                                 </p>
+<div class="hero-slide__badges">
+<span>Educación</span>
+<span>Contenido</span>
+<span>Organización</span>
+</div>
+<div class="hero-slide__layout">
+<div class="hero-slide__info">
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+</div>
+</div>
+</div>
+<div class="hero__browser-footer">
+<div class="hero__browser-dots-nav">
+<button aria-label="Mostrar primera vista" class="hero-dot active" type="button"></button>
+<button aria-label="Mostrar segunda vista" class="hero-dot" type="button"></button>
+<button aria-label="Mostrar tercera vista" class="hero-dot" type="button"></button>
+<button aria-label="Mostrar cuarta vista" class="hero-dot" type="button"></button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</header>
+<!-- Tecnologías utilizadas -->
+<section aria-label="Tecnologías y conocimientos aplicados" class="technology-strip">
+<div class="technology-strip__track">
+<div class="technology-strip__group">
+<span>HTML</span>
+<span>CSS</span>
+<span>JavaScript</span>
+<span>Java</span>
+<span>Spring Boot</span>
+<span>MySQL</span>
+<span>Git</span>
+<span>GitHub</span>
+<span>API REST</span>
+<span>Administración</span>
+</div>
+<!-- Copia necesaria para mantener el movimiento continuo -->
+<div aria-hidden="true" class="technology-strip__group">
+<span>HTML</span>
+<span>CSS</span>
+<span>JavaScript</span>
+<span>Java</span>
+<span>Spring Boot</span>
+<span>MySQL</span>
+<span>Git</span>
+<span>GitHub</span>
+<span>API REST</span>
+<span>Administración</span>
+</div>
+</div>
+</section>
+<main>
+<!-- Presentación breve -->
 
-                                <div class="hero-slide__badges">
-                                    <span>Educación</span>
-                                    <span>Contenido</span>
-                                    <span>Organización</span>
-                                </div>
+<!-- Punto de partida -->
 
-                                <div class="hero-slide__layout">
-                                    <div class="hero-slide__info">
-                                        <span></span>
-                                        <span></span>
-                                        <span></span>
-                                        <span></span>
-                                    </div>
-                                </div>
-                            </div>
+<!-- Orientador digital -->
 
-                            <div class="hero__browser-footer">
-                                <div class="hero__browser-dots-nav">
-                                    <button type="button" class="hero-dot active" aria-label="Mostrar primera vista"></button>
-                                    <button type="button" class="hero-dot" aria-label="Mostrar segunda vista"></button>
-                                    <button type="button" class="hero-dot" aria-label="Mostrar tercera vista"></button>
-                                    <button type="button" class="hero-dot" aria-label="Mostrar cuarta vista"></button>
-                                </div>
-                            </div>
+<!-- Confianza -->
 
-                        </div>
+<!-- Preguntas frecuentes -->
 
-                    </div>
+<!-- Cierre del inicio -->
 
-                </div>
+<section class="section solution-guide" id="orientador-digital">
+<div class="container solution-guide__layout">
+<div class="solution-guide__intro">
+<p class="section__tag">Orientador digital</p>
+<h2 class="section__title">Elige tu necesidad principal y descubre un buen punto de partida</h2>
+<p>
+                        Selecciona una necesidad para ver una recomendación inicial.
+                    </p>
+<div aria-label="Seleccionar necesidad principal" class="solution-guide__options" role="group">
+<button class="solution-guide__option is-active" data-guide-option="presencia" type="button">
+<span>01</span> Necesito presencia en internet
+                        </button>
+<button class="solution-guide__option" data-guide-option="catalogo" type="button">
+<span>02</span> Quiero ordenar productos o servicios
+                        </button>
+<button class="solution-guide__option" data-guide-option="sistema" type="button">
+<span>03</span> Necesito registrar o gestionar información
+                        </button>
+<button class="solution-guide__option" data-guide-option="orientacion" type="button">
+<span>04</span> Aún no sé qué solución necesito
+                        </button>
+</div>
+</div>
+<div aria-live="polite" class="solution-guide__result">
+<div class="solution-guide__result-top">
+<span>Recomendación inicial</span>
+<small>Janabith PuntoCL · guía de decisión</small>
+</div>
+<div class="solution-guide__result-body">
+<span class="solution-guide__result-code" id="guideResultCode">WEB-01</span>
+<h3 id="guideResultTitle">Página web profesional</h3>
+<p id="guideResultText">
+                            Una página clara y responsiva puede presentar tu propuesta, servicios,
+                            canales de contacto y elementos de confianza en un solo lugar.
+                        </p>
+<div class="solution-guide__result-points" id="guideResultPoints">
+<span>Presentación del negocio</span>
+<span>Servicios organizados</span>
+<span>Contacto directo</span>
+</div>
 
-            </div>
+<div class="solution-guide__actions"><a class="button button--primary" href="explora/index.html" id="guideResultLink">Explorar esta ruta</a><a class="button button--whatsapp" href="https://wa.me/56972367335?text=Hola%2C%20vi%20el%20orientador%20de%20Janabith%20PuntoCL%20y%20quiero%20conversar%20sobre%20una%20p%C3%A1gina%20web%20profesional." id="guideWhatsappLink" rel="noopener noreferrer" target="_blank"><span aria-hidden="true" class="button__wa-icon">◉</span> WhatsApp</a></div><p class="solution-guide__micro">También puedes usar Explora para recibir una orientación más detallada en 2–3 minutos.</p></div>
+</div>
+</div>
 
-        </section>
-
-    </header>
-    
-    <!-- Tecnologías utilizadas -->
-    <section class="technology-strip" aria-label="Tecnologías y conocimientos aplicados">
-        <div class="technology-strip__track">
-    
-            <div class="technology-strip__group">
-                <span>HTML</span>
-                <span>CSS</span>
-                <span>JavaScript</span>
-                <span>Java</span>
-                <span>Spring Boot</span>
-                <span>MySQL</span>
-                <span>Git</span>
-                <span>GitHub</span>
-                <span>API REST</span>
-                <span>Administración</span>
-            </div>
-    
-            <!-- Copia necesaria para mantener el movimiento continuo -->
-            <div class="technology-strip__group" aria-hidden="true">
-                <span>HTML</span>
-                <span>CSS</span>
-                <span>JavaScript</span>
-                <span>Java</span>
-                <span>Spring Boot</span>
-                <span>MySQL</span>
-                <span>Git</span>
-                <span>GitHub</span>
-                <span>API REST</span>
-                <span>Administración</span>
-            </div>
-    
-        </div>
-    </section>
-    
-    <main>
-
-        <!-- Presentación breve -->
-        <section class="section home-about-preview">
-        
-            <div class="container home-about-preview__layout">
-        
-                <!-- Identidad visual -->
-        
-                <div class="home-about-preview__visual">
-
-                    <div class="home-about-preview__wave" aria-label="Sticker animado de Janabith saludando">
-                        <img class="home-about-preview__wave-video" src="assets/img/perfil/janabith-saludo-lento.png"
-                            alt="Ilustración animada de Janabith saludando con la mano">
-
-                        <div class="home-about-preview__wave-bubble">
-                            <strong>¡Hola! 👋</strong>
-                            <span>Soy Janabith. Te ayudo a ordenar tu idea y convertirla en una solución digital clara.</span>
-                        </div>
-                    </div>
-        
-                    <div class="home-about-preview__badge home-about-preview__badge--one">
+<div class="container">
+<div class="home-stage__header">
+<div>
+<p class="section__tag">Tu punto de partida</p>
+<h2 class="section__title">Comencemos desde la etapa en que estás</h2>
+</div>
+<p>Primero identificamos qué necesitas resolver y qué avance tiene más sentido.</p>
+</div>
+<div class="home-stage__grid">
+<article class="home-stage-card">
+<p class="home-stage-card__eyebrow">Idea inicial</p>
+<h3>Necesito ordenar una idea</h3>
+<details class="home-stage-card__details">
+<summary>Cómo puedo ayudarte</summary>
+<p>Definimos propósito, público, contenido mínimo y una primera versión posible.</p>
+</details>
+<div class="home-stage-card__tags">
+<span>Orientación</span><span>Estructura</span><span>Prioridades</span>
+</div>
+</article>
+<article class="home-stage-card home-stage-card--featured">
+<p class="home-stage-card__eyebrow">Negocio en marcha</p>
+<h3>Necesito presencia digital</h3>
+<details class="home-stage-card__details">
+<summary>Cómo puedo ayudarte</summary>
+<p>Organizamos la información y creamos un sitio para presentar, explicar y contactar.</p>
+</details>
+<div class="home-stage-card__tags">
+<span>Página web</span><span>Catálogo</span><span>Contacto</span>
+</div>
+</article>
+<article class="home-stage-card">
+<p class="home-stage-card__eyebrow">Proyecto existente</p>
+<h3>Necesito mejorar lo que ya tengo</h3>
+<details class="home-stage-card__details">
+<summary>Cómo puedo ayudarte</summary>
+<p>Revisamos el proyecto actual y priorizamos mejoras útiles y escalables.</p>
+</details>
+<div class="home-stage-card__tags">
+<span>Revisión</span><span>Mejoras</span><span>Escalabilidad</span>
+</div>
+</article>
+</div>
+</div>
+</section><section class="section home-trust">
+<div class="container home-trust__layout">
+<div class="home-trust__content">
+<p class="section__tag">Una forma de trabajar confiable</p>
+<h2 class="section__title">La solución importa, pero también cómo se construye</h2>
+<p>
+                        Trabajo con acuerdos claros, cuidado de la información y revisión antes de publicar.
+                    </p>
+<a class="button button--secondary" href="pages/como-trabajo.html">
+                        Conocer el proceso completo
+                    </a>
+</div>
+<div class="home-trust__grid">
+<article><span>01</span><h3>Confidencialidad</h3><p>Los datos, accesos y documentos se utilizan solo para las tareas acordadas.</p></article>
+<article><span>02</span><h3>Alcance comprensible</h3><p>Se define qué incluye cada etapa para evitar expectativas confusas.</p></article>
+<article><span>03</span><h3>Revisión real</h3><p>Se prueban enlaces, formularios, navegación y adaptación a distintas pantallas.</p></article>
+<article><span>04</span><h3>Entrega acompañada</h3><p>La solución se explica para que puedas comprenderla y utilizarla con seguridad.</p></article>
+</div>
+</div>
+</section><section class="section home-about-preview">
+<div class="container home-about-preview__layout">
+<!-- Identidad visual -->
+<div class="home-about-preview__visual">
+<div aria-label="Sticker animado de Janabith saludando" class="home-about-preview__wave">
+<img alt="Ilustración animada de Janabith saludando con la mano" class="home-about-preview__wave-video" src="assets/img/perfil/janabith-saludo-lento.png"/>
+<div class="home-about-preview__wave-bubble">
+<strong>¡Hola! 👋</strong>
+<span>Soy Janabith. Conecto tecnología y organización para convertir ideas en soluciones digitales claras.</span>
+</div>
+</div>
+<div class="home-about-preview__badge home-about-preview__badge--one">
                         Desarrollo web
                     </div>
-        
-                    <div class="home-about-preview__badge home-about-preview__badge--two">
+<div class="home-about-preview__badge home-about-preview__badge--two">
                         Java Full Stack
                     </div>
-        
-                    <div class="home-about-preview__badge home-about-preview__badge--three">
+<div class="home-about-preview__badge home-about-preview__badge--three">
                         Administración
                     </div>
-        
-                </div>
-        
-        
-                <!-- Contenido -->
-        
-                <div class="home-about-preview__content">
-        
-                    <p class="section__tag">
+</div>
+<!-- Contenido -->
+<div class="home-about-preview__content">
+<p class="section__tag">
                         Sobre Janabith PuntoCL
                     </p>
-        
-                    <h2 class="section__title">
+<h2 class="section__title">
                         Tecnología y organización para una solución clara
                     </h2>
-        
-                    <p>
-                        Desarrollo soluciones digitales funcionales, ordenadas y adaptadas a cada proyecto.
+<p>
+                        Integro tres áreas principales: <strong>desarrollo web</strong>, <strong>Java Full Stack</strong> y <strong>administración</strong>. Las combino según lo que cada proyecto necesita.
                     </p>
-
-                    <details class="text-disclosure">
-                        <summary>Conocer cómo se integran estas áreas</summary>
-
-                        <div class="text-disclosure__content">
-                            <p>
+<div class="home-about-preview__area-chips" aria-label="Áreas que integra Janabith">
+<span>Desarrollo web</span>
+<span>Java Full Stack</span>
+<span>Administración</span>
+</div>
+<details class="text-disclosure">
+<summary>Ver cómo se complementan</summary>
+<div class="text-disclosure__content">
+<p>
                                 Esta formación multidisciplinaria me permite comprender
                                 distintas necesidades y transformarlas en soluciones claras,
                                 funcionales y adaptadas a cada contexto.
                             </p>
-                        </div>
-                    </details>
-        
-        
-                    <div class="home-about-preview__qualities">
-
-                        <details class="home-quality" open>
-                            <summary>Perfil multidisciplinario</summary>
-                            <p>Integro conocimientos técnicos, administrativos y organizacionales.</p>
-                        </details>
-
-                        <details class="home-quality">
-                            <summary>Comunicación clara</summary>
-                            <p>Explico decisiones, procesos y avances de forma escrita y comprensible.</p>
-                        </details>
-
-                        <details class="home-quality">
-                            <summary>Trabajo responsable</summary>
-                            <p>Cuido la información, los accesos y los acuerdos de cada proyecto.</p>
-                        </details>
-
-                    </div>
-
-
-                    <div class="home-about-preview__actions">
-        
-                        <a href="pages/sobre-mi.html" class="button button--primary">
-                            Conocer mi perfil
-                        </a>
-        
-                        <a href="pages/portafolio.html" class="button button--secondary">
-                            Revisar proyectos
-                        </a>
-        
-                    </div>
-        
-                </div>
-        
-            </div>
-        
-        </section>
-
-        <!-- Punto de partida -->
-        <section class="section home-stage" id="punto-de-partida">
-            <div class="container">
-                <div class="home-stage__header">
-                    <div>
-                        <p class="section__tag">Tu punto de partida</p>
-                        <h2 class="section__title">Comencemos desde la etapa en que estás</h2>
-                    </div>
-                    <p>Primero identificamos qué necesitas resolver y qué avance tiene más sentido.</p>
-                </div>
-
-                <div class="home-stage__grid">
-                    <article class="home-stage-card">
-                        <p class="home-stage-card__eyebrow">Idea inicial</p>
-                        <h3>Necesito ordenar una idea</h3>
-                        <details class="home-stage-card__details">
-                            <summary>Cómo puedo ayudarte</summary>
-                            <p>Definimos propósito, público, contenido mínimo y una primera versión posible.</p>
-                        </details>
-                        <div class="home-stage-card__tags">
-                            <span>Orientación</span><span>Estructura</span><span>Prioridades</span>
-                        </div>
-                    </article>
-
-                    <article class="home-stage-card home-stage-card--featured">
-                        <p class="home-stage-card__eyebrow">Negocio en marcha</p>
-                        <h3>Necesito presencia digital</h3>
-                        <details class="home-stage-card__details">
-                            <summary>Cómo puedo ayudarte</summary>
-                            <p>Organizamos la información y creamos un sitio para presentar, explicar y contactar.</p>
-                        </details>
-                        <div class="home-stage-card__tags">
-                            <span>Página web</span><span>Catálogo</span><span>Contacto</span>
-                        </div>
-                    </article>
-
-                    <article class="home-stage-card">
-                        <p class="home-stage-card__eyebrow">Proyecto existente</p>
-                        <h3>Necesito mejorar lo que ya tengo</h3>
-                        <details class="home-stage-card__details">
-                            <summary>Cómo puedo ayudarte</summary>
-                            <p>Revisamos el proyecto actual y priorizamos mejoras útiles y escalables.</p>
-                        </details>
-                        <div class="home-stage-card__tags">
-                            <span>Revisión</span><span>Mejoras</span><span>Escalabilidad</span>
-                        </div>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <!-- Orientador digital -->
-        <section class="section solution-guide" id="orientador-digital">
-            <div class="container solution-guide__layout">
-                <div class="solution-guide__intro">
-                    <p class="section__tag">Orientador digital</p>
-                    <h2 class="section__title">Elige tu necesidad principal y descubre un buen punto de partida</h2>
-                    <p>
-                        Selecciona una necesidad para ver una recomendación inicial.
-                    </p>
-
-                    <div class="solution-guide__options" role="group" aria-label="Seleccionar necesidad principal">
-                        <button type="button" class="solution-guide__option is-active" data-guide-option="presencia">
-                            <span>01</span> Necesito presencia en internet
-                        </button>
-                        <button type="button" class="solution-guide__option" data-guide-option="catalogo">
-                            <span>02</span> Quiero ordenar productos o servicios
-                        </button>
-                        <button type="button" class="solution-guide__option" data-guide-option="sistema">
-                            <span>03</span> Necesito registrar o gestionar información
-                        </button>
-                        <button type="button" class="solution-guide__option" data-guide-option="orientacion">
-                            <span>04</span> Aún no sé qué solución necesito
-                        </button>
-                    </div>
-                </div>
-
-                <div class="solution-guide__result" aria-live="polite">
-                    <div class="solution-guide__result-top">
-                        <span>Recomendación inicial</span>
-                        <small>Janabith PuntoCL · guía de decisión</small>
-                    </div>
-                    <div class="solution-guide__result-body">
-                        <span class="solution-guide__result-code" id="guideResultCode">WEB-01</span>
-                        <h3 id="guideResultTitle">Página web profesional</h3>
-                        <p id="guideResultText">
-                            Una página clara y responsiva puede presentar tu propuesta, servicios,
-                            canales de contacto y elementos de confianza en un solo lugar.
-                        </p>
-                        <div class="solution-guide__result-points" id="guideResultPoints">
-                            <span>Presentación del negocio</span>
-                            <span>Servicios organizados</span>
-                            <span>Contacto directo</span>
-                        </div>
-                        <a href="pages/servicios.html" class="button button--primary" id="guideResultLink">
-                            Revisar esta solución
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Confianza -->
-        <section class="section home-trust">
-            <div class="container home-trust__layout">
-                <div class="home-trust__content">
-                    <p class="section__tag">Una forma de trabajar confiable</p>
-                    <h2 class="section__title">La solución importa, pero también cómo se construye</h2>
-                    <p>
-                        Trabajo con acuerdos claros, cuidado de la información y revisión antes de publicar.
-                    </p>
-                    <a href="pages/como-trabajo.html" class="button button--secondary">
-                        Conocer el proceso completo
-                    </a>
-                </div>
-
-                <div class="home-trust__grid">
-                    <article><span>01</span><h3>Confidencialidad</h3><p>Los datos, accesos y documentos se utilizan solo para las tareas acordadas.</p></article>
-                    <article><span>02</span><h3>Alcance comprensible</h3><p>Se define qué incluye cada etapa para evitar expectativas confusas.</p></article>
-                    <article><span>03</span><h3>Revisión real</h3><p>Se prueban enlaces, formularios, navegación y adaptación a distintas pantallas.</p></article>
-                    <article><span>04</span><h3>Entrega acompañada</h3><p>La solución se explica para que puedas comprenderla y utilizarla con seguridad.</p></article>
-                </div>
-            </div>
-        </section>
-
-        <!-- Preguntas frecuentes -->
-        <section class="section home-faq">
-            <div class="container home-faq__layout">
-                <div class="home-faq__intro">
-                    <p class="section__tag">Preguntas frecuentes</p>
-                    <h2 class="section__title">Dudas habituales antes de comenzar</h2>
-                    <p>Estas respuestas ayudan a preparar una primera conversación sin tecnicismos innecesarios.</p>
-                    <a href="pages/contacto.html?servicio=otro&origen=Orientador%20digital%20del%20inicio&mensaje=Hola%2C%20llegu%C3%A9%20desde%20el%20orientador%20digital%20del%20inicio%20y%20necesito%20orientaci%C3%B3n%20para%20definir%20la%20mejor%20soluci%C3%B3n%20para%20mi%20proyecto.#formulario-contacto" class="button button--primary" data-contact-service="otro" data-contact-origin="Orientador digital del inicio" data-contact-message="Hola, llegué desde el orientador digital del inicio y necesito orientación para definir la mejor solución para mi proyecto.">Realizar una consulta</a>
-                </div>
-
-                <div class="home-faq__list">
-                    <article class="home-faq__item">
-                        <button type="button" class="home-faq__question" aria-expanded="true">
-                            <span>¿Necesito tener todos los textos e imágenes preparados?</span><b>−</b>
-                        </button>
-                        <div class="home-faq__answer"><p>No. Podemos comenzar organizando lo que ya existe y definiendo qué contenido falta reunir.</p></div>
-                    </article>
-                    <article class="home-faq__item">
-                        <button type="button" class="home-faq__question" aria-expanded="false">
-                            <span>¿Cómo se define el valor de un proyecto?</span><b>+</b>
-                        </button>
-                        <div class="home-faq__answer" hidden><p>Las páginas web parten desde $199.990. El valor final depende de secciones, funciones, contenido, publicación y acompañamiento.</p></div>
-                    </article>
-                    <article class="home-faq__item">
-                        <button type="button" class="home-faq__question" aria-expanded="false">
-                            <span>¿Puedo comenzar con una versión pequeña?</span><b>+</b>
-                        </button>
-                        <div class="home-faq__answer" hidden><p>Sí. Una primera versión bien planificada puede publicarse y luego crecer por etapas sin perder el trabajo inicial.</p></div>
-                    </article>
-                    <article class="home-faq__item">
-                        <button type="button" class="home-faq__question" aria-expanded="false">
-                            <span>¿Qué ocurre con mis claves y accesos?</span><b>+</b>
-                        </button>
-                        <div class="home-faq__answer" hidden><p>Solo se solicitan cuando son indispensables. Al finalizar se recomienda actualizar las contraseñas personales.</p></div>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <!-- Cierre del inicio -->
-        <section class="home-contact-banner">
-            <div class="container home-contact-banner__content">
-                <div>
-                    <p class="section__tag">Primer paso</p>
-                    <h2>Cuéntame qué quieres crear, ordenar o mejorar</h2>
-                    <p>No necesitas conocer la solución técnica. Comenzamos comprendiendo la necesidad.</p>
-                </div>
-                <a href="pages/contacto.html?servicio=otro&origen=Cierre%20de%20la%20p%C3%A1gina%20principal&mensaje=Hola%2C%20vi%20la%20p%C3%A1gina%20principal%20de%20Janabith%20PuntoCL%20y%20quiero%20conversar%20sobre%20mi%20proyecto.#formulario-contacto" class="button button--primary" data-contact-service="otro" data-contact-origin="Cierre de la página principal" data-contact-message="Hola, vi la página principal de Janabith PuntoCL y quiero conversar sobre mi proyecto.">Conversar mi proyecto</a>
-            </div>
-        </section>
-
-
-    </main>
-
-    <footer class="footer">
-    
-        <div class="footer__content">
-    
-            <div>
-                <strong>Janabith</strong>
-    
-                <span>PuntoCL</span>
-            </div>
-            <div class="footer__links">
-
-                <a href="https://www.instagram.com/janabith.cl/" target="_blank" rel="noopener noreferrer">
+</div>
+</details>
+<div class="home-about-preview__qualities">
+<details class="home-quality" open="">
+<summary>Perfil multidisciplinario</summary>
+<p>Integro conocimientos técnicos, administrativos y organizacionales.</p>
+</details>
+<details class="home-quality">
+<summary>Comunicación clara</summary>
+<p>Explico decisiones, procesos y avances de forma escrita y comprensible.</p>
+</details>
+<details class="home-quality">
+<summary>Trabajo responsable</summary>
+<p>Cuido la información, los accesos y los acuerdos de cada proyecto.</p>
+</details>
+</div>
+    <div class="home-about-preview__actions">
+        <a class="button button--primary" href="pages/sobre-mi.html">Conocer mi perfil</a>
+        <a class="button button--secondary" href="pages/contacto.html">Hablemos de tu código</a>
+    </div>
+</div>
+</div>
+</section><section class="section home-faq">
+<div class="container home-faq__layout">
+<div class="home-faq__intro">
+<p class="section__tag">Preguntas frecuentes</p>
+<h2 class="section__title">Dudas habituales antes de comenzar</h2>
+<p>Estas respuestas ayudan a preparar una primera conversación sin tecnicismos innecesarios.</p>
+<a class="button button--primary" data-contact-message="Hola, llegué desde el orientador digital del inicio y necesito orientación para definir la mejor solución para mi proyecto." data-contact-origin="Orientador digital del inicio" data-contact-service="otro" href="pages/contacto.html?servicio=otro&amp;origen=Orientador%20digital%20del%20inicio&amp;mensaje=Hola%2C%20llegu%C3%A9%20desde%20el%20orientador%20digital%20del%20inicio%20y%20necesito%20orientaci%C3%B3n%20para%20definir%20la%20mejor%20soluci%C3%B3n%20para%20mi%20proyecto.#formulario-contacto">Realizar una consulta</a>
+</div>
+<div class="home-faq__list">
+<article class="home-faq__item">
+<button aria-expanded="true" class="home-faq__question" type="button">
+<span>¿Necesito tener todos los textos e imágenes preparados?</span><b>−</b>
+</button>
+<div class="home-faq__answer"><p>No. Podemos comenzar organizando lo que ya existe y definiendo qué contenido falta reunir.</p></div>
+</article>
+<article class="home-faq__item">
+<button aria-expanded="false" class="home-faq__question" type="button">
+<span>¿Cómo se define el valor de un proyecto?</span><b>+</b>
+</button>
+<div class="home-faq__answer" hidden=""><p>Las páginas web parten desde $199.990. El valor final depende de secciones, funciones, contenido, publicación y acompañamiento.</p></div>
+</article>
+<article class="home-faq__item">
+<button aria-expanded="false" class="home-faq__question" type="button">
+<span>¿Puedo comenzar con una versión pequeña?</span><b>+</b>
+</button>
+<div class="home-faq__answer" hidden=""><p>Sí. Una primera versión bien planificada puede publicarse y luego crecer por etapas sin perder el trabajo inicial.</p></div>
+</article>
+<article class="home-faq__item">
+<button aria-expanded="false" class="home-faq__question" type="button">
+<span>¿Qué ocurre con mis claves y accesos?</span><b>+</b>
+</button>
+<div class="home-faq__answer" hidden=""><p>Solo se solicitan cuando son indispensables. Al finalizar se recomienda actualizar las contraseñas personales.</p></div>
+</article>
+</div>
+</div>
+</section><section class="home-contact-banner">
+<div class="container home-contact-banner__content">
+<div>
+<p class="section__tag">Primer paso</p>
+<h2>Cuéntame qué quieres crear, ordenar o mejorar</h2>
+<p>No necesitas conocer la solución técnica. Comenzamos comprendiendo la necesidad.</p>
+</div>
+<a class="button button--primary" data-contact-message="Hola, vi la página principal de Janabith PuntoCL y quiero conversar sobre mi proyecto." data-contact-origin="Cierre de la página principal" data-contact-service="otro" href="pages/contacto.html?servicio=otro&amp;origen=Cierre%20de%20la%20p%C3%A1gina%20principal&amp;mensaje=Hola%2C%20vi%20la%20p%C3%A1gina%20principal%20de%20Janabith%20PuntoCL%20y%20quiero%20conversar%20sobre%20mi%20proyecto.#formulario-contacto">Conversar mi proyecto</a>
+</div>
+</section></main>
+<footer class="footer">
+<div class="footer__content">
+<div>
+<strong>Janabith</strong>
+<span>PuntoCL</span>
+</div>
+<div class="footer__links">
+<a href="https://wa.me/56972367335?text=Hola%2C%20llegu%C3%A9%20desde%20janabith.cl%20y%20quiero%20conversar%20sobre%20un%20proyecto%20digital." rel="noopener noreferrer" target="_blank">WhatsApp</a><a href="https://www.instagram.com/janabith.cl/" rel="noopener noreferrer" target="_blank">
                     Instagram
                 </a>
-
-                <a href="mailto:janabithpuntocl@gmail.com">
+<a href="mailto:janabithpuntocl@gmail.com">
                     Correo
                 </a>
-
-                <a href="https://github.com/Jannabitte" target="_blank" rel="noopener noreferrer">
+<a href="https://github.com/Jannabitte" rel="noopener noreferrer" target="_blank">
                     GitHub
                 </a>
-
-                <a href="https://www.linkedin.com/in/jannabitte-pino889576190/" target="_blank" rel="noopener noreferrer">
+<a href="https://www.linkedin.com/in/jannabitte-pino889576190/" rel="noopener noreferrer" target="_blank">
                     LinkedIn
                 </a>
-
-                <a href="https://www.acreditta.com/credential/211da0a0-9c1f-4477-90a2-6fcc19d41416?utm_source=whatsapp&resource_type=badge&resource=211da0a0-9c1f-4477-90a2-6fcc19d41416" target="_blank" rel="noopener noreferrer">
+<a href="https://www.acreditta.com/credential/211da0a0-9c1f-4477-90a2-6fcc19d41416?utm_source=whatsapp&amp;resource_type=badge&amp;resource=211da0a0-9c1f-4477-90a2-6fcc19d41416" rel="noopener noreferrer" target="_blank">
                     Insignia digital
                 </a>
-
-            </div>
-    
-            <p>
+</div>
+<p>
                 © 2026 Janabith PuntoCL.
                 Todos los derechos reservados.
             </p>
-    
-        </div>
-    
-    </footer>
-    
-    <a href="pages/contacto.html?servicio=pagina-web&origen=Botón%20flotante%20del%20inicio&mensaje=Hola%2C%20quiero%20solicitar%20una%20cotización%20para%20mi%20proyecto%20digital.#formulario-contacto" class="floating-cta" data-contact-service="pagina-web" data-contact-origin="Botón flotante del inicio" data-contact-message="Hola, quiero solicitar una cotización para mi proyecto digital." aria-label="Solicitar cotización"><span aria-hidden="true">💬</span></a>
-
-    <script src="js/app.js"></script>
-    <script src="js/home-experience.js"></script>
-
+</div>
+</footer>
+<a aria-label="Solicitar cotización" class="floating-cta" data-contact-message="Hola, quiero solicitar una cotización para mi proyecto digital." data-contact-origin="Botón flotante del inicio" data-contact-service="pagina-web" href="pages/contacto.html?servicio=pagina-web&amp;origen=Botón%20flotante%20del%20inicio&amp;mensaje=Hola%2C%20quiero%20solicitar%20una%20cotización%20para%20mi%20proyecto%20digital.#formulario-contacto"><span aria-hidden="true">💬</span></a>
+<script src="js/app.js"></script>
+<script src="js/home-experience.js"></script>
 </body>
-
 </html>

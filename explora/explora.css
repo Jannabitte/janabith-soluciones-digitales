@@ -278,3 +278,23 @@ button,a{-webkit-tap-highlight-color:transparent}a{color:inherit;text-decoration
   .hero-card__sticker { width: min(128px, 100%); }
   .hero-card__hello { width: min(120px, 100%); }
 }
+
+/* WhatsApp como salida alternativa del orientador */
+.explora-whatsapp {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    margin-top: 10px;
+    padding: 10px 14px;
+    border-radius: 14px;
+    background: rgba(37, 211, 102, .12);
+    border: 1px solid rgba(37, 211, 102, .28);
+    color: #b8ffd2;
+    font-size: .76rem;
+    font-weight: 900;
+    text-decoration: none;
+}
+.explora-whatsapp:hover {
+    background: rgba(37, 211, 102, .20);
+}

@@ -1,0 +1,9 @@
+{
+  "name": "janabith-aurora-experience",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Experiencia privada de cumpleaños de Aurora",
+  "dependencies": {
+    "@netlify/blobs": "latest"
+  }
+}

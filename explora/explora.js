@@ -451,6 +451,10 @@
         const message=`Hola, llegué desde Explora y completé el orientador. Mi mapa inicial fue: ${s.title}. ${summaryText()} Prioridad sugerida: ${s.priority} Quiero conversar sobre esta idea.`;
         const params=new URLSearchParams({servicio:s.service,origen:'Explora · Orientador interactivo',mensaje:message});
         document.querySelector('[data-contact]').href=`../pages/contacto.html?${params.toString()}#formulario-contacto`;
+        const whatsapp = document.querySelector('.explora-whatsapp');
+        if (whatsapp) {
+            whatsapp.href=`https://wa.me/56972367335?text=${encodeURIComponent(message)}`;
+        }
     }
 
     document.querySelector('[data-copy-result]')?.addEventListener('click',async(event)=>{
