@@ -2816,21 +2816,17 @@ button:focus-visible {
 }
 
 .page-hero__content h1 {
-    max-width: 800px;
-    margin-bottom: 24px;
-
-    color: var(--color-morado-oscuro);
-    font-size: clamp(2.7rem, 5vw, 4.7rem);
-    line-height: 1.05;
-    letter-spacing: -2px;
+    max-width: 650px; /* Evita que el título se estire demasiado y se vea desordenado */
+    margin-bottom: 20px;
+    line-height: 1.1;
+    letter-spacing: -1px;
 }
 
-.page-hero__content>p:not(.section__tag) {
-    max-width: 720px;
-
-    color: var(--color-texto-claro);
+.page-hero__content p:not(.section__tag) {
+    max-width: 600px; /* Mantiene el párrafo compacto y fácil de leer */
+    margin-bottom: 30px;
     font-size: 1.05rem;
-    line-height: 1.8;
+    line-height: 1.7;
 }
 
 .page-hero__back {
@@ -5428,90 +5424,102 @@ button:focus-visible {
 }
 
 
-/* Diferencial */
 
-.about-difference {
-    background:
-        radial-gradient(circle at 10% 15%,
-            rgba(201, 175, 232, 0.17),
-            transparent 23%),
-        var(--color-blanco);
-}
-
-.about-difference__header {
-    max-width: 780px;
-    margin: 0 auto 48px;
-
-    text-align: center;
-}
-
-.about-difference__header>p:last-child {
-    margin-top: 18px;
-
-    color: var(--color-texto-claro);
-    line-height: 1.75;
-}
-
+/* --- SECCIÓN ENFOQUE DE TRABAJO --- */
 .about-difference__grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 17px;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    margin-top: 40px;
 }
 
-.about-difference__grid article {
-    min-height: 270px;
-    padding: 25px;
-
-    background:
-        linear-gradient(145deg,
-            #ffffff,
-            #faf7fd);
-
+.difference-card {
+    background-color: #ffffff;
+    padding: 30px 20px;
+    border-radius: 16px;
     border: 1px solid rgba(111, 66, 193, 0.12);
-    border-radius: 22px;
-    box-shadow: var(--sombra-suave);
-
-    transition:
-        transform var(--transicion),
-        border-color var(--transicion);
+    border-top: 5px solid #35dd88; /* Acento verde superior */
+    box-shadow: 0 10px 30px rgba(47, 27, 77, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
 }
 
-.about-difference__grid article:hover {
-    transform: translateY(-7px);
-    border-color: rgba(53, 221, 136, 0.5);
+.difference-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(47, 27, 77, 0.12);
 }
 
-.about-difference__grid article>span {
-    width: 43px;
-    height: 43px;
-    margin-bottom: 22px;
-
+.difference-card__number {
+    width: 40px;
+    height: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
-
-    color: var(--color-morado-oscuro);
-    background-color: var(--color-verde);
-    border-radius: 13px;
-
-    font-size: 0.66rem;
+    color: #2f1b4d;
+    background-color: #35dd88;
+    border-radius: 10px;
+    font-size: 0.85rem;
     font-weight: 900;
+    margin-bottom: 20px;
 }
 
-.about-difference__grid h3 {
-    margin-bottom: 11px;
+.difference-card h3 {
+    color: #2f1b4d;
+    font-size: 1.15rem;
+    margin-bottom: 12px;
+}
 
+.difference-card p {
+    color: #6c6473;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin: 0;
+}
+/* --- TÍTULO DE LA SECCIÓN ENFOQUE DE TRABAJO --- */
+.about-difference__header .section__tag {
+    color: var(--color-verde-oscuro);
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.about-difference__header h2,
+.about-difference__header .section__title {
     color: var(--color-morado-oscuro);
-    font-size: 1rem;
+    font-size: clamp(2rem, 4vw, 3.1rem);
+    line-height: 1.15;
+    font-weight: 800;
+    margin-bottom: 15px;
 }
 
-.about-difference__grid p {
+.about-difference__header p {
     color: var(--color-texto-claro);
-    font-size: 0.78rem;
-    line-height: 1.67;
+    font-size: 1.05rem;
+    line-height: 1.7;
+    max-width: 760px;
 }
 
+/* Tarjeta destacada para romper el diseño blanco */
+.difference-card--featured {
+    background: linear-gradient(135deg, #2f1b4d, #513276);
+    border-top: 5px solid #c9afe8;
+}
 
+.difference-card--featured .difference-card__number {
+    background-color: #ffffff;
+    color: #6f42c1;
+}
+
+.difference-card--featured h3 {
+    color: #ffffff;
+}
+
+.difference-card--featured p {
+    color: rgba(255, 255, 255, 0.85);
+}
 /* Marca */
 
 .about-brand {
@@ -7529,6 +7537,80 @@ button:focus-visible {
     color: var(--color-texto-claro);
     font-size: 0.78rem;
     line-height: 1.55;
+}
+
+/* --- SECCIÓN PERFIL TÉCNICO --- */
+.about-skills__header {
+    max-width: 850px;
+    margin-bottom: 45px;
+}
+
+.about-skills__text p {
+    color: var(--color-texto-claro);
+    font-size: 1.05rem;
+    line-height: 1.8;
+    margin-bottom: 18px;
+}
+
+.about-skills__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+}
+
+.skill-card {
+    background-color: #ffffff;
+    padding: 32px 24px;
+    border-radius: 16px;
+    border: 1px solid rgba(111, 66, 193, 0.12);
+    border-top: 5px solid var(--color-morado-principal);
+    box-shadow: 0 10px 30px rgba(47, 27, 77, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.skill-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 35px rgba(47, 27, 77, 0.12);
+}
+
+.skill-card__icon {
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-morado-oscuro);
+    background-color: var(--color-verde);
+    border-radius: 12px;
+    font-size: 0.85rem;
+    font-weight: 900;
+    margin-bottom: 20px;
+}
+
+.skill-card h3 {
+    color: var(--color-morado-oscuro);
+    font-size: 1.25rem;
+    margin-bottom: 12px;
+}
+
+.skill-card p {
+    color: var(--color-texto-claro);
+    font-size: 0.92rem;
+    line-height: 1.65;
+    margin: 0;
+    flex-grow: 1; /* Empuja el contenido para que todas las tarjetas midan igual */
+}
+
+/* Detalles para la tarjeta del medio */
+.skill-card--featured {
+    border-top: 5px solid var(--color-verde);
+}
+.skill-card--featured .skill-card__icon {
+    background-color: var(--color-morado-lila);
+    color: var(--color-morado-principal);
 }
 
 /* Sticker animado: GIF para evitar fondo negro en algunos celulares */
